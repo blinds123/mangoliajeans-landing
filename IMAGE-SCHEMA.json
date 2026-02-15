@@ -1,0 +1,203 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Image Schema Contract - aligned to YES-Clean-Jarvis-Template",
+  "version": "3.0.0",
+  "source_of_truth": "IMAGE-MAPPING.json",
+  "required_images": {
+    "product": {
+      "count": 6,
+      "directory": "images/product",
+      "format": "product-{01-06}.webp",
+      "files": [
+        "product-01.webp",
+        "product-02.webp",
+        "product-03.webp",
+        "product-04.webp",
+        "product-05.webp",
+        "product-06.webp"
+      ],
+      "variables": [
+        "PRODUCT_IMAGE_1",
+        "PRODUCT_IMAGE_2",
+        "PRODUCT_IMAGE_3",
+        "PRODUCT_IMAGE_4",
+        "PRODUCT_IMAGE_5",
+        "PRODUCT_IMAGE_6"
+      ],
+      "description": "Main product gallery images"
+    },
+    "feature_testimonials": {
+      "count": 3,
+      "directory": "images/testimonials",
+      "format": "testimonial-{01-03}.webp",
+      "files": [
+        "testimonial-01.webp",
+        "testimonial-02.webp",
+        "testimonial-03.webp"
+      ],
+      "variables": [
+        "FEATURE_IMAGE_1",
+        "FEATURE_IMAGE_2",
+        "FEATURE_IMAGE_3"
+      ],
+      "description": "Feature proof images for FIBS section"
+    },
+    "secret_testimonials": {
+      "count": 3,
+      "directory": "images/testimonials",
+      "format": "testimonial-{04-06}.webp",
+      "files": [
+        "testimonial-04.webp",
+        "testimonial-05.webp",
+        "testimonial-06.webp"
+      ],
+      "variables": [
+        "SECRET_IMAGE_1",
+        "SECRET_IMAGE_2",
+        "SECRET_IMAGE_3"
+      ],
+      "description": "Secret proof images for V-I-E sections"
+    },
+    "main_testimonials": {
+      "count": 12,
+      "directory": "images/testimonials",
+      "format": "testimonial-{07-18}.webp",
+      "files": [
+        "testimonial-07.webp",
+        "testimonial-08.webp",
+        "testimonial-09.webp",
+        "testimonial-10.webp",
+        "testimonial-11.webp",
+        "testimonial-12.webp",
+        "testimonial-13.webp",
+        "testimonial-14.webp",
+        "testimonial-15.webp",
+        "testimonial-16.webp",
+        "testimonial-17.webp",
+        "testimonial-18.webp"
+      ],
+      "variables": [
+        "TESTIMONIAL_1_IMAGE",
+        "TESTIMONIAL_2_IMAGE",
+        "TESTIMONIAL_3_IMAGE",
+        "TESTIMONIAL_4_IMAGE",
+        "TESTIMONIAL_5_IMAGE",
+        "TESTIMONIAL_6_IMAGE",
+        "TESTIMONIAL_7_IMAGE",
+        "TESTIMONIAL_8_IMAGE",
+        "TESTIMONIAL_9_IMAGE",
+        "TESTIMONIAL_10_IMAGE",
+        "TESTIMONIAL_11_IMAGE",
+        "TESTIMONIAL_12_IMAGE"
+      ],
+      "description": "Primary testimonial images used in grids and strips"
+    },
+    "supporting_testimonials": {
+      "count": 5,
+      "directory": "images/testimonials",
+      "format": "testimonial-{19-23}.webp",
+      "files": [
+        "testimonial-19.webp",
+        "testimonial-20.webp",
+        "testimonial-21.webp",
+        "testimonial-22.webp",
+        "testimonial-23.webp"
+      ],
+      "variables": [
+        "CUSTOM_SECTION_IMAGE_1",
+        "CUSTOM_SECTION_IMAGE_2",
+        "SLIDESHOW_IMAGE_1",
+        "SLIDESHOW_IMAGE_2",
+        "MULTIROW_2_IMAGE"
+      ],
+      "description": "Supporting images for custom, slideshow, and multirow sections"
+    },
+    "spare_testimonials": {
+      "count": 2,
+      "directory": "images/testimonials",
+      "format": "testimonial-{24-25}.webp",
+      "files": [
+        "testimonial-24.webp",
+        "testimonial-25.webp"
+      ],
+      "variables": [],
+      "description": "Extra testimonial images (optional overflow)"
+    },
+    "comparison": {
+      "count": 1,
+      "directory": "images/comparison",
+      "format": "comparison-01.webp",
+      "files": ["comparison-01.webp"],
+      "variables": ["COMPARISON_IMAGE"],
+      "description": "Single combined before/after comparison image"
+    },
+    "order_bump": {
+      "count": 1,
+      "directory": "images/order-bump",
+      "format": "order-bump-01.webp",
+      "files": ["order-bump-01.webp"],
+      "variables": ["ORDER_BUMP_IMAGE"],
+      "description": "Order bump upsell image"
+    },
+    "founder": {
+      "count": 1,
+      "directory": "images/founder",
+      "format": "founder-01.webp",
+      "files": ["founder-01.webp"],
+      "variables": ["FOUNDER_IMAGE"],
+      "description": "Founder image (static; currently duplicates awards-1)"
+    },
+    "awards": {
+      "count": 5,
+      "directory": "images/awards",
+      "format": "awards-{1-5}.webp",
+      "files": [
+        "awards-1.webp",
+        "awards-2.webp",
+        "awards-3.webp",
+        "awards-4.webp",
+        "awards-5.webp"
+      ],
+      "variables": [
+        "AWARD_IMAGE_1",
+        "AWARD_IMAGE_2",
+        "AWARD_IMAGE_3",
+        "AWARD_IMAGE_4",
+        "AWARD_IMAGE_5"
+      ],
+      "description": "Awards/trust badges (static, universal)"
+    },
+    "universal": {
+      "count": 2,
+      "directory": "images/universal",
+      "format": "logo.webp, size-chart-hero.webp",
+      "files": [
+        "logo.webp",
+        "size-chart-hero.webp"
+      ],
+      "variables": [
+        "LOGO_URL",
+        "FAVICON_IMAGE",
+        "OG_IMAGE_URL",
+        "SIZE_CHART_IMAGE"
+      ],
+      "description": "Logo and size chart (static, universal)"
+    }
+  },
+  "validation_rules": {
+    "file_extension": ".webp",
+    "max_file_size_kb": 500,
+    "recommended_dimensions": {
+      "product": "800x800",
+      "testimonials": "800x800",
+      "founder": "1200x800",
+      "awards": "600x400",
+      "comparison": "1100x600"
+    }
+  },
+  "notes": [
+    "Use IMAGE-MAPPING.json for deterministic sorting and prompt order.",
+    "Images are referenced via {{PLACEHOLDER}} variables in templates and replaced by build.sh.",
+    "CTA_BANNER_IMAGE and FAQ_IMAGE default to product-06.webp (can be overridden)."
+  ]
+}

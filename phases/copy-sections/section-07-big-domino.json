@@ -1,0 +1,62 @@
+{
+  "section": "07-big-domino",
+  "file": "sections/07-big-domino.html",
+  "CRITICAL": true,
+
+  "MANDATORY_READS": [
+    "context/COPY-REQUIREMENTS.md",
+    "context/research-summary.md"
+  ],
+
+  "requirements": {
+    "pain_points": ["Pain 1", "Pain 2"],
+    "secrets": ["Secret 1 (Vehicle)"],
+    "frameworks": ["Big Domino", "Hook-Story-Offer"],
+    "pattern_interrupts_min": 3
+  },
+
+  "the_big_domino": {
+    "definition": "The ONE belief that makes everything else fall into place",
+    "format": "It's not YOU - it's the pieces you've been trying",
+    "rule": "If she believes THIS, she buys",
+    "framing": "WOMEN'S FASHION - shift blame from HER body/style to the PRODUCTS"
+  },
+
+  "belief_shift": {
+    "OLD_BELIEF": "Maybe I'm just not the type who can wear nice things",
+    "NEW_BELIEF": "I just hadn't found the RIGHT piece yet - until now",
+    "EMOTIONAL_CORE": "It's not about changing yourself - it's about finding what was made FOR you"
+  },
+
+  "structure": {
+    "HOOK": "Challenge her self-doubt with compassion",
+    "STORY": "Why those other pieces failed (not her fault)",
+    "OFFER": "This is the piece that was designed for women like her"
+  },
+
+  "content_flow": [
+    "1. Open with pattern interrupt - validate her frustration with past purchases",
+    "2. Explain why the old pieces failed HER (quality, fit, not designed for real bodies)",
+    "3. Introduce the shift: it's not about changing YOU",
+    "4. Show how this piece is DIFFERENT (designed for how she wants to FEEL)",
+    "5. Transition to product as the obvious solution"
+  ],
+
+  "tone_guidance": {
+    "write_like": "A friend who finally helps her see it was never her fault",
+    "avoid": ["tech specs", "masculine framing", "feature lists"],
+    "use": ["validation", "relief", "finally found", "designed for YOU"]
+  },
+
+  "anti_laziness_check": [
+    "Does this RELIEVE her self-doubt?",
+    "Does this shift blame FROM her TO the products?",
+    "Would she feel UNDERSTOOD reading this?",
+    "Is this specific to THIS product, not generic fashion copy?"
+  ],
+
+  "validation": [
+    "bash tests/validate-section.sh sections/07-big-domino.html",
+    "bash tests/validate-engage.sh sections/07-big-domino.html 3"
+  ]
+}

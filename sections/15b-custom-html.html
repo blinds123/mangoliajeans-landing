@@ -1,0 +1,164 @@
+<!-- ============================================
+     SECTION: CUSTOM HTML
+     VARIABLES: {{CUSTOM_SECTION_HEADING}}, {{CUSTOM_SECTION_IMAGE_1}}, {{CUSTOM_SECTION_IMAGE_2}}, {{CUSTOM_SECTION_TEXT}}
+     IMAGES: images/product/product-01.webp
+     FRAMEWORK: CUSTOM
+     ============================================ -->
+<div
+  id="shopify-section-template--17453745111139__8beb6911-28c6-482c-976a-e5421ad3e8df"
+  class="shopify-section"
+>
+  <style data-shopify>
+    .section-template--17453745111139__8beb6911-28c6-482c-976a-e5421ad3e8df-padding {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    .custom-columns-grid-template--17453745111139__8beb6911-28c6-482c-976a-e5421ad3e8df {
+      column-gap: 2rem;
+      row-gap: 3rem;
+    }
+
+    @media screen and (min-width: 750px) {
+      .section-template--17453745111139__8beb6911-28c6-482c-976a-e5421ad3e8df-padding {
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
+
+      .custom-columns-grid-template--17453745111139__8beb6911-28c6-482c-976a-e5421ad3e8df {
+        column-gap: 4rem;
+        row-gap: 4rem;
+      }
+    }
+
+    .color-scheme-template--17453745111139__8beb6911-28c6-482c-976a-e5421ad3e8df.color-custom {
+      --color-background: 255, 255, 255;
+      --gradient-background: #ffffff;
+
+      --color-foreground: 46, 42, 57;
+      --color-button: 221, 29, 29;
+      --color-button-text: 255, 255, 255;
+      --color-base-outline-button-labels: 221, 29, 29;
+    }
+  </style>
+  <div
+    class="color-scheme-template--17453745111139__8beb6911-28c6-482c-976a-e5421ad3e8df color-background-1 gradient content-for-grouping animate-section animate--hidden always-display"
+  >
+    <!--
+    NANO BANANA PROTOCOL (Deep Scroll - Phase 2: The Education Matrix):
+    FRAMEWORK: "The Us vs. Them" / "Anti-Dupe" Protocol.
+    COPY STRATEGY (Perry Belcher):
+      - Headline: "Why the Copycat Failed" or "The $19 Difference".
+      - Left Col: The "Cheap Knockoff" (Pain point).
+      - Right Col: The "Real Deal" (Mechanism of Action).
+    IMAGE GEN: Must visualize the "This vs. That" comparison.
+    REFERENCE: Use `images/product/product-01.webp` as SEED for the "Real Deal" side.
+  -->
+    <div
+      class="page-width section-template--17453745111139__8beb6911-28c6-482c-976a-e5421ad3e8df-padding isolate"
+    >
+      <!--
+        NANO BANANA PROTOCOL (Deep Scroll - Comparison):
+        1. IMAGE GEN: Must be generated based on the SALES COPY (e.g. Anti-Dupe Matrix).
+        2. REFERENCE: Must analyze/use all `images/product/` photos to ensure accurate depiction.
+        3. MAPPING: Do NOT use generic testimonial photos here.
+      -->
+      <!-- IMAGE 1: Before Custom Section Heading -->
+      <div class="custom-section-image" style="margin-bottom: 2rem">
+        <img
+          src="{{CUSTOM_SECTION_IMAGE_1}}"
+          alt="{{CUSTOM_SECTION_HEADING}}"
+          loading="lazy"
+          style="
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            display: block;
+            border-radius: 8px;
+          "
+          srcset="
+            {{CUSTOM_SECTION_IMAGE_1}}  375w,
+            {{CUSTOM_SECTION_IMAGE_1}}  750w,
+            {{CUSTOM_SECTION_IMAGE_1}} 1100w
+          "
+          sizes="(max-width: 750px) 100vw, 800px"
+        />
+      </div>
+
+      <div
+        class="custom-columns"
+        style="
+          --columns-count: 1;
+          --desktop-grid-parts: 12;
+          --mobile-grid-parts: 4;
+          --desktop-column-gap: 4rem;
+          --desktop-row-gap: 4rem;
+          --mobile-column-gap: 2rem;
+          --mobile-row-gap: 3rem;
+          --desktop-vertical-alignment: center;
+          --mobile-vertical-alignment: flex-start;
+        "
+      >
+        <div
+          class="custom-columns__column always-display animate-item animate-item--child"
+          style="--desktop-width: 12; --mobile-width: 4; --index: 0"
+        >
+          <div
+            class="custom-columns__block custom-columns__block-heading always-display"
+            style="
+              --margin-top: 2rem;
+              --margin-bottom: 2rem;
+              --image-width: %;
+              --image-alignment: center;
+              --border-radius: 0rem;
+            "
+          >
+            <h2
+              class="custom-columns__title h1 center mobile-center title-with-highlight"
+              style="--highlight-color: #6d388b"
+            >
+              {{CUSTOM_SECTION_HEADING}}
+            </h2>
+          </div>
+
+          <div
+            class="custom-columns__block custom-columns__block-richtext always-display"
+            style="
+              --margin-top: 2rem;
+              --margin-bottom: 2rem;
+              --image-width: %;
+              --image-alignment: center;
+              --border-radius: 0rem;
+            "
+          >
+            <div class="rte body center mobile-center">
+              <p>{{CUSTOM_SECTION_TEXT}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- IMAGE 2: After Custom Section Text -->
+      <div class="custom-section-image" style="margin-top: 2rem">
+        <img
+          src="{{CUSTOM_SECTION_IMAGE_2}}"
+          alt="{{CUSTOM_SECTION_HEADING}} detail"
+          loading="lazy"
+          style="
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            display: block;
+            border-radius: 8px;
+          "
+          srcset="
+            {{CUSTOM_SECTION_IMAGE_2}}  375w,
+            {{CUSTOM_SECTION_IMAGE_2}}  750w,
+            {{CUSTOM_SECTION_IMAGE_2}} 1100w
+          "
+          sizes="(max-width: 750px) 100vw, 800px"
+        />
+      </div>
+    </div>
+  </div>
+</div>

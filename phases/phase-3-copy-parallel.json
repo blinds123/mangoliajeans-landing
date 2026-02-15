@@ -1,0 +1,180 @@
+{
+  "phase": "3-copy-parallel",
+  "title": "PARALLEL Section Copy Generation",
+  "description": "Generate 25 HTML sections using 5 parallel subagents. 5x faster than sequential.",
+
+  "EXECUTION_MODE": "PARALLEL_SUBAGENTS",
+
+  "global_context": {
+    "MUST_READ_FIRST": [
+      "context/COPY-REQUIREMENTS.md",
+      "context/research-summary.md"
+    ],
+    "shared_variables": {
+      "SINGLE_PRICE": "19",
+      "ORDER_BUMP_PRICE": "10"
+    }
+  },
+
+  "subagents": [
+    {
+      "id": "copy-agent-A",
+      "name": "Header & Hero Agent",
+      "model": "haiku",
+      "sections": ["01", "02", "03", "04", "05"],
+      "pre_read": [
+        "context/research-summary.md",
+        "phases/copy-sections/section-03-hero.json"
+      ],
+      "output_files": [
+        "sections/01-announcement-bar.html",
+        "sections/02-header.html",
+        "sections/03-hero.html",
+        "sections/04-product-info-bar.html",
+        "sections/05-gallery.html"
+      ],
+      "estimated_time": "2-3 minutes"
+    },
+    {
+      "id": "copy-agent-B",
+      "name": "Pricing & Features Agent",
+      "model": "haiku",
+      "sections": ["06", "07", "08", "09", "10"],
+      "pre_read": [
+        "context/research-summary.md",
+        "phases/copy-sections/section-07-big-domino.json",
+        "phases/copy-sections/section-08-pricing.json",
+        "phases/copy-sections/section-09-features.json"
+      ],
+      "output_files": [
+        "sections/06-product-title.html",
+        "sections/07-big-domino.html",
+        "sections/08-pricing.html",
+        "sections/09-features.html",
+        "sections/10-add-to-cart.html"
+      ],
+      "estimated_time": "3-4 minutes",
+      "CRITICAL_SECTIONS": ["07-big-domino", "08-pricing"]
+    },
+    {
+      "id": "copy-agent-C",
+      "name": "Comparison & Secret 1 Agent",
+      "model": "haiku",
+      "sections": ["11", "12", "13", "14", "15"],
+      "pre_read": [
+        "context/research-summary.md",
+        "phases/copy-sections/section-11-comparison.json",
+        "phases/copy-sections/section-14-secret-1.json"
+      ],
+      "output_files": [
+        "sections/11-comparison.html",
+        "sections/12-press-logos.html",
+        "sections/13-testimonial-1.html",
+        "sections/14-secret-1-vehicle.html",
+        "sections/15-testimonial-2.html"
+      ],
+      "estimated_time": "2-3 minutes"
+    },
+    {
+      "id": "copy-agent-D",
+      "name": "Secrets 2 & 3 Agent",
+      "model": "haiku",
+      "sections": ["16", "17", "18", "19", "20"],
+      "pre_read": [
+        "context/research-summary.md",
+        "phases/copy-sections/section-16-secret-2.json",
+        "phases/copy-sections/section-18-founder-story.json",
+        "phases/copy-sections/section-20-secret-3.json"
+      ],
+      "output_files": [
+        "sections/16-secret-2-internal.html",
+        "sections/17-testimonial-3.html",
+        "sections/18-founder-story.html",
+        "sections/19-testimonial-4.html",
+        "sections/20-secret-3-external.html"
+      ],
+      "estimated_time": "3-4 minutes",
+      "CRITICAL_SECTIONS": ["18-founder-story"]
+    },
+    {
+      "id": "copy-agent-E",
+      "name": "FAQ & CTA Agent",
+      "model": "haiku",
+      "sections": ["21", "22", "23", "24", "25"],
+      "pre_read": [
+        "context/research-summary.md",
+        "phases/copy-sections/section-23-faq.json",
+        "phases/copy-sections/section-24-final-cta.json"
+      ],
+      "output_files": [
+        "sections/21-testimonial-5.html",
+        "sections/22-segment.html",
+        "sections/23-faq.html",
+        "sections/24-final-cta.html",
+        "sections/25-footer.html"
+      ],
+      "estimated_time": "2-3 minutes"
+    }
+  ],
+
+  "execution_order": {
+    "parallel_batch_1": [
+      "copy-agent-A",
+      "copy-agent-B",
+      "copy-agent-C",
+      "copy-agent-D",
+      "copy-agent-E"
+    ],
+    "wait_for_all": true,
+    "validation_after": "bash tests/validate-all-sections.sh"
+  },
+
+  "subagent_prompt_template": {
+    "system": "You are a specialized copywriting agent. Your ONLY job is to write HTML sections for a landing page.",
+    "pre_instructions": [
+      "1. READ context/research-summary.md FIRST - this contains the research you MUST reference",
+      "2. READ your assigned section JSON files for specific requirements",
+      "3. READ context/COPY-REQUIREMENTS.md for mandatory rules",
+      "4. Write ONLY your assigned sections",
+      "5. Use EXACT pain points and desires from research",
+      "6. Include required pattern interrupts per section",
+      "7. DO NOT write generic copy - every sentence must be product-specific"
+    ],
+    "anti_laziness": {
+      "banned_phrases": [
+        "amazing product",
+        "life-changing",
+        "incredible results",
+        "best ever",
+        "you won't believe",
+        "game changer"
+      ],
+      "require_pain_reference": true,
+      "require_desire_reference": true
+    }
+  },
+
+  "how_to_invoke": {
+    "claude_code": {
+      "command": "Use 5 parallel Task tool calls with subagent_type='general-purpose'",
+      "example": "For each subagent, spawn with Task tool in a SINGLE message containing all 5 Task calls"
+    },
+    "ralph": {
+      "command": "/ralph-go 5 --parallel --config phases/phase-3-copy-parallel.json",
+      "note": "Ralph will spawn 5 parallel agents automatically"
+    }
+  },
+
+  "benefits": {
+    "speed": "5x faster than sequential (all agents run simultaneously)",
+    "cost": "Haiku model = cheapest option",
+    "isolation": "Each agent only writes to its own files - no conflicts",
+    "quality": "Same validation runs after all complete"
+  },
+
+  "checkpoint": {
+    "type": "automatic",
+    "pass_condition": "All 25 sections created and pass bash tests/validate-all-sections.sh",
+    "fail_action": "Re-run failed subagent only"
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "_comment": "BRUNSON PROTOCOL JSON SCHEMAS - All output files must conform to these structures",
+  "_version": "1.1.0",
+  "_mapping_note": "These schemas define intermediate JSON outputs. The engage-fibs-writer skill translates these to product.config variables using this mapping: headlines.hook -> HEADLINE_HOOK, headlines.tagline -> TAGLINE, headlines.sub_headline -> HEADLINE_OPENING_COPY, features[n].hook -> FEATURE_HEADLINE_{n+1}, features[n].heading -> FEATURE_HEADING_{n+1}, secrets[n].title -> SECRET_HEADLINE_{n+1}",
+  "market_trends": {
+    "required_keys": [
+      "cultural_landscape",
+      "linguistic_markers",
+      "freshness_citations"
+    ],
+    "schema": {
+      "cultural_landscape": {
+        "type": "object",
+        "description": "The media, trends, and narratives shaping the market",
+        "required_fields": [
+          "trending_narratives",
+          "status_markers",
+          "media_diet"
+        ]
+      },
+      "linguistic_markers": {
+        "type": "object",
+        "description": "The vocabulary and jargon used by the target audience",
+        "required_fields": ["vocabulary", "tone_markers", "in_group_terms"]
+      },
+      "freshness_citations": {
+        "type": "array",
+        "description": "URLs and dates of research sources",
+        "min_items": 3
+      }
+    }
+  },
+  "competitor_funnels": {
+    "required_keys": [
+      "emotional_frequency_map",
+      "visual_analysis",
+      "weaknesses"
+    ],
+    "schema": {
+      "emotional_frequency_map": {
+        "type": "object",
+        "description": "Emotional triggers used by competitors",
+        "required_fields": [
+          "primary_emotion",
+          "secondary_emotions",
+          "frequency"
+        ]
+      },
+      "visual_analysis": {
+        "type": "object",
+        "description": "Design language analysis"
+      },
+      "weaknesses": {
+        "type": "array",
+        "description": "Exploitable gaps in competitor positioning",
+        "min_items": 3
+      }
+    }
+  },
+  "customer_profile": {
+    "required_keys": [
+      "day_in_the_life",
+      "emotional_climate_index",
+      "tension_points"
+    ],
+    "schema": {
+      "day_in_the_life": {
+        "type": "object",
+        "description": "Temporal map of customer's daily routine",
+        "required_fields": ["morning", "afternoon", "evening", "stress_moments"]
+      },
+      "emotional_climate_index": {
+        "type": "object",
+        "description": "Emotional state throughout the day"
+      },
+      "tension_points": {
+        "type": "array",
+        "description": "Moments of frustration or desire",
+        "min_items": 3
+      }
+    }
+  },
+  "avatar_profile": {
+    "required_keys": [
+      "secret_starvation",
+      "buyer_modality",
+      "visual_preferences"
+    ],
+    "schema": {
+      "secret_starvation": {
+        "type": "string",
+        "description": "What they secretly crave but won't admit"
+      },
+      "buyer_modality": {
+        "type": "string",
+        "enum": ["logical", "spontaneous", "humanistic", "methodical"],
+        "description": "How they make purchase decisions"
+      },
+      "visual_preferences": {
+        "type": "object",
+        "required_fields": ["aesthetic", "colors", "settings", "textures"]
+      }
+    }
+  },
+  "mechanism_report": {
+    "required_keys": [
+      "technical_specs",
+      "benefit_physics",
+      "material_analysis"
+    ],
+    "schema": {
+      "technical_specs": {
+        "type": "object",
+        "description": "Objective product specifications"
+      },
+      "benefit_physics": {
+        "type": "object",
+        "description": "How technical specs translate to benefits"
+      },
+      "material_analysis": {
+        "type": "object",
+        "description": "Material properties and quality indicators"
+      }
+    }
+  },
+  "strategy_brief": {
+    "required_keys": [
+      "dominant_emotion",
+      "ultimate_craving",
+      "psychological_bridge",
+      "offer_stack"
+    ],
+    "schema": {
+      "dominant_emotion": {
+        "type": "string",
+        "description": "The primary emotion driving the market"
+      },
+      "ultimate_craving": {
+        "type": "string",
+        "description": "The secret desire to fulfill"
+      },
+      "psychological_bridge": {
+        "type": "string",
+        "description": "How product connects emotion to craving"
+      },
+      "offer_stack": {
+        "type": "object",
+        "description": "Complete offer architecture",
+        "required_fields": [
+          "core_offer",
+          "bonuses",
+          "price_anchor",
+          "urgency_trigger",
+          "risk_reversal"
+        ]
+      }
+    }
+  },
+  "neuro_triggers": {
+    "required_keys": ["dopamine", "serotonin", "oxytocin", "cortisol"],
+    "schema": {
+      "dopamine": {
+        "type": "object",
+        "description": "Reward and anticipation triggers",
+        "required_fields": ["visual_triggers", "word_triggers", "scenarios"]
+      },
+      "serotonin": {
+        "type": "object",
+        "description": "Status and belonging triggers"
+      },
+      "oxytocin": {
+        "type": "object",
+        "description": "Trust and connection triggers"
+      },
+      "cortisol": {
+        "type": "object",
+        "description": "Fear and urgency triggers (use sparingly)"
+      }
+    }
+  },
+  "linguistic_seed_map": {
+    "required_keys": [
+      "identity_seed",
+      "transformation_seed",
+      "relief_seed",
+      "planting_strategy"
+    ],
+    "schema": {
+      "identity_seed": {
+        "type": "string",
+        "description": "Core identity phrase (e.g., 'Archive Curator')"
+      },
+      "transformation_seed": {
+        "type": "string",
+        "description": "Transformation phrase (e.g., 'From Tourist to Connoisseur')"
+      },
+      "relief_seed": {
+        "type": "string",
+        "description": "Pain relief phrase (e.g., 'Finally Available')"
+      },
+      "planting_strategy": {
+        "type": "object",
+        "description": "Where each seed appears in copy"
+      }
+    }
+  },
+  "copy_draft": {
+    "required_keys": [
+      "headlines",
+      "features",
+      "secrets",
+      "founder_story",
+      "tiktok_bubbles"
+    ],
+    "schema": {
+      "headlines": {
+        "type": "object",
+        "required_fields": ["hook", "tagline", "sub_headline"]
+      },
+      "features": {
+        "type": "array",
+        "min_items": 3,
+        "item_fields": ["hook", "heading", "copy"]
+      },
+      "secrets": {
+        "type": "array",
+        "min_items": 3,
+        "item_fields": ["title", "truth"]
+      },
+      "founder_story": {
+        "type": "object",
+        "min_word_count": 150
+      },
+      "tiktok_bubbles": {
+        "type": "object",
+        "min_keys": 6,
+        "pattern": "BUBBLE_Q*_*, BUBBLE_A*_*"
+      }
+    }
+  },
+  "visual_storyboard": {
+    "required_keys": ["scenes", "hero_image", "neuro_targets"],
+    "schema": {
+      "scenes": {
+        "type": "array",
+        "min_items": 5
+      },
+      "hero_image": {
+        "type": "object",
+        "description": "Primary above-fold image specification"
+      },
+      "neuro_targets": {
+        "type": "object",
+        "description": "Which neurochemical each scene targets"
+      }
+    }
+  }
+}

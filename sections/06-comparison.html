@@ -1,0 +1,88 @@
+<!-- ============================================
+     SECTION: COMPARISON
+     VARIABLES: {{COMPARISON_ALT_TEXT}}, {{COMPARISON_HEADLINE}}, {{COMPARISON_IMAGE}}, {{COMPARISON_PARAGRAPH}}
+     IMAGES: images/comparison/comparison-01.webp
+     FRAMEWORK: V-I-E
+     ============================================ -->
+<div
+  id="shopify-section-template--17453745111139__comparison_single_image"
+  class="shopify-section"
+>
+  <style data-shopify>
+    .section-template--17453745111139__comparison_single_image-padding {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    @media screen and (min-width: 750px) {
+      .section-template--17453745111139__comparison_single_image-padding {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+    }
+
+    .comparison-single-image__container {
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    .comparison-single-image__container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+  </style>
+  <!--
+    FRAMEWORK: THE BRIDGE (Logic & Philosophy)
+    - GOAL: Define "The Old Way" (Pain) vs "The New Way" (Pleasure).
+    - HEADLINE: Comparison headline from product.config
+    - VISUAL: Single combined before/after image showing the clear difference.
+    - IMAGE: images/comparison/comparison-01.webp (combined before/after graphic)
+  -->
+  <div
+    class="color-scheme-template--17453745111139__comparison_single_image color-background-1 gradient content-for-grouping animate-section animate--hidden"
+  >
+    <div
+      class="page-width section-template--17453745111139__comparison_single_image-padding"
+    >
+      <div
+        class="content-and-comparison-slider section-group__container__child-grid content-and-comparison-slider--slider-first"
+      >
+        <div
+          class="content-container content-rte center animate-item animate-item--child index-0 desktop-index-1"
+        >
+          <div
+            class="content-container content-rte center animate-item animate-item--child index-0 desktop-index-1"
+          >
+            <h2
+              class="h2 title-with-highlight"
+              style="--highlight-color: #000000"
+            >
+              {{COMPARISON_HEADLINE}}
+            </h2>
+            <div class="rte">
+              <p>{{COMPARISON_PARAGRAPH}}</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="comparison-single-image__container animate-item animate-item--child index-1 desktop-index-0"
+        >
+          <img
+            src="{{COMPARISON_IMAGE}}"
+            alt="{{COMPARISON_ALT_TEXT}}"
+            loading="lazy"
+            width="1100"
+            height="auto"
+            class="global-media-settings"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

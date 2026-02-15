@@ -1,0 +1,87 @@
+{
+  "section": "18-founder-story",
+  "file": "sections/18-founder-story.html",
+  "CRITICAL": true,
+
+  "MANDATORY_READS": [
+    "context/COPY-REQUIREMENTS.md",
+    "context/research-summary.md - READ EPIPHANY BRIDGE SECTION"
+  ],
+
+  "requirements": {
+    "frameworks": ["Epiphany Bridge"],
+    "pattern_interrupts_min": 4
+  },
+
+  "images": {
+    "founder": "{{FOUNDER_IMAGE}}",
+    "source": "images/founder/",
+    "NOTE": "Founder image ONLY used here"
+  },
+
+  "epiphany_bridge_structure": {
+    "1_BACKSTORY": {
+      "description": "Founder had the SAME frustrations shopping for pieces that never felt right",
+      "source": "research-summary.md → Epiphany Bridge → Backstory",
+      "purpose": "Create instant relatability - she's been there too",
+      "framing": "WOMEN'S FASHION - her closet full of pieces she never wore"
+    },
+    "2_STRUGGLE": {
+      "description": "All the pieces that looked good online but disappointed in person",
+      "source": "research-summary.md → Epiphany Bridge → Struggle",
+      "purpose": "Show deep understanding of the shopping frustration",
+      "framing": "WOMEN'S FASHION - wrong fit, cheap quality, not flattering"
+    },
+    "3_EPIPHANY": {
+      "description": "The moment she realized what was ACTUALLY missing",
+      "source": "research-summary.md → Epiphany Bridge → Epiphany",
+      "purpose": "The emotional turning point",
+      "framing": "WOMEN'S FASHION - it wasn't about trends, it was about how it made her FEEL"
+    },
+    "4_SOLUTION": {
+      "description": "How she created a piece designed for how women actually want to feel",
+      "source": "research-summary.md → Epiphany Bridge → Solution",
+      "purpose": "Product origin story with emotional foundation",
+      "framing": "WOMEN'S FASHION - designed for confidence, not just looks"
+    },
+    "5_RESULT": {
+      "description": "The transformation - finally having a piece she reaches for again and again",
+      "source": "research-summary.md → Epiphany Bridge → Result",
+      "purpose": "Proof that it's possible for her too",
+      "framing": "WOMEN'S FASHION - compliments, confidence, feeling like herself"
+    }
+  },
+
+  "content_flow": [
+    "1. Open with pattern interrupt - her shopping frustration is REAL",
+    "2. Tell the founder's relatable story - we've all been there",
+    "3. The failed attempts that led to giving up",
+    "4. The aha moment - what was actually missing",
+    "5. How this product was born from that realization",
+    "6. The result - finally finding 'the one'",
+    "7. Bridge to reader: 'You can feel this way too'"
+  ],
+
+  "tone_guidance": {
+    "write_like": "A woman sharing her genuine discovery with a friend",
+    "avoid": [
+      "corporate origin story",
+      "tech jargon",
+      "masculine achievement framing"
+    ],
+    "use": ["relatability", "warmth", "shared frustration", "genuine discovery"]
+  },
+
+  "anti_laziness_check": [
+    "Does this have ALL 5 Epiphany Bridge elements?",
+    "Is the founder's story GENUINELY relatable to the customer?",
+    "Does it focus on FEELINGS, not product features?",
+    "Is the bridge to reader warm and inviting?"
+  ],
+
+  "validation": [
+    "bash tests/validate-section.sh sections/18-founder-story.html",
+    "bash tests/validate-engage.sh sections/18-founder-story.html 4",
+    "bash tests/validate-epiphany-bridge.sh"
+  ]
+}

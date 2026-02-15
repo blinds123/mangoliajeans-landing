@@ -1,0 +1,76 @@
+{
+  "section": "08-pricing",
+  "file": "sections/08-pricing.html",
+  "CRITICAL": true,
+
+  "MANDATORY_READS": ["context/COPY-REQUIREMENTS.md"],
+
+  "HARDCODED_VALUES": {
+    "SINGLE_PRICE": "19",
+    "ORDER_BUMP_PRICE": "10",
+    "ORDER_BUMP_PRECHECKED": "true",
+    "WARNING": "DO NOT CHANGE THESE VALUES"
+  },
+
+  "images": {
+    "order_bump": "{{ORDER_BUMP_IMAGE}}",
+    "source": "images/order-bump/",
+    "NOTE": "Order bump image ONLY used here"
+  },
+
+  "elements": [
+    "Main price: ${{SINGLE_PRICE}}",
+    "Compare price (crossed out): ${{COMPARE_PRICE}}",
+    "Order bump checkbox with checked=\"checked\"",
+    "Order bump product image",
+    "Order bump description (emotional, not feature-based)",
+    "Add to Cart button",
+    "Guarantee badge",
+    "Trust indicators (secure checkout, easy returns)"
+  ],
+
+  "pricing_framing": {
+    "WRONG": "Save $20! Limited time offer!",
+    "RIGHT": "Less than a lunch out for a piece you'll love",
+    "focus": "Value in how she'll FEEL, not discounts"
+  },
+
+  "order_bump_framing": {
+    "WRONG": "Add matching accessory - Premium materials!",
+    "RIGHT": "Complete the look - the perfect finishing touch",
+    "copy_style": "A natural 'oh, I should grab that too' feeling"
+  },
+
+  "order_bump_checkbox": {
+    "CRITICAL": "MUST include checked=\"checked\" attribute",
+    "html_example": "<input type=\"checkbox\" checked=\"checked\" id=\"order-bump\">",
+    "reason": "Pre-checked increases conversion 40%+"
+  },
+
+  "tone_guidance": {
+    "write_like": "Making a confident, easy decision for herself",
+    "avoid": [
+      "pressure",
+      "fake scarcity",
+      "aggressive discounts",
+      "countdown timers"
+    ],
+    "use": [
+      "treat yourself",
+      "you deserve this",
+      "investment in feeling amazing"
+    ]
+  },
+
+  "anti_laziness_check": [
+    "Is the pricing framed around VALUE, not discounts?",
+    "Does the order bump feel like a natural addition?",
+    "Is the checkbox pre-checked?",
+    "Would she feel good about this purchase, not pressured?"
+  ],
+
+  "validation": [
+    "bash tests/validate-section.sh sections/08-pricing.html",
+    "bash tests/validate-order-bump.sh"
+  ]
+}

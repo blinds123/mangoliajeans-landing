@@ -1,0 +1,42 @@
+<!-- ============================================
+     SECTION: BRIDGE HEADLINE
+     VARIABLES: {{BRIDGE_HEADLINE}}, {{BRIDGE_SUBHEADLINE}}
+     IMAGES: NONE
+     FRAMEWORK: BRIDGE
+     ============================================ -->
+<div id="shopify-section-template--bridge-headline" class="shopify-section section">
+    <style data-shopify>
+        .section-bridge-headline-padding {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        @media screen and (min-width: 750px) {
+            .section-bridge-headline-padding {
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+        }
+    </style>
+
+    <!-- 
+    FRAMEWORK: THE BRIDGE HEADLINE (Attention Reset)
+    - GOAL: Break the scrolling pattern between Comparison (Logic) and Features (Details).
+    - COPY STRATEGY (Perry Belcher): 
+      - Use a "Categorical Claim" or "New Category" declaration.
+      - Example: "The First Jacket Engineer For The Subway."
+      - NOT: "Here are our features."
+    - VISUAL: Clean, centered, high-contrast typography. No images to distract.
+  -->
+
+    <div class="page-width section-bridge-headline-padding center">
+        <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
+            <h2 class="title h1 title-with-highlight" style="--highlight-color: #6d388b">
+                {{BRIDGE_HEADLINE}}
+            </h2>
+        </div>
+        <div class="rte body">
+            <p>{{BRIDGE_SUBHEADLINE}}</p>
+        </div>
+    </div>
+</div>

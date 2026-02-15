@@ -1,0 +1,189 @@
+{
+  "phase": "5-test-complete",
+  "title": "Browser Testing & Completion",
+  "description": "Comprehensive browser tests using Chrome DevTools MCP. All tests in mobile viewport 375x667.",
+
+  "EXECUTION_METHOD": {
+    "tool": "Chrome DevTools MCP",
+    "mcp_prefix": "mcp__chrome-devtools__",
+    "alternative": "mcp__claude-in-chrome__",
+    "note": "Claude MUST use MCP browser tools, NOT bash scripts"
+  },
+
+  "global_rules": {
+    "viewport": {
+      "width": 375,
+      "height": 667,
+      "device": "iPhone SE"
+    },
+    "screenshot_on_fail": true,
+    "max_retries": 3
+  },
+
+  "setup": {
+    "step_1": "Use mcp__chrome-devtools__new_page to open the LIVE_URL",
+    "step_2": "Use mcp__chrome-devtools__resize_page to set 375x667",
+    "step_3": "Use mcp__chrome-devtools__take_screenshot to verify initial state"
+  },
+
+  "tasks": [
+    {
+      "id": "5.1",
+      "title": "Test: Page loads without errors",
+      "mcp_tools": [
+        "mcp__chrome-devtools__navigate_page url={{LIVE_URL}}",
+        "mcp__chrome-devtools__resize_page width=375 height=667",
+        "mcp__chrome-devtools__take_screenshot"
+      ],
+      "pass_criteria": [
+        "Page loads < 5s",
+        "Hero section visible",
+        "No white screen"
+      ]
+    },
+    {
+      "id": "5.2",
+      "title": "Test: All images load (zero 404s)",
+      "mcp_tools": [
+        "mcp__chrome-devtools__list_network_requests resourceTypes=[\"image\"]",
+        "Check for any status !== 200"
+      ],
+      "pass_criteria": [
+        "Zero 404 errors",
+        "All images load",
+        "All images are .webp"
+      ]
+    },
+    {
+      "id": "5.3",
+      "title": "Test: Zero console errors",
+      "mcp_tools": [
+        "mcp__chrome-devtools__list_console_messages types=[\"error\"]"
+      ],
+      "pass_criteria": ["Zero JavaScript errors", "Zero exceptions"]
+    },
+    {
+      "id": "5.4",
+      "title": "Test: Mobile responsive",
+      "mcp_tools": [
+        "mcp__chrome-devtools__take_snapshot",
+        "Check for horizontal overflow elements",
+        "Check font sizes >= 14px",
+        "Check button sizes >= 44px"
+      ],
+      "pass_criteria": [
+        "No horizontal scroll",
+        "Text readable",
+        "Touch targets adequate"
+      ]
+    },
+    {
+      "id": "5.5",
+      "title": "Test: Add to Cart functional",
+      "mcp_tools": [
+        "mcp__chrome-devtools__take_snapshot",
+        "Find button with text 'Add to Cart'",
+        "mcp__chrome-devtools__click uid=<button_uid>",
+        "mcp__chrome-devtools__take_screenshot",
+        "Verify cart drawer/modal appears"
+      ],
+      "pass_criteria": ["Cart action triggers", "Modal/drawer opens"]
+    },
+    {
+      "id": "5.6",
+      "title": "Test: Order bump is pre-checked",
+      "mcp_tools": [
+        "mcp__chrome-devtools__take_snapshot",
+        "Find checkbox input in order bump section",
+        "Verify checked attribute is true"
+      ],
+      "pass_criteria": ["Order bump checkbox is checked by default"]
+    },
+    {
+      "id": "5.7",
+      "title": "Test: FAQ accordion works",
+      "mcp_tools": [
+        "mcp__chrome-devtools__take_snapshot",
+        "Find FAQ question elements",
+        "mcp__chrome-devtools__click uid=<first_faq_uid>",
+        "Verify answer expands",
+        "mcp__chrome-devtools__click uid=<first_faq_uid>",
+        "Verify answer collapses"
+      ],
+      "pass_criteria": ["All 6 FAQs expand/collapse correctly"]
+    },
+    {
+      "id": "5.8",
+      "title": "Test: Comparison section at 40% scroll",
+      "mcp_tools": [
+        "Calculate 40% scroll position",
+        "mcp__chrome-devtools__evaluate_script function='() => window.scrollTo(0, document.body.scrollHeight * 0.4)'",
+        "mcp__chrome-devtools__take_snapshot",
+        "Verify comparison section is visible"
+      ],
+      "pass_criteria": ["Comparison section visible at 40% scroll"]
+    },
+    {
+      "id": "5.9",
+      "title": "Test: TikTok comments visible in hero",
+      "mcp_tools": [
+        "mcp__chrome-devtools__evaluate_script function='() => window.scrollTo(0, 0)'",
+        "mcp__chrome-devtools__take_snapshot",
+        "Find elements with tiktok-comment class or similar",
+        "Verify 3-5 comment overlays exist"
+      ],
+      "pass_criteria": ["3-5 TikTok comments visible in hero"]
+    },
+    {
+      "id": "5.10",
+      "title": "Test: Core Web Vitals",
+      "mcp_tools": [
+        "mcp__chrome-devtools__performance_start_trace reload=true autoStop=true",
+        "Wait for trace to complete",
+        "mcp__chrome-devtools__performance_stop_trace",
+        "Extract LCP, CLS, FID metrics"
+      ],
+      "pass_criteria": {
+        "LCP": "< 2.5s",
+        "CLS": "< 0.1",
+        "FID": "< 100ms"
+      }
+    },
+    {
+      "id": "5.11",
+      "title": "Test: SimpleSwap checkout function",
+      "mcp_tools": [
+        "mcp__chrome-devtools__navigate_page url={{LIVE_URL}}/.netlify/functions/buy-now",
+        "Verify page returns JSON, not 404",
+        "Check for valid response structure"
+      ],
+      "pass_criteria": ["Function returns 200", "Valid JSON response"]
+    },
+    {
+      "id": "5.12",
+      "title": "Self-heal: Fix any failures",
+      "conditional": true,
+      "condition": "Any test 5.1-5.11 failed",
+      "actions": [
+        "Read failure messages",
+        "Run: bash tests/auto-fix.sh",
+        "Re-deploy: bash scripts/safe-deploy.sh",
+        "Re-run failed tests",
+        "Repeat until all pass (max 3 iterations)"
+      ]
+    },
+    {
+      "id": "5.13",
+      "title": "Generate completion report",
+      "output_format": "completion-report",
+      "template": "================================================================================\n✅ BRUNSON PROTOCOL DEPLOYMENT COMPLETE\n================================================================================\n\n🌐 Live URL: {{LIVE_URL}}\n📦 GitHub: {{GITHUB_URL}}\n\n📊 Performance:\n  - LCP: {{LCP}}s\n  - CLS: {{CLS}}\n  - FID: {{FID}}ms\n\n✅ Tests: {{PASSED_COUNT}}/11 Passed\n\n📁 Generated:\n  - research-summary.md (filled)\n  - product.config (filled)\n  - 25 HTML sections\n  - index.html (optimized)\n  - 42 WebP images\n\n🛒 Checkout: SimpleSwap crypto payments active\n📱 Mobile: Optimized for 375x667\n\n================================================================================"
+    }
+  ],
+
+  "checkpoint": {
+    "type": "human",
+    "question": "All tests passed. Ready to hand off?",
+    "pass_action": "Complete workflow and output report",
+    "fail_action": "Continue fixing issues"
+  }
+}

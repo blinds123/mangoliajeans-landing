@@ -1,0 +1,451 @@
+{
+  "_description": "Deterministic image mapping for YES-Clean-Jarvis-Template. Generated images are sorted into fixed slots; awards/logo/size-chart are static assets.",
+  "_version": "3.0",
+  "_template": "YES-Clean-Jarvis-Template",
+  "_generated_images": 33,
+  "_static_assets": {
+    "awards": 5,
+    "logo": 1,
+    "size_chart": 1
+  },
+  "image_categories": {
+    "product": {
+      "description": "6 product images for hero carousel",
+      "count": 6,
+      "folder": "images/product/",
+      "generated": true
+    },
+    "testimonials": {
+      "description": "25 testimonial images used across features, secrets, testimonials, and supporting sections",
+      "count": 25,
+      "folder": "images/testimonials/",
+      "generated": true
+    },
+    "comparison": {
+      "description": "1 combined comparison image (before/after in a single frame)",
+      "count": 1,
+      "folder": "images/comparison/",
+      "generated": true
+    },
+    "order_bump": {
+      "description": "1 order bump image",
+      "count": 1,
+      "folder": "images/order-bump/",
+      "generated": true
+    },
+    "founder": {
+      "description": "1 founder image (static asset; currently duplicates awards-1)",
+      "count": 1,
+      "folder": "images/founder/",
+      "generated": false
+    },
+    "awards": {
+      "description": "5 awards/trust badges (static, universal)",
+      "count": 5,
+      "folder": "images/awards/",
+      "generated": false
+    },
+    "universal": {
+      "description": "Logo + size chart (static, universal)",
+      "count": 2,
+      "folder": "images/universal/",
+      "generated": false
+    }
+  },
+  "sections": {
+    "product": {
+      "description": "Hero carousel images",
+      "folder": "images/product/",
+      "slots": [
+        {
+          "slot_id": "product-01",
+          "filename": "product-01.webp",
+          "required": true,
+          "position": "hero_1"
+        },
+        {
+          "slot_id": "product-02",
+          "filename": "product-02.webp",
+          "required": true,
+          "position": "hero_2"
+        },
+        {
+          "slot_id": "product-03",
+          "filename": "product-03.webp",
+          "required": true,
+          "position": "hero_3"
+        },
+        {
+          "slot_id": "product-04",
+          "filename": "product-04.webp",
+          "required": true,
+          "position": "hero_4"
+        },
+        {
+          "slot_id": "product-05",
+          "filename": "product-05.webp",
+          "required": true,
+          "position": "hero_5"
+        },
+        {
+          "slot_id": "product-06",
+          "filename": "product-06.webp",
+          "required": true,
+          "position": "hero_6"
+        }
+      ]
+    },
+    "testimonials": {
+      "description": "Testimonial pool images",
+      "folder": "images/testimonials/",
+      "slots": [
+        {
+          "slot_id": "testimonial-01",
+          "filename": "testimonial-01.webp",
+          "required": true
+        },
+        {
+          "slot_id": "testimonial-02",
+          "filename": "testimonial-02.webp",
+          "required": true
+        },
+        {
+          "slot_id": "testimonial-03",
+          "filename": "testimonial-03.webp",
+          "required": true
+        },
+        {
+          "slot_id": "testimonial-04",
+          "filename": "testimonial-04.webp",
+          "required": true
+        },
+        {
+          "slot_id": "testimonial-05",
+          "filename": "testimonial-05.webp",
+          "required": true
+        },
+        {
+          "slot_id": "testimonial-06",
+          "filename": "testimonial-06.webp",
+          "required": true
+        },
+        {
+          "slot_id": "testimonial-07",
+          "filename": "testimonial-07.webp",
+          "required": true
+        },
+        {
+          "slot_id": "testimonial-08",
+          "filename": "testimonial-08.webp",
+          "required": true
+        },
+        {
+          "slot_id": "testimonial-09",
+          "filename": "testimonial-09.webp",
+          "required": true
+        },
+        {
+          "slot_id": "testimonial-10",
+          "filename": "testimonial-10.webp",
+          "required": true
+        },
+        {
+          "slot_id": "testimonial-11",
+          "filename": "testimonial-11.webp",
+          "required": true
+        },
+        {
+          "slot_id": "testimonial-12",
+          "filename": "testimonial-12.webp",
+          "required": true
+        },
+        {
+          "slot_id": "testimonial-13",
+          "filename": "testimonial-13.webp",
+          "required": true
+        },
+        {
+          "slot_id": "testimonial-14",
+          "filename": "testimonial-14.webp",
+          "required": true
+        },
+        {
+          "slot_id": "testimonial-15",
+          "filename": "testimonial-15.webp",
+          "required": true
+        },
+        {
+          "slot_id": "testimonial-16",
+          "filename": "testimonial-16.webp",
+          "required": true
+        },
+        {
+          "slot_id": "testimonial-17",
+          "filename": "testimonial-17.webp",
+          "required": true
+        },
+        {
+          "slot_id": "testimonial-18",
+          "filename": "testimonial-18.webp",
+          "required": true
+        },
+        {
+          "slot_id": "testimonial-19",
+          "filename": "testimonial-19.webp",
+          "required": true
+        },
+        {
+          "slot_id": "testimonial-20",
+          "filename": "testimonial-20.webp",
+          "required": true
+        },
+        {
+          "slot_id": "testimonial-21",
+          "filename": "testimonial-21.webp",
+          "required": true
+        },
+        {
+          "slot_id": "testimonial-22",
+          "filename": "testimonial-22.webp",
+          "required": true
+        },
+        {
+          "slot_id": "testimonial-23",
+          "filename": "testimonial-23.webp",
+          "required": true
+        },
+        {
+          "slot_id": "testimonial-24",
+          "filename": "testimonial-24.webp",
+          "required": true
+        },
+        {
+          "slot_id": "testimonial-25",
+          "filename": "testimonial-25.webp",
+          "required": true
+        }
+      ]
+    },
+    "comparison": {
+      "description": "Combined comparison image",
+      "folder": "images/comparison/",
+      "slots": [
+        {
+          "slot_id": "comparison-01",
+          "filename": "comparison-01.webp",
+          "required": true
+        }
+      ]
+    },
+    "order-bump": {
+      "description": "Order bump image",
+      "folder": "images/order-bump/",
+      "slots": [
+        {
+          "slot_id": "order-bump-01",
+          "filename": "order-bump-01.webp",
+          "required": true
+        }
+      ]
+    },
+    "founder": {
+      "description": "Founder image",
+      "folder": "images/founder/",
+      "slots": [
+        {
+          "slot_id": "founder-01",
+          "filename": "founder-01.webp",
+          "required": false,
+          "note": "Static asset; currently duplicates awards-1"
+        }
+      ]
+    },
+    "awards": {
+      "description": "Awards/trust badges (static)",
+      "folder": "images/awards/",
+      "slots": [
+        {
+          "slot_id": "awards-01",
+          "filename": "awards-1.webp",
+          "required": false
+        },
+        {
+          "slot_id": "awards-02",
+          "filename": "awards-2.webp",
+          "required": false
+        },
+        {
+          "slot_id": "awards-03",
+          "filename": "awards-3.webp",
+          "required": false
+        },
+        {
+          "slot_id": "awards-04",
+          "filename": "awards-4.webp",
+          "required": false
+        },
+        {
+          "slot_id": "awards-05",
+          "filename": "awards-5.webp",
+          "required": false
+        }
+      ]
+    },
+    "universal": {
+      "description": "Universal assets (static)",
+      "folder": "images/universal/",
+      "slots": [
+        {
+          "slot_id": "logo",
+          "filename": "logo.webp",
+          "required": false
+        },
+        {
+          "slot_id": "size-chart-hero",
+          "filename": "size-chart-hero.webp",
+          "required": false
+        }
+      ]
+    }
+  },
+  "placeholder_map": {
+    "PRODUCT_IMAGE_1": "images/product/product-01.webp",
+    "PRODUCT_IMAGE_2": "images/product/product-02.webp",
+    "PRODUCT_IMAGE_3": "images/product/product-03.webp",
+    "PRODUCT_IMAGE_4": "images/product/product-04.webp",
+    "PRODUCT_IMAGE_5": "images/product/product-05.webp",
+    "PRODUCT_IMAGE_6": "images/product/product-06.webp",
+    "PRODUCT_IMAGE_6_CTA": "images/product/product-06.webp",
+    "FEATURE_IMAGE_1": "images/testimonials/testimonial-01.webp",
+    "FEATURE_IMAGE_2": "images/testimonials/testimonial-02.webp",
+    "FEATURE_IMAGE_3": "images/testimonials/testimonial-03.webp",
+    "SECRET_IMAGE_1": "images/testimonials/testimonial-04.webp",
+    "SECRET_IMAGE_2": "images/testimonials/testimonial-05.webp",
+    "SECRET_IMAGE_3": "images/testimonials/testimonial-06.webp",
+    "TESTIMONIAL_1_IMAGE": "images/testimonials/testimonial-07.webp",
+    "TESTIMONIAL_2_IMAGE": "images/testimonials/testimonial-08.webp",
+    "TESTIMONIAL_3_IMAGE": "images/testimonials/testimonial-09.webp",
+    "TESTIMONIAL_4_IMAGE": "images/testimonials/testimonial-10.webp",
+    "TESTIMONIAL_5_IMAGE": "images/testimonials/testimonial-11.webp",
+    "TESTIMONIAL_6_IMAGE": "images/testimonials/testimonial-12.webp",
+    "TESTIMONIAL_7_IMAGE": "images/testimonials/testimonial-13.webp",
+    "TESTIMONIAL_8_IMAGE": "images/testimonials/testimonial-14.webp",
+    "TESTIMONIAL_9_IMAGE": "images/testimonials/testimonial-15.webp",
+    "TESTIMONIAL_10_IMAGE": "images/testimonials/testimonial-16.webp",
+    "TESTIMONIAL_11_IMAGE": "images/testimonials/testimonial-17.webp",
+    "TESTIMONIAL_12_IMAGE": "images/testimonials/testimonial-18.webp",
+    "CUSTOM_SECTION_IMAGE_1": "images/testimonials/testimonial-19.webp",
+    "CUSTOM_SECTION_IMAGE_2": "images/testimonials/testimonial-20.webp",
+    "SLIDESHOW_IMAGE_1": "images/testimonials/testimonial-21.webp",
+    "SLIDESHOW_IMAGE_2": "images/testimonials/testimonial-22.webp",
+    "MULTIROW_2_IMAGE": "images/testimonials/testimonial-23.webp",
+    "COMPARISON_IMAGE": "images/comparison/comparison-01.webp",
+    "ORDER_BUMP_IMAGE": "images/order-bump/order-bump-01.webp",
+    "FOUNDER_IMAGE": "images/founder/founder-01.webp",
+    "AWARD_IMAGE_1": "images/awards/awards-1.webp",
+    "AWARD_IMAGE_2": "images/awards/awards-2.webp",
+    "AWARD_IMAGE_3": "images/awards/awards-3.webp",
+    "AWARD_IMAGE_4": "images/awards/awards-4.webp",
+    "AWARD_IMAGE_5": "images/awards/awards-5.webp",
+    "LOGO_URL": "images/universal/logo.webp",
+    "FAVICON_IMAGE": "images/universal/logo.webp",
+    "OG_IMAGE_URL": "images/product/product-01.webp",
+    "SIZE_CHART_IMAGE": "images/universal/size-chart-hero.webp",
+    "CTA_BANNER_IMAGE": "images/testimonials/testimonial-24.webp",
+    "FAQ_IMAGE": "images/testimonials/testimonial-25.webp"
+  },
+  "prompt_order": {
+    "description": "Whisk prompt order for consistent style",
+    "order": [
+      "product-01",
+      "product-02",
+      "product-03",
+      "product-04",
+      "product-05",
+      "product-06",
+      "testimonial-01",
+      "testimonial-02",
+      "testimonial-03",
+      "testimonial-04",
+      "testimonial-05",
+      "testimonial-06",
+      "testimonial-07",
+      "testimonial-08",
+      "testimonial-09",
+      "testimonial-10",
+      "testimonial-11",
+      "testimonial-12",
+      "testimonial-13",
+      "testimonial-14",
+      "testimonial-15",
+      "testimonial-16",
+      "testimonial-17",
+      "testimonial-18",
+      "testimonial-19",
+      "testimonial-20",
+      "testimonial-21",
+      "testimonial-22",
+      "testimonial-23",
+      "testimonial-24",
+      "testimonial-25",
+      "comparison-01",
+      "order-bump-01"
+    ],
+    "notes": [
+      "Founder image is static (founder-01.webp). If none, duplicate awards-1.webp.",
+      "Awards and universal assets are static and not part of Whisk generation."
+    ]
+  },
+  "naming_convention": {
+    "description": "How to name source images so the sorter can place them",
+    "rule": "Prefix filenames with the slot_id (e.g., product-01, testimonial-07, order-bump-01). Extra descriptors after the slot_id are allowed.",
+    "examples": [
+      "product-01-hero.webp",
+      "product-02-side.webp",
+      "testimonial-07-jane.webp",
+      "comparison-01-before-after.webp",
+      "order-bump-01-bonus.webp",
+      "founder-01-portrait.webp"
+    ]
+  },
+  "hardcoded_requirements": {
+    "description": "These generated images must exist before build",
+    "required_images": [
+      "images/product/product-01.webp",
+      "images/product/product-02.webp",
+      "images/product/product-03.webp",
+      "images/product/product-04.webp",
+      "images/product/product-05.webp",
+      "images/product/product-06.webp",
+      "images/testimonials/testimonial-01.webp",
+      "images/testimonials/testimonial-02.webp",
+      "images/testimonials/testimonial-03.webp",
+      "images/testimonials/testimonial-04.webp",
+      "images/testimonials/testimonial-05.webp",
+      "images/testimonials/testimonial-06.webp",
+      "images/testimonials/testimonial-07.webp",
+      "images/testimonials/testimonial-08.webp",
+      "images/testimonials/testimonial-09.webp",
+      "images/testimonials/testimonial-10.webp",
+      "images/testimonials/testimonial-11.webp",
+      "images/testimonials/testimonial-12.webp",
+      "images/testimonials/testimonial-13.webp",
+      "images/testimonials/testimonial-14.webp",
+      "images/testimonials/testimonial-15.webp",
+      "images/testimonials/testimonial-16.webp",
+      "images/testimonials/testimonial-17.webp",
+      "images/testimonials/testimonial-18.webp",
+      "images/testimonials/testimonial-19.webp",
+      "images/testimonials/testimonial-20.webp",
+      "images/testimonials/testimonial-21.webp",
+      "images/testimonials/testimonial-22.webp",
+      "images/testimonials/testimonial-23.webp",
+      "images/testimonials/testimonial-24.webp",
+      "images/testimonials/testimonial-25.webp",
+      "images/comparison/comparison-01.webp",
+      "images/order-bump/order-bump-01.webp",
+      "images/founder/founder-01.webp"
+    ]
+  },
+  "_total_required": 34
+}

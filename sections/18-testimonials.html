@@ -1,0 +1,1065 @@
+<!-- ============================================
+     SECTION: TESTIMONIALS
+     VARIABLES: {{TESTIMONIAL_1_AUTHOR}}, {{TESTIMONIAL_1_IMAGE}}, {{TESTIMONIAL_1_LOCATION}}, {{TESTIMONIAL_1_QUOTE}}, {{TESTIMONIAL_1_TITLE}}, {{TESTIMONIAL_2_AUTHOR}}, {{TESTIMONIAL_2_IMAGE}}, {{TESTIMONIAL_2_LOCATION}}, {{TESTIMONIAL_2_QUOTE}}, {{TESTIMONIAL_2_TITLE}}, {{TESTIMONIAL_3_AUTHOR}}, {{TESTIMONIAL_3_IMAGE}}, {{TESTIMONIAL_3_LOCATION}}, {{TESTIMONIAL_3_QUOTE}}, {{TESTIMONIAL_3_TITLE}}, {{TESTIMONIAL_4_AUTHOR}}, {{TESTIMONIAL_4_IMAGE}}, {{TESTIMONIAL_4_LOCATION}}, {{TESTIMONIAL_4_QUOTE}}, {{TESTIMONIAL_4_TITLE}}, {{TESTIMONIAL_5_AUTHOR}}, {{TESTIMONIAL_5_IMAGE}}, {{TESTIMONIAL_5_LOCATION}}, {{TESTIMONIAL_5_QUOTE}}, {{TESTIMONIAL_5_TITLE}}, {{TESTIMONIAL_6_AUTHOR}}, {{TESTIMONIAL_6_IMAGE}}, {{TESTIMONIAL_6_LOCATION}}, {{TESTIMONIAL_6_QUOTE}}, {{TESTIMONIAL_6_TITLE}}, {{TESTIMONIAL_7_AUTHOR}}, {{TESTIMONIAL_7_IMAGE}}, {{TESTIMONIAL_7_LOCATION}}, {{TESTIMONIAL_7_QUOTE}}, {{TESTIMONIAL_7_TITLE}}, {{TESTIMONIAL_8_AUTHOR}}, {{TESTIMONIAL_8_IMAGE}}, {{TESTIMONIAL_8_LOCATION}}, {{TESTIMONIAL_8_QUOTE}}, {{TESTIMONIAL_8_TITLE}}, {{TESTIMONIAL_9_AUTHOR}}, {{TESTIMONIAL_9_IMAGE}}, {{TESTIMONIAL_9_LOCATION}}, {{TESTIMONIAL_9_QUOTE}}, {{TESTIMONIAL_9_TITLE}}, {{TESTIMONIAL_10_AUTHOR}}, {{TESTIMONIAL_10_IMAGE}}, {{TESTIMONIAL_10_LOCATION}}, {{TESTIMONIAL_10_QUOTE}}, {{TESTIMONIAL_10_TITLE}}, {{TESTIMONIAL_11_AUTHOR}}, {{TESTIMONIAL_11_IMAGE}}, {{TESTIMONIAL_11_LOCATION}}, {{TESTIMONIAL_11_QUOTE}}, {{TESTIMONIAL_11_TITLE}}, {{TESTIMONIAL_12_AUTHOR}}, {{TESTIMONIAL_12_IMAGE}}, {{TESTIMONIAL_12_LOCATION}}, {{TESTIMONIAL_12_QUOTE}}, {{TESTIMONIAL_12_TITLE}}
+     IMAGES: NONE
+     FRAMEWORK: SOCIAL-PROOF
+     ============================================ -->
+<section
+  id="shopify-section-template--17453745111139__55bd100e-3bbd-426c-a5cf-eed7b2a3706f"
+  class="shopify-section section"
+>
+  <style data-shopify>
+    .section-template--17453745111139__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-padding {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    @media screen and (min-width: 750px) {
+      .section-template--17453745111139__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-padding {
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
+    }
+
+    /* ... */
+
+    /* Testimonial Image Strip */
+    .testimonial-strip {
+      display: flex;
+      gap: 16px;
+      padding: 20px 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      margin-bottom: 30px;
+    }
+
+    .testimonial-strip::-webkit-scrollbar {
+      display: none;
+    }
+
+    .testimonial-strip-item {
+      flex-shrink: 0;
+      width: 80px;
+      height: 80px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-strip-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ============================================
+       TESTIMONIAL IMAGE FIX - Override base.css conflicts
+
+       Problem: base.css .media uses position:absolute on children
+       which requires explicit height via padding-bottom.
+       We override to use normal flow with aspect-ratio instead.
+       ============================================ */
+
+    /* Force testimonial card images to display */
+    .testimonial-card .multicolumn-card__image-wrapper,
+    .testimonial-card .multicolumn-card__image-wrapper--full-width {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      width: 100% !important;
+      max-width: 280px !important;
+      height: auto !important;
+      margin: 0 auto 1.5rem !important;
+      overflow: visible !important;
+      position: relative !important;
+    }
+
+    /* Override base.css .media absolute positioning */
+    .testimonial-card .media,
+    .testimonial-card .media--transparent {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      position: relative !important;
+      padding-bottom: 0 !important;
+      height: auto !important;
+      overflow: visible !important;
+      background: transparent !important;
+    }
+
+    /* Make image flow normally instead of absolute */
+    .testimonial-card .multicolumn-card__image {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      position: relative !important;
+      width: 100% !important;
+      height: auto !important;
+      max-width: 100% !important;
+      border-radius: 16px !important;
+      object-fit: cover !important;
+      aspect-ratio: 1/1 !important;
+      top: unset !important;
+      left: unset !important;
+    }
+
+    /* Ensure the card info section flows after image */
+    .testimonial-card .multicolumn-card__info {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    /* Stars visibility */
+    .testimonial-card__stars {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      color: #ffd700 !important;
+    }
+
+    /* Hide thumbnail strip - images are in cards */
+    .testimonial-strip {
+      display: none !important;
+    }
+
+    /* Ensure splide slides are visible */
+    .splide__slide {
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    .splide__slide__container {
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    /* ============================================
+       VERTICAL STACK LAYOUT - Image above Review
+       Force single column layout for testimonials
+       ============================================ */
+
+    /* Override Splide carousel - make it a simple vertical list */
+    .splide--destroy-desktop,
+    .splide--destroy-mobile {
+      display: block !important;
+    }
+
+    .splide__track {
+      overflow: visible !important;
+    }
+
+    .splide__list {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 2rem !important;
+      max-width: 600px !important;
+      margin: 0 auto !important;
+    }
+
+    .splide__slide {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+
+    /* Hide carousel navigation */
+    .splide__pagination,
+    .splide__arrows,
+    .splide__dots-and-arrows {
+      display: none !important;
+    }
+
+    /* Card layout - image on top, content below */
+    .testimonial-card {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+      padding: 1.5rem !important;
+      background: #fff !important;
+      border-radius: 16px !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+    }
+
+    /* Image container - centered above text */
+    .testimonial-card .multicolumn-card__image-wrapper {
+      order: 1 !important;
+      width: 200px !important;
+      max-width: 200px !important;
+      margin-bottom: 1.5rem !important;
+    }
+
+    /* Image styling - square with rounded corners */
+    .testimonial-card .multicolumn-card__image {
+      width: 200px !important;
+      height: 200px !important;
+      object-fit: cover !important;
+      border-radius: 12px !important;
+    }
+
+    /* Info section - below image */
+    .testimonial-card .multicolumn-card__info {
+      order: 2 !important;
+      width: 100% !important;
+    }
+
+    /* Mobile adjustments */
+    @media screen and (max-width: 749px) {
+      .splide__list {
+        max-width: 100% !important;
+        padding: 0 1rem !important;
+      }
+
+      .testimonial-card .multicolumn-card__image-wrapper {
+        width: 150px !important;
+        max-width: 150px !important;
+      }
+
+      .testimonial-card .multicolumn-card__image {
+        width: 150px !important;
+        height: 150px !important;
+      }
+    }
+  </style>
+  <div
+    class="multicolumn color-scheme-template--17453745111139__55bd100e-3bbd-426c-a5cf-eed7b2a3706f color-custom gradient no-heading content-for-grouping animate-section animate--hidden always-display"
+  >
+    <div
+      class="page-width section-template--17453745111139__55bd100e-3bbd-426c-a5cf-eed7b2a3706f-padding isolate"
+      style="
+        --columns-desktop: 1;
+        --columns-mobile: 1;
+        --gap-desktop: 2rem;
+        --gap-mobile: 1.5rem;
+      "
+    >
+      <!--
+        ENGAGE STEP 6: ELEVATE (Status Transformation)
+        FRAMEWORK: TRANSFORMATION ARCS (Social Proof)
+        Show how customers elevated their status through transformation.
+
+        - QUANTITY: 12x Main Reviews.
+        - STRUCTURE: "Doubt -> Truth -> Belief -> ELEVATED IDENTITY".
+        - CONTENT: Must trace back to specific Objections in `avatar_profile.json`.
+        - VISUALS: Real humans (or highly realistic avatars) matching the Target Demographic.
+      -->
+      <!-- Testimonial Image Strip - Thumbnails matching review cards -->
+      <div class="testimonial-strip">
+        <div class="testimonial-strip-item">
+          <img src="{{TESTIMONIAL_1_IMAGE}}" alt="Review 1" loading="lazy" />
+        </div>
+        <div class="testimonial-strip-item">
+          <img src="{{TESTIMONIAL_2_IMAGE}}" alt="Review 2" loading="lazy" />
+        </div>
+        <div class="testimonial-strip-item">
+          <img src="{{TESTIMONIAL_3_IMAGE}}" alt="Review 3" loading="lazy" />
+        </div>
+        <div class="testimonial-strip-item">
+          <img src="{{TESTIMONIAL_4_IMAGE}}" alt="Review 4" loading="lazy" />
+        </div>
+        <div class="testimonial-strip-item">
+          <img src="{{TESTIMONIAL_5_IMAGE}}" alt="Review 5" loading="lazy" />
+        </div>
+        <div class="testimonial-strip-item">
+          <img src="{{TESTIMONIAL_6_IMAGE}}" alt="Review 6" loading="lazy" />
+        </div>
+        <div class="testimonial-strip-item">
+          <img src="{{TESTIMONIAL_7_IMAGE}}" alt="Review 7" loading="lazy" />
+        </div>
+        <div class="testimonial-strip-item">
+          <img src="{{TESTIMONIAL_8_IMAGE}}" alt="Review 8" loading="lazy" />
+        </div>
+        <div class="testimonial-strip-item">
+          <img src="{{TESTIMONIAL_9_IMAGE}}" alt="Review 9" loading="lazy" />
+        </div>
+        <div class="testimonial-strip-item">
+          <img src="{{TESTIMONIAL_10_IMAGE}}" alt="Review 10" loading="lazy" />
+        </div>
+        <div class="testimonial-strip-item">
+          <img src="{{TESTIMONIAL_11_IMAGE}}" alt="Review 11" loading="lazy" />
+        </div>
+        <div class="testimonial-strip-item">
+          <img src="{{TESTIMONIAL_12_IMAGE}}" alt="Review 12" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="animate-item animate-item--child index-0"></div>
+
+      <div
+        class="splide splide--desktop-dots-under splide--mobile-dots-under splide--desktop-arrows-sides splide--desktop-arrows-outside splide--mobile-arrows-under splide--transparent-arrows splide--destroy-desktop splide--destroy-mobile"
+        style="
+          --columns-desktop: 1;
+          --columns-mobile: 1;
+          --gap-desktop: 2rem;
+          --gap-mobile: 1.5rem;
+        "
+      >
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="splide__slide__container" style="--index: 0">
+                <div
+                  class="multicolumn-card content-container testimonial-card color-bg-overlay cards-color-scheme-template--17453745111139__55bd100e-3bbd-426c-a5cf-eed7b2a3706f gradient multicolumn--diff-bgs center testimonial-card--has-author animate-item animate-item--child"
+                >
+                  <div
+                    class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--full-width multicolumn-card-spacing"
+                  >
+                    <div class="media media--transparent">
+                      <img
+                        src="{{TESTIMONIAL_1_IMAGE}}"
+                        alt=""
+                        srcset="
+                          {{TESTIMONIAL_1_IMAGE}} 275w,
+                          {{TESTIMONIAL_1_IMAGE}} 550w,
+                          {{TESTIMONIAL_1_IMAGE}} 710w
+                        "
+                        width="1024"
+                        height="1024"
+                        loading="lazy"
+                        sizes="(min-width: 990px) 550px, (min-width: 750px) 550px, calc(100vw - 30px)"
+                        class="multicolumn-card__image"
+                      />
+                    </div>
+                  </div>
+                  <div class="multicolumn-card__info">
+                    <p
+                      class="testimonial-card__stars"
+                      style="--stars-color: #ffd700"
+                    >
+                      ★★★★★
+                    </p>
+                    <div
+                      class="testimonial-card__quotes flex-center color-accent-2"
+                    >
+                      <svg
+                        viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M119.472 66.59C53.489 66.59 0 120.094 0 186.1c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.135 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.829-6.389c82.925-90.7 115.385-197.448 115.385-251.8C238.989 120.094 185.501 66.59 119.472 66.59z"
+                        />
+                        <path
+                          fill="currentColor"
+                          d="M392.482 66.59c-65.983 0-119.472 53.505-119.472 119.51c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.136 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.828-6.389C479.539 347.2 512 240.452 512 186.1C512 120.094 458.511 66.59 392.482 66.59z"
+                        />
+                      </svg>
+                    </div>
+                    <h3>{{TESTIMONIAL_1_TITLE}}</h3>
+                    <div class="rte">
+                      <p>{{TESTIMONIAL_1_QUOTE}}</p>
+                    </div>
+                    <div class="testimonial-card__author-container">
+                      <p class="testimonial-card__author">
+                        <strong>{{TESTIMONIAL_1_AUTHOR}}</strong> -
+                        {{TESTIMONIAL_1_LOCATION}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="splide__slide__container" style="--index: 1">
+                <div
+                  class="multicolumn-card content-container testimonial-card color-bg-overlay cards-color-scheme-template--17453745111139__55bd100e-3bbd-426c-a5cf-eed7b2a3706f gradient multicolumn--diff-bgs center testimonial-card--has-author animate-item animate-item--child"
+                >
+                  <div
+                    class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--full-width multicolumn-card-spacing"
+                  >
+                    <div class="media media--transparent">
+                      <img
+                        src="{{TESTIMONIAL_2_IMAGE}}"
+                        alt=""
+                        srcset="
+                          {{TESTIMONIAL_2_IMAGE}} 275w,
+                          {{TESTIMONIAL_2_IMAGE}} 550w,
+                          {{TESTIMONIAL_2_IMAGE}} 710w
+                        "
+                        width="1024"
+                        height="1024"
+                        loading="lazy"
+                        sizes="(min-width: 990px) 550px, (min-width: 750px) 550px, calc(100vw - 30px)"
+                        class="multicolumn-card__image"
+                      />
+                    </div>
+                  </div>
+                  <div class="multicolumn-card__info">
+                    <p
+                      class="testimonial-card__stars"
+                      style="--stars-color: #ffd700"
+                    >
+                      ★★★★★
+                    </p>
+                    <div
+                      class="testimonial-card__quotes flex-center color-accent-2"
+                    >
+                      <svg
+                        viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M119.472 66.59C53.489 66.59 0 120.094 0 186.1c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.135 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.829-6.389c82.925-90.7 115.385-197.448 115.385-251.8C238.989 120.094 185.501 66.59 119.472 66.59z"
+                        />
+                        <path
+                          fill="currentColor"
+                          d="M392.482 66.59c-65.983 0-119.472 53.505-119.472 119.51c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.136 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.828-6.389C479.539 347.2 512 240.452 512 186.1C512 120.094 458.511 66.59 392.482 66.59z"
+                        />
+                      </svg>
+                    </div>
+                    <h3>{{TESTIMONIAL_2_TITLE}}</h3>
+                    <div class="rte">
+                      <p>{{TESTIMONIAL_2_QUOTE}}</p>
+                    </div>
+                    <div class="testimonial-card__author-container">
+                      <p class="testimonial-card__author">
+                        <strong>{{TESTIMONIAL_2_AUTHOR}}</strong> -
+                        {{TESTIMONIAL_2_LOCATION}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="splide__slide__container" style="--index: 2">
+                <div
+                  class="multicolumn-card content-container testimonial-card color-bg-overlay cards-color-scheme-template--17453745111139__55bd100e-3bbd-426c-a5cf-eed7b2a3706f gradient multicolumn--diff-bgs center testimonial-card--has-author animate-item animate-item--child"
+                >
+                  <div
+                    class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--full-width multicolumn-card-spacing"
+                  >
+                    <div class="media media--transparent">
+                      <img
+                        src="{{TESTIMONIAL_3_IMAGE}}"
+                        alt=""
+                        srcset="
+                          {{TESTIMONIAL_3_IMAGE}} 275w,
+                          {{TESTIMONIAL_3_IMAGE}} 550w,
+                          {{TESTIMONIAL_3_IMAGE}} 710w
+                        "
+                        width="1024"
+                        height="1024"
+                        loading="lazy"
+                        sizes="(min-width: 990px) 550px, (min-width: 750px) 550px, calc(100vw - 30px)"
+                        class="multicolumn-card__image"
+                      />
+                    </div>
+                  </div>
+                  <div class="multicolumn-card__info">
+                    <p
+                      class="testimonial-card__stars"
+                      style="--stars-color: #ffd700"
+                    >
+                      ★★★★★
+                    </p>
+                    <div
+                      class="testimonial-card__quotes flex-center color-accent-2"
+                    >
+                      <svg
+                        viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M119.472 66.59C53.489 66.59 0 120.094 0 186.1c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.135 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.829-6.389c82.925-90.7 115.385-197.448 115.385-251.8C238.989 120.094 185.501 66.59 119.472 66.59z"
+                        />
+                        <path
+                          fill="currentColor"
+                          d="M392.482 66.59c-65.983 0-119.472 53.505-119.472 119.51c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.136 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.828-6.389C479.539 347.2 512 240.452 512 186.1C512 120.094 458.511 66.59 392.482 66.59z"
+                        />
+                      </svg>
+                    </div>
+                    <h3>{{TESTIMONIAL_3_TITLE}}</h3>
+                    <div class="rte">
+                      <p>{{TESTIMONIAL_3_QUOTE}}</p>
+                    </div>
+                    <div class="testimonial-card__author-container">
+                      <p class="testimonial-card__author">
+                        <strong>{{TESTIMONIAL_3_AUTHOR}}</strong> -
+                        {{TESTIMONIAL_3_LOCATION}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="splide__slide__container" style="--index: 3">
+                <div
+                  class="multicolumn-card content-container testimonial-card color-bg-overlay cards-color-scheme-template--17453745111139__55bd100e-3bbd-426c-a5cf-eed7b2a3706f gradient multicolumn--diff-bgs center testimonial-card--has-author animate-item animate-item--child"
+                >
+                  <div
+                    class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--full-width multicolumn-card-spacing"
+                  >
+                    <div class="media media--transparent">
+                      <img
+                        src="{{TESTIMONIAL_4_IMAGE}}"
+                        alt=""
+                        srcset="
+                          {{TESTIMONIAL_4_IMAGE}} 275w,
+                          {{TESTIMONIAL_4_IMAGE}} 550w,
+                          {{TESTIMONIAL_4_IMAGE}} 710w
+                        "
+                        width="1024"
+                        height="1024"
+                        loading="lazy"
+                        sizes="(min-width: 990px) 550px, (min-width: 750px) 550px, calc(100vw - 30px)"
+                        class="multicolumn-card__image"
+                      />
+                    </div>
+                  </div>
+                  <div class="multicolumn-card__info">
+                    <p
+                      class="testimonial-card__stars"
+                      style="--stars-color: #ffd700"
+                    >
+                      ★★★★★
+                    </p>
+                    <div
+                      class="testimonial-card__quotes flex-center color-accent-2"
+                    >
+                      <svg
+                        viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M119.472 66.59C53.489 66.59 0 120.094 0 186.1c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.135 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.829-6.389c82.925-90.7 115.385-197.448 115.385-251.8C238.989 120.094 185.501 66.59 119.472 66.59z"
+                        />
+                        <path
+                          fill="currentColor"
+                          d="M392.482 66.59c-65.983 0-119.472 53.505-119.472 119.51c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.136 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.828-6.389C479.539 347.2 512 240.452 512 186.1C512 120.094 458.511 66.59 392.482 66.59z"
+                        />
+                      </svg>
+                    </div>
+                    <h3>{{TESTIMONIAL_4_TITLE}}</h3>
+                    <div class="rte">
+                      <p>{{TESTIMONIAL_4_QUOTE}}</p>
+                    </div>
+                    <div class="testimonial-card__author-container">
+                      <p class="testimonial-card__author">
+                        <strong>{{TESTIMONIAL_4_AUTHOR}}</strong> -
+                        {{TESTIMONIAL_4_LOCATION}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="splide__slide__container" style="--index: 4">
+                <div
+                  class="multicolumn-card content-container testimonial-card color-bg-overlay cards-color-scheme-template--17453745111139__55bd100e-3bbd-426c-a5cf-eed7b2a3706f gradient multicolumn--diff-bgs center testimonial-card--has-author animate-item animate-item--child"
+                >
+                  <div
+                    class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--full-width multicolumn-card-spacing"
+                  >
+                    <div class="media media--transparent">
+                      <img
+                        src="{{TESTIMONIAL_5_IMAGE}}"
+                        alt=""
+                        srcset="
+                          {{TESTIMONIAL_5_IMAGE}} 275w,
+                          {{TESTIMONIAL_5_IMAGE}} 550w,
+                          {{TESTIMONIAL_5_IMAGE}} 710w
+                        "
+                        width="1024"
+                        height="1024"
+                        loading="lazy"
+                        sizes="(min-width: 990px) 550px, (min-width: 750px) 550px, calc(100vw - 30px)"
+                        class="multicolumn-card__image"
+                      />
+                    </div>
+                  </div>
+                  <div class="multicolumn-card__info">
+                    <p
+                      class="testimonial-card__stars"
+                      style="--stars-color: #ffd700"
+                    >
+                      ★★★★★
+                    </p>
+                    <div
+                      class="testimonial-card__quotes flex-center color-accent-2"
+                    >
+                      <svg
+                        viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M119.472 66.59C53.489 66.59 0 120.094 0 186.1c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.135 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.829-6.389c82.925-90.7 115.385-197.448 115.385-251.8C238.989 120.094 185.501 66.59 119.472 66.59z"
+                        />
+                        <path
+                          fill="currentColor"
+                          d="M392.482 66.59c-65.983 0-119.472 53.505-119.472 119.51c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.136 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.828-6.389C479.539 347.2 512 240.452 512 186.1C512 120.094 458.511 66.59 392.482 66.59z"
+                        />
+                      </svg>
+                    </div>
+                    <h3>{{TESTIMONIAL_5_TITLE}}</h3>
+                    <div class="rte">
+                      <p>{{TESTIMONIAL_5_QUOTE}}</p>
+                    </div>
+                    <div class="testimonial-card__author-container">
+                      <p class="testimonial-card__author">
+                        <strong>{{TESTIMONIAL_5_AUTHOR}}</strong> -
+                        {{TESTIMONIAL_5_LOCATION}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="splide__slide__container" style="--index: 5">
+                <div
+                  class="multicolumn-card content-container testimonial-card color-bg-overlay cards-color-scheme-template--17453745111139__55bd100e-3bbd-426c-a5cf-eed7b2a3706f gradient multicolumn--diff-bgs center testimonial-card--has-author animate-item animate-item--child"
+                >
+                  <div
+                    class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--full-width multicolumn-card-spacing"
+                  >
+                    <div class="media media--transparent">
+                      <img
+                        src="{{TESTIMONIAL_6_IMAGE}}"
+                        alt=""
+                        srcset="
+                          {{TESTIMONIAL_6_IMAGE}} 275w,
+                          {{TESTIMONIAL_6_IMAGE}} 550w,
+                          {{TESTIMONIAL_6_IMAGE}} 710w
+                        "
+                        width="1024"
+                        height="1024"
+                        loading="lazy"
+                        sizes="(min-width: 990px) 550px, (min-width: 750px) 550px, calc(100vw - 30px)"
+                        class="multicolumn-card__image"
+                      />
+                    </div>
+                  </div>
+                  <div class="multicolumn-card__info">
+                    <p
+                      class="testimonial-card__stars"
+                      style="--stars-color: #ffd700"
+                    >
+                      ★★★★★
+                    </p>
+                    <div
+                      class="testimonial-card__quotes flex-center color-accent-2"
+                    >
+                      <svg
+                        viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M119.472 66.59C53.489 66.59 0 120.094 0 186.1c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.135 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.829-6.389c82.925-90.7 115.385-197.448 115.385-251.8C238.989 120.094 185.501 66.59 119.472 66.59z"
+                        />
+                        <path
+                          fill="currentColor"
+                          d="M392.482 66.59c-65.983 0-119.472 53.505-119.472 119.51c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.136 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.828-6.389C479.539 347.2 512 240.452 512 186.1C512 120.094 458.511 66.59 392.482 66.59z"
+                        />
+                      </svg>
+                    </div>
+                    <h3>{{TESTIMONIAL_6_TITLE}}</h3>
+                    <div class="rte">
+                      <p>{{TESTIMONIAL_6_QUOTE}}</p>
+                    </div>
+                    <div class="testimonial-card__author-container">
+                      <p class="testimonial-card__author">
+                        <strong>{{TESTIMONIAL_6_AUTHOR}}</strong> -
+                        {{TESTIMONIAL_6_LOCATION}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="splide__slide__container" style="--index: 6">
+                <div
+                  class="multicolumn-card content-container testimonial-card color-bg-overlay cards-color-scheme-template--17453745111139__55bd100e-3bbd-426c-a5cf-eed7b2a3706f gradient multicolumn--diff-bgs center testimonial-card--has-author animate-item animate-item--child"
+                >
+                  <div
+                    class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--full-width multicolumn-card-spacing"
+                  >
+                    <div class="media media--transparent">
+                      <img
+                        src="{{TESTIMONIAL_7_IMAGE}}"
+                        alt=""
+                        srcset="
+                          {{TESTIMONIAL_7_IMAGE}} 275w,
+                          {{TESTIMONIAL_7_IMAGE}} 550w,
+                          {{TESTIMONIAL_7_IMAGE}} 710w
+                        "
+                        width="1024"
+                        height="1024"
+                        loading="lazy"
+                        sizes="(min-width: 990px) 550px, (min-width: 750px) 550px, calc(100vw - 30px)"
+                        class="multicolumn-card__image"
+                      />
+                    </div>
+                  </div>
+                  <div class="multicolumn-card__info">
+                    <p
+                      class="testimonial-card__stars"
+                      style="--stars-color: #ffd700"
+                    >
+                      ★★★★★
+                    </p>
+                    <div
+                      class="testimonial-card__quotes flex-center color-accent-2"
+                    >
+                      <svg
+                        viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M119.472 66.59C53.489 66.59 0 120.094 0 186.1c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.135 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.829-6.389c82.925-90.7 115.385-197.448 115.385-251.8C238.989 120.094 185.501 66.59 119.472 66.59z"
+                        />
+                        <path
+                          fill="currentColor"
+                          d="M392.482 66.59c-65.983 0-119.472 53.505-119.472 119.51c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.136 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.828-6.389C479.539 347.2 512 240.452 512 186.1C512 120.094 458.511 66.59 392.482 66.59z"
+                        />
+                      </svg>
+                    </div>
+                    <h3>{{TESTIMONIAL_7_TITLE}}</h3>
+                    <div class="rte">
+                      <p>{{TESTIMONIAL_7_QUOTE}}</p>
+                    </div>
+                    <div class="testimonial-card__author-container">
+                      <p class="testimonial-card__author">
+                        <strong>{{TESTIMONIAL_7_AUTHOR}}</strong> -
+                        {{TESTIMONIAL_7_LOCATION}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="splide__slide__container" style="--index: 7">
+                <div
+                  class="multicolumn-card content-container testimonial-card color-bg-overlay cards-color-scheme-template--17453745111139__55bd100e-3bbd-426c-a5cf-eed7b2a3706f gradient multicolumn--diff-bgs center testimonial-card--has-author animate-item animate-item--child"
+                >
+                  <div
+                    class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--full-width multicolumn-card-spacing"
+                  >
+                    <div class="media media--transparent">
+                      <img
+                        src="{{TESTIMONIAL_8_IMAGE}}"
+                        alt=""
+                        srcset="
+                          {{TESTIMONIAL_8_IMAGE}} 275w,
+                          {{TESTIMONIAL_8_IMAGE}} 550w,
+                          {{TESTIMONIAL_8_IMAGE}} 710w
+                        "
+                        width="1024"
+                        height="1024"
+                        loading="lazy"
+                        sizes="(min-width: 990px) 550px, (min-width: 750px) 550px, calc(100vw - 30px)"
+                        class="multicolumn-card__image"
+                      />
+                    </div>
+                  </div>
+                  <div class="multicolumn-card__info">
+                    <p
+                      class="testimonial-card__stars"
+                      style="--stars-color: #ffd700"
+                    >
+                      ★★★★★
+                    </p>
+                    <div
+                      class="testimonial-card__quotes flex-center color-accent-2"
+                    >
+                      <svg
+                        viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M119.472 66.59C53.489 66.59 0 120.094 0 186.1c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.135 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.829-6.389c82.925-90.7 115.385-197.448 115.385-251.8C238.989 120.094 185.501 66.59 119.472 66.59z"
+                        />
+                        <path
+                          fill="currentColor"
+                          d="M392.482 66.59c-65.983 0-119.472 53.505-119.472 119.51c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.136 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.828-6.389C479.539 347.2 512 240.452 512 186.1C512 120.094 458.511 66.59 392.482 66.59z"
+                        />
+                      </svg>
+                    </div>
+                    <h3>{{TESTIMONIAL_8_TITLE}}</h3>
+                    <div class="rte">
+                      <p>{{TESTIMONIAL_8_QUOTE}}</p>
+                    </div>
+                    <div class="testimonial-card__author-container">
+                      <p class="testimonial-card__author">
+                        <strong>{{TESTIMONIAL_8_AUTHOR}}</strong> -
+                        {{TESTIMONIAL_8_LOCATION}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="splide__slide__container" style="--index: 8">
+                <div
+                  class="multicolumn-card content-container testimonial-card color-bg-overlay cards-color-scheme-template--17453745111139__55bd100e-3bbd-426c-a5cf-eed7b2a3706f gradient multicolumn--diff-bgs center testimonial-card--has-author animate-item animate-item--child"
+                >
+                  <div
+                    class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--full-width multicolumn-card-spacing"
+                  >
+                    <div class="media media--transparent">
+                      <img
+                        src="{{TESTIMONIAL_9_IMAGE}}"
+                        alt=""
+                        srcset="
+                          {{TESTIMONIAL_9_IMAGE}} 275w,
+                          {{TESTIMONIAL_9_IMAGE}} 550w,
+                          {{TESTIMONIAL_9_IMAGE}} 710w
+                        "
+                        width="1024"
+                        height="1024"
+                        loading="lazy"
+                        sizes="(min-width: 990px) 550px, (min-width: 750px) 550px, calc(100vw - 30px)"
+                        class="multicolumn-card__image"
+                      />
+                    </div>
+                  </div>
+                  <div class="multicolumn-card__info">
+                    <p
+                      class="testimonial-card__stars"
+                      style="--stars-color: #ffd700"
+                    >
+                      ★★★★★
+                    </p>
+                    <div
+                      class="testimonial-card__quotes flex-center color-accent-2"
+                    >
+                      <svg
+                        viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M119.472 66.59C53.489 66.59 0 120.094 0 186.1c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.135 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.829-6.389c82.925-90.7 115.385-197.448 115.385-251.8C238.989 120.094 185.501 66.59 119.472 66.59z"
+                        />
+                        <path
+                          fill="currentColor"
+                          d="M392.482 66.59c-65.983 0-119.472 53.505-119.472 119.51c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.136 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.828-6.389C479.539 347.2 512 240.452 512 186.1C512 120.094 458.511 66.59 392.482 66.59z"
+                        />
+                      </svg>
+                    </div>
+                    <h3>{{TESTIMONIAL_9_TITLE}}</h3>
+                    <div class="rte">
+                      <p>{{TESTIMONIAL_9_QUOTE}}</p>
+                    </div>
+                    <div class="testimonial-card__author-container">
+                      <p class="testimonial-card__author">
+                        <strong>{{TESTIMONIAL_9_AUTHOR}}</strong> -
+                        {{TESTIMONIAL_9_LOCATION}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="splide__slide__container" style="--index: 9">
+                <div
+                  class="multicolumn-card content-container testimonial-card color-bg-overlay cards-color-scheme-template--17453745111139__55bd100e-3bbd-426c-a5cf-eed7b2a3706f gradient multicolumn--diff-bgs center testimonial-card--has-author animate-item animate-item--child"
+                >
+                  <div
+                    class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--full-width multicolumn-card-spacing"
+                  >
+                    <div class="media media--transparent">
+                      <img
+                        src="{{TESTIMONIAL_10_IMAGE}}"
+                        alt=""
+                        srcset="
+                          {{TESTIMONIAL_10_IMAGE}} 275w,
+                          {{TESTIMONIAL_10_IMAGE}} 550w,
+                          {{TESTIMONIAL_10_IMAGE}} 710w
+                        "
+                        width="1024"
+                        height="1024"
+                        loading="lazy"
+                        sizes="(min-width: 990px) 550px, (min-width: 750px) 550px, calc(100vw - 30px)"
+                        class="multicolumn-card__image"
+                      />
+                    </div>
+                  </div>
+                  <div class="multicolumn-card__info">
+                    <p
+                      class="testimonial-card__stars"
+                      style="--stars-color: #ffd700"
+                    >
+                      ★★★★★
+                    </p>
+                    <div
+                      class="testimonial-card__quotes flex-center color-accent-2"
+                    >
+                      <svg
+                        viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M119.472 66.59C53.489 66.59 0 120.094 0 186.1c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.135 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.829-6.389c82.925-90.7 115.385-197.448 115.385-251.8C238.989 120.094 185.501 66.59 119.472 66.59z"
+                        />
+                        <path
+                          fill="currentColor"
+                          d="M392.482 66.59c-65.983 0-119.472 53.505-119.472 119.51c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.136 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.828-6.389C479.539 347.2 512 240.452 512 186.1C512 120.094 458.511 66.59 392.482 66.59z"
+                        />
+                      </svg>
+                    </div>
+                    <h3>{{TESTIMONIAL_10_TITLE}}</h3>
+                    <div class="rte">
+                      <p>{{TESTIMONIAL_10_QUOTE}}</p>
+                    </div>
+                    <div class="testimonial-card__author-container">
+                      <p class="testimonial-card__author">
+                        <strong>{{TESTIMONIAL_10_AUTHOR}}</strong> -
+                        {{TESTIMONIAL_10_LOCATION}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="splide__slide__container" style="--index: 10">
+                <div
+                  class="multicolumn-card content-container testimonial-card color-bg-overlay cards-color-scheme-template--17453745111139__55bd100e-3bbd-426c-a5cf-eed7b2a3706f gradient multicolumn--diff-bgs center testimonial-card--has-author animate-item animate-item--child"
+                >
+                  <div
+                    class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--full-width multicolumn-card-spacing"
+                  >
+                    <div class="media media--transparent">
+                      <img
+                        src="{{TESTIMONIAL_11_IMAGE}}"
+                        alt=""
+                        srcset="
+                          {{TESTIMONIAL_11_IMAGE}} 275w,
+                          {{TESTIMONIAL_11_IMAGE}} 550w,
+                          {{TESTIMONIAL_11_IMAGE}} 710w
+                        "
+                        width="1024"
+                        height="1024"
+                        loading="lazy"
+                        sizes="(min-width: 990px) 550px, (min-width: 750px) 550px, calc(100vw - 30px)"
+                        class="multicolumn-card__image"
+                      />
+                    </div>
+                  </div>
+                  <div class="multicolumn-card__info">
+                    <p
+                      class="testimonial-card__stars"
+                      style="--stars-color: #ffd700"
+                    >
+                      ★★★★★
+                    </p>
+                    <div
+                      class="testimonial-card__quotes flex-center color-accent-2"
+                    >
+                      <svg
+                        viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M119.472 66.59C53.489 66.59 0 120.094 0 186.1c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.135 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.829-6.389c82.925-90.7 115.385-197.448 115.385-251.8C238.989 120.094 185.501 66.59 119.472 66.59z"
+                        />
+                        <path
+                          fill="currentColor"
+                          d="M392.482 66.59c-65.983 0-119.472 53.505-119.472 119.51c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.136 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.828-6.389C479.539 347.2 512 240.452 512 186.1C512 120.094 458.511 66.59 392.482 66.59z"
+                        />
+                      </svg>
+                    </div>
+                    <h3>{{TESTIMONIAL_11_TITLE}}</h3>
+                    <div class="rte">
+                      <p>{{TESTIMONIAL_11_QUOTE}}</p>
+                    </div>
+                    <div class="testimonial-card__author-container">
+                      <p class="testimonial-card__author">
+                        <strong>{{TESTIMONIAL_11_AUTHOR}}</strong> -
+                        {{TESTIMONIAL_11_LOCATION}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="splide__slide__container" style="--index: 11">
+                <div
+                  class="multicolumn-card content-container testimonial-card color-bg-overlay cards-color-scheme-template--17453745111139__55bd100e-3bbd-426c-a5cf-eed7b2a3706f gradient multicolumn--diff-bgs center testimonial-card--has-author animate-item animate-item--child"
+                >
+                  <div
+                    class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--full-width multicolumn-card-spacing"
+                  >
+                    <div class="media media--transparent">
+                      <img
+                        src="{{TESTIMONIAL_12_IMAGE}}"
+                        alt=""
+                        srcset="
+                          {{TESTIMONIAL_12_IMAGE}} 275w,
+                          {{TESTIMONIAL_12_IMAGE}} 550w,
+                          {{TESTIMONIAL_12_IMAGE}} 710w
+                        "
+                        width="1024"
+                        height="1024"
+                        loading="lazy"
+                        sizes="(min-width: 990px) 550px, (min-width: 750px) 550px, calc(100vw - 30px)"
+                        class="multicolumn-card__image"
+                      />
+                    </div>
+                  </div>
+                  <div class="multicolumn-card__info">
+                    <p
+                      class="testimonial-card__stars"
+                      style="--stars-color: #ffd700"
+                    >
+                      ★★★★★
+                    </p>
+                    <div
+                      class="testimonial-card__quotes flex-center color-accent-2"
+                    >
+                      <svg
+                        viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M119.472 66.59C53.489 66.59 0 120.094 0 186.1c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.135 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.829-6.389c82.925-90.7 115.385-197.448 115.385-251.8C238.989 120.094 185.501 66.59 119.472 66.59z"
+                        />
+                        <path
+                          fill="currentColor"
+                          d="M392.482 66.59c-65.983 0-119.472 53.505-119.472 119.51c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.136 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.828-6.389C479.539 347.2 512 240.452 512 186.1C512 120.094 458.511 66.59 392.482 66.59z"
+                        />
+                      </svg>
+                    </div>
+                    <h3>{{TESTIMONIAL_12_TITLE}}</h3>
+                    <div class="rte">
+                      <p>{{TESTIMONIAL_12_QUOTE}}</p>
+                    </div>
+                    <div class="testimonial-card__author-container">
+                      <p class="testimonial-card__author">
+                        <strong>{{TESTIMONIAL_12_AUTHOR}}</strong> -
+                        {{TESTIMONIAL_12_LOCATION}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="splide__dots-and-arrows">
+          <ul class="splide__pagination"></ul>
+          <div class="splide__arrows"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

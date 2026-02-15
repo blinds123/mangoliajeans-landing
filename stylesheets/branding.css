@@ -1,0 +1,28 @@
+
+/* Auto-Generated Branding */
+:root {
+  /* Primary Product Color (Replaces the specific yellow accent) */
+  --color-base-accent-1: 200, 199, 190;
+  --color-base-background-2: 200, 199, 190;
+  --color-base-outline-button-labels: 200, 199, 190;
+  
+  --gradient-base-accent-1: #c8c7be;
+  --gradient-base-background-2: #c8c7be;
+  
+  /* Update Button Colors to match */
+  --color-button: 200, 199, 190;
+  --color-button-text: #000000;
+  
+  /* Custom property for easy debugging */
+  --brand-primary: #c8c7be;
+}
+
+.button, .shopify-payment-button__button--unbranded {
+    background-color: #c8c7be !important;
+    color: #000000 !important;
+}
+
+.title-with-highlight {
+    --hightlight-color: #c8c7be !important;
+}
+    

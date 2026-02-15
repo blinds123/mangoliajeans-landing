@@ -1,0 +1,62 @@
+{
+  "section": "03-hero",
+  "file": "sections/03-hero.html",
+
+  "MANDATORY_READS": [
+    "context/COPY-REQUIREMENTS.md",
+    "context/research-summary.md"
+  ],
+
+  "requirements": {
+    "pain_points": ["Pain 1", "Pain 2"],
+    "desires": ["Desire 1"],
+    "frameworks": ["Big Domino", "Hook-Story-Offer"],
+    "pattern_interrupts_min": 2
+  },
+
+  "images": {
+    "hero": "{{HERO_IMAGE_1}} through {{HERO_IMAGE_5}}",
+    "source": "images/product/"
+  },
+
+  "structure": {
+    "HOOK": "Headline that speaks to how she WANTS to feel",
+    "STORY": "Subheadline validating her frustration with past pieces",
+    "OFFER": "CTA button - Add to Cart or Shop Now"
+  },
+
+  "elements": [
+    "Main headline - emotional promise (how she'll FEEL)",
+    "Subheadline addressing her frustration with past purchases",
+    "Hero image (product styled beautifully)",
+    "TikTok comments overlay (3-5 comments)",
+    "CTA button"
+  ],
+
+  "tiktok_comments": {
+    "style": "Authentic, relatable, emotional reactions - NOT tech talk",
+    "examples": [
+      "finally found my go-to piece 😭✨",
+      "the compliments won't stop fr",
+      "obsessed with how this makes me feel 🔥",
+      "where was this my whole life",
+      "it actually looks this good irl 💕"
+    ],
+    "avoid": ["specs", "features", "technical language"]
+  },
+
+  "tone_guidance": {
+    "write_like": "The feeling she gets scrolling and finally finding THE one",
+    "avoid": ["tech specs", "feature dumps", "masculine framing"],
+    "use": ["confidence", "compliments", "finally found", "obsessed", "love"]
+  },
+
+  "anti_laziness_check": [
+    "Does the headline speak to how she WANTS TO FEEL?",
+    "Does the subheadline validate her past frustrations?",
+    "Are TikTok comments authentic and emotional?",
+    "Would she immediately see herself in this?"
+  ],
+
+  "validation": "bash tests/validate-section.sh sections/03-hero.html"
+}

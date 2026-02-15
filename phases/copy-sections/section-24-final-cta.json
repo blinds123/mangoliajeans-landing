@@ -1,0 +1,57 @@
+{
+  "section": "24-final-cta",
+  "file": "sections/24-final-cta.html",
+
+  "MANDATORY_READS": [
+    "context/COPY-REQUIREMENTS.md",
+    "context/research-summary.md - READ DESIRES SECTION"
+  ],
+
+  "requirements": {
+    "desires": ["Desire 1", "Desire 2", "Desire 3"],
+    "pattern_interrupts_min": 2,
+    "must_include": ["Time Travel hook", "Guarantee", "Soft urgency"]
+  },
+
+  "structure": {
+    "FEELING_RECAP": "Remind her how this will make her FEEL",
+    "VALUE_STACK": "Everything she's getting (focus on experience, not features)",
+    "PRICE_FRAME": "Investment in feeling amazing",
+    "FINAL_PRICE": "${{SINGLE_PRICE}}",
+    "ORDER_BUMP": "+${{ORDER_BUMP_PRICE}} to complete the look",
+    "GUARANTEE": "{{GUARANTEE_NAME}} - Try it risk-free",
+    "TIME_TRAVEL": "Imagine opening your closet a week from now...",
+    "SOFT_URGENCY": "Gentle nudge (not fake scarcity)",
+    "CTA": "Add to Cart button"
+  },
+
+  "time_travel_format": {
+    "open": "Imagine getting dressed next week...",
+    "paint_picture": "She reaches for this piece first. The way it makes her feel. The compliments.",
+    "contrast": "Or you could keep scrolling, wondering 'what if'",
+    "invitation": "You deserve to feel this way. Why wait?"
+  },
+
+  "tone_guidance": {
+    "write_like": "An encouraging friend helping her make the decision she already wants",
+    "avoid": [
+      "pressure",
+      "fake scarcity",
+      "aggressive urgency",
+      "FOMO manipulation"
+    ],
+    "use": ["you deserve", "imagine", "finally", "why wait", "treat yourself"]
+  },
+
+  "urgency_examples": {
+    "WRONG": "ONLY 3 LEFT! BUY NOW OR MISS OUT!",
+    "RIGHT": "This piece is waiting for you. Why wait to feel amazing?"
+  },
+
+  "anti_laziness_check": [
+    "Does the time travel focus on how she'll FEEL?",
+    "Is the urgency genuine and gentle, not manipulative?",
+    "Does the guarantee feel reassuring, not salesy?",
+    "Would she feel INVITED, not pressured?"
+  ]
+}

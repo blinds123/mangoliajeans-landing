@@ -1,0 +1,86 @@
+# Ralphy Configuration for Brunson Landing Page Builder
+# Optimized for Claude Code CLI with Haiku 4.5 / GLM 4.7
+
+project:
+  name: "brunson-landing-builder"
+  language: "HTML/CSS/JavaScript"
+  framework: "Shopify Liquid Template"
+  description: "High-converting landing pages using Russell Brunson framework"
+
+# Commands for validation
+commands:
+  build: "./build.sh"
+  test: "grep -c '{{' index.html | grep '^0$'"
+  lint: "grep -c 'jeans\\|lamp\\|previous-product' product.config | grep '^0$'"
+
+# Rules the AI must follow (passed to every task)
+rules:
+  # Template Rules
+  - "ALWAYS run template-reset skill before starting new product"
+  - "NEVER leave {{PLACEHOLDER}} variables in final build"
+  - "NEVER leave stale product references (previous product names)"
+
+  # Research Rules
+  - "ALL copy claims must trace to research files"
+  - "NEVER hallucinate testimonials or statistics"
+  - "Avatar profile MUST have 7 sections minimum"
+  - "Strategy brief MUST have big_domino + 3 secrets + epiphany_bridge"
+
+  # Copy Rules
+  - "Headlines MUST use pattern interrupt (Why/Stop/The Lie)"
+  - "Each Secret addresses different objection type (Vehicle/Internal/External)"
+  - "Testimonials distributed: 1-4=Secret1, 5-8=Secret2, 9-12=Secret3"
+  - "Features use FIBS pattern (Feature/Importance/Benefit/Social proof)"
+
+  # Build Rules
+  - "index.html must be > 50KB after build"
+  - "ALL images must exist in correct directories"
+  - "Run ./build.sh after ANY product.config change"
+
+  # E2E Testing Rules (CRITICAL)
+  - "MUST click every FAQ item and verify content appears"
+  - "MUST verify every testimonial image has width > 50 and height > 50"
+  - "MUST check console for JavaScript errors"
+  - "DO NOT deploy until E2E_FUNCTIONAL: PASSED"
+
+  # CSS Rules
+  - "If FAQ chevron rotates but content hidden: add display:block !important"
+  - "If testimonial images not showing: add visibility:visible !important"
+  - "Always check for grid vs max-height CSS conflicts"
+
+  # Deployment Rules
+  - "Run E2E tests on BOTH local and live URLs"
+  - "Verify HTTPS active on live site"
+  - "Verify all images load from CDN"
+
+# Files that should never be modified
+boundaries:
+  never_touch:
+    - "stylesheets/base.css"
+    - "*.lock"
+    - ".git/**"
+
+  # Files that CAN be modified
+  can_modify:
+    - "product.config"
+    - "index.html"
+    - "index.html.bak"
+    - "context/*.json"
+    - "context/*.md"
+
+# Browser automation for E2E testing
+capabilities:
+  browser: "auto"
+
+# Notifications (optional)
+notifications:
+  # discord_webhook: ""
+  # slack_webhook: ""
+
+# Model settings for weaker models
+model_hints:
+  # For Haiku 4.5 and GLM 4.7
+  explicit_steps: true
+  verbose_instructions: true
+  max_context_per_task: 8000
+  prefer_simple_tools: true

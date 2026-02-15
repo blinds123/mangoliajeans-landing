@@ -1,0 +1,73 @@
+<!-- ============================================
+     SECTION: SCRIPTS
+     VARIABLES: {{SHOP_URL}}
+     IMAGES: NONE
+     FRAMEWORK: STRUCTURE
+     ============================================ -->
+<!-- OPTIMIZED SCRIPTS SECTION - All Shopify app bloat removed -->
+
+<ul hidden>
+  <li id="a11y-refresh-page-message">Choosing a selection results in a full page refresh.</li>
+  <li id="a11y-new-window-message">Opens in a new window.</li>
+</ul>
+
+<script>
+  // Minimal theme strings
+  window.shopUrl = '{{SHOP_URL}}';
+  window.routes = {
+    cart_add_url: '/cart/add',
+    cart_url: '/cart'
+  };
+
+  window.variantStrings = {
+    addToCart: 'Add to cart',
+    soldOut: 'Sold out',
+    unavailable: 'Unavailable'
+  };
+
+  // Force visibility immediately
+  function initAnimations(rootElement = document) {
+    const elementsToAnimate = rootElement.querySelectorAll('.animate-section');
+    elementsToAnimate.forEach(element => {
+      element.classList.add('animate--shown');
+      element.style.opacity = '1';
+      element.style.visibility = 'visible';
+      const items = element.querySelectorAll('.animate-item');
+      items.forEach(item => {
+        item.style.opacity = '1';
+        item.style.visibility = 'visible';
+        item.style.transform = 'none';
+      });
+    });
+  }
+
+  initAnimations(document);
+  document.addEventListener('DOMContentLoaded', () => initAnimations(document));
+</script>
+
+<script>
+  // Force visibility on load
+  (function () {
+    document.documentElement.classList.add('loaded');
+    if (document.body) document.body.classList.add('theme-loaded');
+
+    const forceVisible = () => {
+      document.documentElement.style.visibility = 'visible';
+      if (document.body) document.body.style.visibility = 'visible';
+      const main = document.querySelector('main');
+      if (main) main.style.visibility = 'visible';
+      const content = document.querySelector('.content-for-layout');
+      if (content) content.style.visibility = 'visible';
+    };
+
+    forceVisible();
+    window.addEventListener('load', forceVisible);
+    document.addEventListener('DOMContentLoaded', forceVisible);
+  })();
+</script>
+
+<!-- Size Chart Removed -->
+
+</body>
+
+</html>

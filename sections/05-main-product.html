@@ -1,0 +1,1680 @@
+<!-- ============================================
+     SECTION: MAIN PRODUCT
+     VARIABLES: {{AUDIENCE}}, {{BRAND_NAME}}, {{BUNDLE_BADGE_TEXT}}, {{BUNDLE_DESC_2X}}, {{BUNDLE_OLD_PRICE}}, {{BUNDLE_PRICE}}, {{BUNDLE_SAVINGS}}, {{BUNDLE_TITLE_2X}}, {{COLOR_IMAGE_MAP}}, {{COLOR_UI_HTML}}, {{GUARANTEE_CONDITION}}, {{GUARANTEE_DAYS}}, {{GUARANTEE_NAME}}, {{HEADLINE_HOOK}}, {{HEADLINE_OPENING_COPY}}, {{HERO_FEATURE_1}}, {{HERO_FEATURE_2}}, {{HERO_FEATURE_3}}, {{HERO_FEATURE_4}}, {{META_DESCRIPTION}}, {{OG_IMAGE_URL}}, {{ORDER_BUMP_CTA_TEXT}}, {{ORDER_BUMP_DESC}}, {{ORDER_BUMP_IMAGE}}, {{ORDER_BUMP_PRICE}}, {{PRODUCT_FULL_URL}}, {{PRODUCT_ID}}, {{PRODUCT_IMAGE_1}}, {{PRODUCT_IMAGE_2}}, {{PRODUCT_IMAGE_3}}, {{PRODUCT_IMAGE_4}}, {{PRODUCT_IMAGE_5}}, {{PRODUCT_IMAGE_6}}, {{PRODUCT_NAME}}, {{PRODUCT_URL}}, {{ROTATING_TESTIMONIAL_1}}, {{ROTATING_TESTIMONIAL_2}}, {{ROTATING_TESTIMONIAL_3}}, {{ROTATING_TESTIMONIAL_4}}, {{ROTATING_TESTIMONIAL_5}}, {{SINGLE_PRICE}}, {{SIZE_CHART_IMAGE}}, {{SIZE_OPTIONS}}, {{VARIANT_ID}}
+     IMAGES: NONE
+     FRAMEWORK: ENGAGE
+     ============================================ -->
+<section id="shopify-section-template--17453745111139__main" class="shopify-section section">
+  <section id="MainProduct-template--17453745111139__main"
+    class="page-width section-template--17453745111139__main-padding" data-section="template--17453745111139__main">
+    <style data-shopify>
+      /* Override section spacing to remove white gap after header */
+      #shopify-section-template--17453745111139__main.section,
+      #shopify-section-template--17453745111139__main {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        --spacing-sections-mobile: 0px;
+        --spacing-sections-desktop: 0px;
+      }
+
+      /* Force zero spacing on product wrapper */
+      #MainProduct-template--17453745111139__main {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+      }
+
+      /* Remove any grid gap at top */
+      #MainProduct-template--17453745111139__main .product {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+      }
+
+      .section-template--17453745111139__main-padding {
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+
+      /* OVERLAY BAR - Full width on all screens */
+      .product-overlay-bar {
+        width: calc(100% + 3rem) !important;
+        margin-left: -1.5rem !important;
+        margin-right: -1.5rem !important;
+      }
+
+      @media screen and (max-width: 749px) {
+
+        /* Mobile: edge-to-edge overlay bar */
+        .product-overlay-bar {
+          width: calc(100% + 3rem) !important;
+          margin-left: -1.5rem !important;
+          margin-right: -1.5rem !important;
+          padding: 12px 15px !important;
+        }
+
+        .overlay-bar__left {
+          flex: 1 !important;
+        }
+
+        .overlay-bar__right {
+          flex-shrink: 0 !important;
+          font-size: 20px !important;
+        }
+      }
+
+      @media screen and (min-width: 750px) {
+        .section-template--17453745111139__main-padding {
+          padding-top: 0px;
+          padding-bottom: 0px;
+        }
+
+        /* Desktop: wider margins to counteract page-width padding */
+        .product-overlay-bar {
+          width: calc(100% + 10rem) !important;
+          margin-left: -5rem !important;
+          margin-right: -5rem !important;
+        }
+      }
+
+      #MediaGallery-template--17453745111139__main {
+        --desktop-thumbnails: 5;
+        --mobile-thumbnails: 5;
+      }
+
+      @media screen and (max-width: 749px) {
+        #MediaGallery-template--17453745111139__main {
+          --media-radius: 0px;
+          --grid-mobile-horizontal-spacing: 0px;
+          --mobile-scroll-padding: calc(0% + 0px);
+          --slide-container-percentage-width: 100%;
+          --slide-inner-percentage-width: 100%;
+        }
+      }
+    </style>
+
+
+
+    <div
+      class="product product--medium product--left product--thumbnail_slider product--mobile-show grid grid--1-col grid--2-col-tablet">
+      <div class="grid__item product__media-wrapper product__column-sticky">
+
+        <media-gallery id="MediaGallery-template--17453745111139__main" data-section="template--17453745111139__main"
+          role="region" aria-label="Gallery Viewer" data-desktop-layout="thumbnail_slider" data-disable-prepend="false">
+          <div id="GalleryStatus-template--17453745111139__main" class="visually-hidden" role="status"></div>
+          <slider-component id="GalleryViewer-template--17453745111139__main" class="slider-mobile-gutter"
+            data-pause-videos='true' data-update-active="true"><a
+              class="skip-to-content-link button visually-hidden quick-add-hidden"
+              href="#ProductInfo-template--17453745111139__main">
+              Skip to product information
+            </a>
+            <ul id="Slider-Gallery-template--17453745111139__main"
+              class="product__media-list contains-media grid grid--peek list-unstyled slider slider--mobile gallery-slider--desktop product__media-list--outer-spacing"
+              role="list">
+              <li id="Slide-template--17453745111139__main-25929888825443"
+                class="product__media-item grid__item slider__slide is-active"
+                data-media-id="template--17453745111139__main-25929888825443"
+                data-alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}">
+
+
+                <div
+                  class="product-media-container media-type-image media-fit-contain global-media-settings gradient constrain-height"
+                  style="--ratio: 1.0; --preview-ratio: 1.0;">
+
+                  <noscript>
+                    <div class="product__media media">
+                      <img src="{{PRODUCT_IMAGE_1}}" alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}"
+                        srcset="{{PRODUCT_IMAGE_1}} 246w, {{PRODUCT_IMAGE_1}} 493w, {{PRODUCT_IMAGE_1}} 600w, {{PRODUCT_IMAGE_1}} 713w, {{PRODUCT_IMAGE_1}} 823w, {{PRODUCT_IMAGE_1}} 990w, {{PRODUCT_IMAGE_1}} 1100w, {{PRODUCT_IMAGE_1}} 1206w, {{PRODUCT_IMAGE_1}} 1346w, {{PRODUCT_IMAGE_1}} 1426w, {{PRODUCT_IMAGE_1}} 1646w, {{PRODUCT_IMAGE_1}} 1946w"
+                        width="1024" height="1024"
+                        sizes="(min-width: 1400px) 715px, (min-width: 990px) calc(55.0vw - 10rem), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw / 1 - 4rem)">
+                    </div>
+                  </noscript>
+
+                  <modal-opener class="product__modal-opener product__modal-opener--image no-js-hidden"
+                    data-modal="#ProductModal-template--17453745111139__main">
+                    <span class="product__media-icon motion-reduce quick-add-hidden product__media-icon--none"
+                      aria-hidden="true"><svg aria-hidden="true" focusable="false" class="icon icon-plus" width="19"
+                        height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M4.66724 7.93978C4.66655 7.66364 4.88984 7.43922 5.16598 7.43853L10.6996 7.42464C10.9758 7.42395 11.2002 7.64724 11.2009 7.92339C11.2016 8.19953 10.9783 8.42395 10.7021 8.42464L5.16849 8.43852C4.89235 8.43922 4.66793 8.21592 4.66724 7.93978Z"
+                          fill="currentColor" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M7.92576 4.66463C8.2019 4.66394 8.42632 4.88723 8.42702 5.16337L8.4409 10.697C8.44159 10.9732 8.2183 11.1976 7.94215 11.1983C7.66601 11.199 7.44159 10.9757 7.4409 10.6995L7.42702 5.16588C7.42633 4.88974 7.64962 4.66532 7.92576 4.66463Z"
+                          fill="currentColor" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M12.8324 3.03011C10.1255 0.323296 5.73693 0.323296 3.03011 3.03011C0.323296 5.73693 0.323296 10.1256 3.03011 12.8324C5.73693 15.5392 10.1255 15.5392 12.8324 12.8324C15.5392 10.1256 15.5392 5.73693 12.8324 3.03011ZM2.32301 2.32301C5.42035 -0.774336 10.4421 -0.774336 13.5395 2.32301C16.6101 5.39361 16.6366 10.3556 13.619 13.4588L18.2473 18.0871C18.4426 18.2824 18.4426 18.599 18.2473 18.7943C18.0521 18.9895 17.7355 18.9895 17.5402 18.7943L12.8778 14.1318C9.76383 16.6223 5.20839 16.4249 2.32301 13.5395C-0.774335 10.4421 -0.774335 5.42035 2.32301 2.32301Z"
+                          fill="currentColor" />
+                      </svg>
+                    </span>
+                    <div class="product__media media media--transparent">
+
+                      <img src="{{PRODUCT_IMAGE_1}}" alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}"
+                        srcset="{{PRODUCT_IMAGE_1}} 246w, {{PRODUCT_IMAGE_1}} 493w, {{PRODUCT_IMAGE_1}} 600w, {{PRODUCT_IMAGE_1}} 713w, {{PRODUCT_IMAGE_1}} 823w, {{PRODUCT_IMAGE_1}} 990w, {{PRODUCT_IMAGE_1}} 1100w, {{PRODUCT_IMAGE_1}} 1206w, {{PRODUCT_IMAGE_1}} 1346w, {{PRODUCT_IMAGE_1}} 1426w, {{PRODUCT_IMAGE_1}} 1646w, {{PRODUCT_IMAGE_1}} 1946w"
+                        width="1024" height="1024" class="image-magnify-none"
+                        sizes="(min-width: 1400px) 715px, (min-width: 990px) calc(55.0vw - 10rem), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw / 1 - 4rem)">
+
+                    </div>
+                    <button class="product__media-toggle quick-add-hidden product__media-zoom-none" type="button"
+                      aria-haspopup="dialog" data-media-id="25929888825443">
+                      <span class="visually-hidden">
+                        Open media 1 in modal
+                      </span>
+                    </button>
+                  </modal-opener>
+                </div>
+
+              </li>
+              <li id="Slide-template--17453745111139__main-25929888792675"
+                class="product__media-item grid__item slider__slide"
+                data-media-id="template--17453745111139__main-25929888792675"
+                data-alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}">
+
+
+                <div
+                  class="product-media-container media-type-image media-fit-contain global-media-settings gradient constrain-height"
+                  style="--ratio: 1.0; --preview-ratio: 1.0;">
+
+                  <noscript>
+                    <div class="product__media media">
+                      <img src="{{PRODUCT_IMAGE_2}}" alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}"
+                        srcset="{{PRODUCT_IMAGE_2}} 246w, {{PRODUCT_IMAGE_2}} 493w, {{PRODUCT_IMAGE_2}} 600w, {{PRODUCT_IMAGE_2}} 713w, {{PRODUCT_IMAGE_2}} 823w, {{PRODUCT_IMAGE_2}} 990w, {{PRODUCT_IMAGE_2}} 1100w, {{PRODUCT_IMAGE_2}} 1206w, {{PRODUCT_IMAGE_2}} 1346w, {{PRODUCT_IMAGE_2}} 1426w, {{PRODUCT_IMAGE_2}} 1646w, {{PRODUCT_IMAGE_2}} 1946w"
+                        width="1024" height="1024" loading="lazy"
+                        sizes="(min-width: 1400px) 715px, (min-width: 990px) calc(55.0vw - 10rem), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw / 1 - 4rem)">
+                    </div>
+                  </noscript>
+
+                  <modal-opener class="product__modal-opener product__modal-opener--image no-js-hidden"
+                    data-modal="#ProductModal-template--17453745111139__main">
+                    <span class="product__media-icon motion-reduce quick-add-hidden product__media-icon--none"
+                      aria-hidden="true"><svg aria-hidden="true" focusable="false" class="icon icon-plus" width="19"
+                        height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M4.66724 7.93978C4.66655 7.66364 4.88984 7.43922 5.16598 7.43853L10.6996 7.42464C10.9758 7.42395 11.2002 7.64724 11.2009 7.92339C11.2016 8.19953 10.9783 8.42395 10.7021 8.42464L5.16849 8.43852C4.89235 8.43922 4.66793 8.21592 4.66724 7.93978Z"
+                          fill="currentColor" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M7.92576 4.66463C8.2019 4.66394 8.42632 4.88723 8.42702 5.16337L8.4409 10.697C8.44159 10.9732 8.2183 11.1976 7.94215 11.1983C7.66601 11.199 7.44159 10.9757 7.4409 10.6995L7.42702 5.16588C7.42633 4.88974 7.64962 4.66532 7.92576 4.66463Z"
+                          fill="currentColor" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M12.8324 3.03011C10.1255 0.323296 5.73693 0.323296 3.03011 3.03011C0.323296 5.73693 0.323296 10.1256 3.03011 12.8324C5.73693 15.5392 10.1255 15.5392 12.8324 12.8324C15.5392 10.1256 15.5392 5.73693 12.8324 3.03011ZM2.32301 2.32301C5.42035 -0.774336 10.4421 -0.774336 13.5395 2.32301C16.6101 5.39361 16.6366 10.3556 13.619 13.4588L18.2473 18.0871C18.4426 18.2824 18.4426 18.599 18.2473 18.7943C18.0521 18.9895 17.7355 18.9895 17.5402 18.7943L12.8778 14.1318C9.76383 16.6223 5.20839 16.4249 2.32301 13.5395C-0.774335 10.4421 -0.774335 5.42035 2.32301 2.32301Z"
+                          fill="currentColor" />
+                      </svg>
+                    </span>
+                    <div class="product__media media media--transparent">
+
+                      <img src="{{PRODUCT_IMAGE_2}}" alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}"
+                        srcset="{{PRODUCT_IMAGE_2}} 246w, {{PRODUCT_IMAGE_2}} 493w, {{PRODUCT_IMAGE_2}} 600w, {{PRODUCT_IMAGE_2}} 713w, {{PRODUCT_IMAGE_2}} 823w, {{PRODUCT_IMAGE_2}} 990w, {{PRODUCT_IMAGE_2}} 1100w, {{PRODUCT_IMAGE_2}} 1206w, {{PRODUCT_IMAGE_2}} 1346w, {{PRODUCT_IMAGE_2}} 1426w, {{PRODUCT_IMAGE_2}} 1646w, {{PRODUCT_IMAGE_2}} 1946w"
+                        width="1024" height="1024" loading="lazy" class="image-magnify-none"
+                        sizes="(min-width: 1400px) 715px, (min-width: 990px) calc(55.0vw - 10rem), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw / 1 - 4rem)">
+
+                    </div>
+                    <button class="product__media-toggle quick-add-hidden product__media-zoom-none" type="button"
+                      aria-haspopup="dialog" data-media-id="25929888792675">
+                      <span class="visually-hidden">
+                        Open media 2 in modal
+                      </span>
+                    </button>
+                  </modal-opener>
+                </div>
+
+              </li>
+              <li id="Slide-template--17453745111139__main-25929888858211"
+                class="product__media-item grid__item slider__slide"
+                data-media-id="template--17453745111139__main-25929888858211"
+                data-alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}">
+
+
+                <div
+                  class="product-media-container media-type-image media-fit-contain global-media-settings gradient constrain-height"
+                  style="--ratio: 1.0; --preview-ratio: 1.0;">
+
+                  <noscript>
+                    <div class="product__media media">
+                      <img src="{{PRODUCT_IMAGE_3}}" alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}"
+                        srcset="{{PRODUCT_IMAGE_3}} 246w, {{PRODUCT_IMAGE_3}} 493w, {{PRODUCT_IMAGE_3}} 600w, {{PRODUCT_IMAGE_3}} 713w, {{PRODUCT_IMAGE_3}} 823w, {{PRODUCT_IMAGE_3}} 990w, {{PRODUCT_IMAGE_3}} 1100w, {{PRODUCT_IMAGE_3}} 1206w, {{PRODUCT_IMAGE_3}} 1346w, {{PRODUCT_IMAGE_3}} 1426w, {{PRODUCT_IMAGE_3}} 1646w, {{PRODUCT_IMAGE_3}} 1946w"
+                        width="1024" height="1024" loading="lazy"
+                        sizes="(min-width: 1400px) 715px, (min-width: 990px) calc(55.0vw - 10rem), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw / 1 - 4rem)">
+                    </div>
+                  </noscript>
+
+                  <modal-opener class="product__modal-opener product__modal-opener--image no-js-hidden"
+                    data-modal="#ProductModal-template--17453745111139__main">
+                    <span class="product__media-icon motion-reduce quick-add-hidden product__media-icon--none"
+                      aria-hidden="true"><svg aria-hidden="true" focusable="false" class="icon icon-plus" width="19"
+                        height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M4.66724 7.93978C4.66655 7.66364 4.88984 7.43922 5.16598 7.43853L10.6996 7.42464C10.9758 7.42395 11.2002 7.64724 11.2009 7.92339C11.2016 8.19953 10.9783 8.42395 10.7021 8.42464L5.16849 8.43852C4.89235 8.43922 4.66793 8.21592 4.66724 7.93978Z"
+                          fill="currentColor" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M7.92576 4.66463C8.2019 4.66394 8.42632 4.88723 8.42702 5.16337L8.4409 10.697C8.44159 10.9732 8.2183 11.1976 7.94215 11.1983C7.66601 11.199 7.44159 10.9757 7.4409 10.6995L7.42702 5.16588C7.42633 4.88974 7.64962 4.66532 7.92576 4.66463Z"
+                          fill="currentColor" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M12.8324 3.03011C10.1255 0.323296 5.73693 0.323296 3.03011 3.03011C0.323296 5.73693 0.323296 10.1256 3.03011 12.8324C5.73693 15.5392 10.1255 15.5392 12.8324 12.8324C15.5392 10.1256 15.5392 5.73693 12.8324 3.03011ZM2.32301 2.32301C5.42035 -0.774336 10.4421 -0.774336 13.5395 2.32301C16.6101 5.39361 16.6366 10.3556 13.619 13.4588L18.2473 18.0871C18.4426 18.2824 18.4426 18.599 18.2473 18.7943C18.0521 18.9895 17.7355 18.9895 17.5402 18.7943L12.8778 14.1318C9.76383 16.6223 5.20839 16.4249 2.32301 13.5395C-0.774335 10.4421 -0.774335 5.42035 2.32301 2.32301Z"
+                          fill="currentColor" />
+                      </svg>
+                    </span>
+                    <div class="product__media media media--transparent">
+
+                      <img src="{{PRODUCT_IMAGE_3}}" alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}"
+                        srcset="{{PRODUCT_IMAGE_3}} 246w, {{PRODUCT_IMAGE_3}} 493w, {{PRODUCT_IMAGE_3}} 600w, {{PRODUCT_IMAGE_3}} 713w, {{PRODUCT_IMAGE_3}} 823w, {{PRODUCT_IMAGE_3}} 990w, {{PRODUCT_IMAGE_3}} 1100w, {{PRODUCT_IMAGE_3}} 1206w, {{PRODUCT_IMAGE_3}} 1346w, {{PRODUCT_IMAGE_3}} 1426w, {{PRODUCT_IMAGE_3}} 1646w, {{PRODUCT_IMAGE_3}} 1946w"
+                        width="1024" height="1024" loading="lazy" class="image-magnify-none"
+                        sizes="(min-width: 1400px) 715px, (min-width: 990px) calc(55.0vw - 10rem), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw / 1 - 4rem)">
+
+                    </div>
+                    <button class="product__media-toggle quick-add-hidden product__media-zoom-none" type="button"
+                      aria-haspopup="dialog" data-media-id="25929888858211">
+                      <span class="visually-hidden">
+                        Open media 3 in modal
+                      </span>
+                    </button>
+                  </modal-opener>
+                </div>
+
+              </li>
+              <li id="Slide-template--17453745111139__main-25634420818019"
+                class="product__media-item grid__item slider__slide"
+                data-media-id="template--17453745111139__main-25634420818019"
+                data-alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}">
+
+
+                <div
+                  class="product-media-container media-type-image media-fit-contain global-media-settings gradient constrain-height"
+                  style="--ratio: 1.0; --preview-ratio: 1.0;">
+
+                  <noscript>
+                    <div class="product__media media">
+                      <img src="{{PRODUCT_IMAGE_4}}" alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}"
+                        srcset="{{PRODUCT_IMAGE_4}} 246w, {{PRODUCT_IMAGE_4}} 493w, {{PRODUCT_IMAGE_4}} 600w, {{PRODUCT_IMAGE_4}} 713w, {{PRODUCT_IMAGE_4}} 823w, {{PRODUCT_IMAGE_4}} 990w, {{PRODUCT_IMAGE_4}} 1100w, {{PRODUCT_IMAGE_4}} 1206w, {{PRODUCT_IMAGE_4}} 1346w, {{PRODUCT_IMAGE_4}} 1426w, {{PRODUCT_IMAGE_4}} 1646w, {{PRODUCT_IMAGE_4}} 1946w"
+                        width="1946" height="1946" loading="lazy"
+                        sizes="(min-width: 1400px) 715px, (min-width: 990px) calc(55.0vw - 10rem), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw / 1 - 4rem)">
+                    </div>
+                  </noscript>
+
+                  <modal-opener class="product__modal-opener product__modal-opener--image no-js-hidden"
+                    data-modal="#ProductModal-template--17453745111139__main">
+                    <span class="product__media-icon motion-reduce quick-add-hidden product__media-icon--none"
+                      aria-hidden="true"><svg aria-hidden="true" focusable="false" class="icon icon-plus" width="19"
+                        height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M4.66724 7.93978C4.66655 7.66364 4.88984 7.43922 5.16598 7.43853L10.6996 7.42464C10.9758 7.42395 11.2002 7.64724 11.2009 7.92339C11.2016 8.19953 10.9783 8.42395 10.7021 8.42464L5.16849 8.43852C4.89235 8.43922 4.66793 8.21592 4.66724 7.93978Z"
+                          fill="currentColor" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M7.92576 4.66463C8.2019 4.66394 8.42632 4.88723 8.42702 5.16337L8.4409 10.697C8.44159 10.9732 8.2183 11.1976 7.94215 11.1983C7.66601 11.199 7.44159 10.9757 7.4409 10.6995L7.42702 5.16588C7.42633 4.88974 7.64962 4.66532 7.92576 4.66463Z"
+                          fill="currentColor" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M12.8324 3.03011C10.1255 0.323296 5.73693 0.323296 3.03011 3.03011C0.323296 5.73693 0.323296 10.1256 3.03011 12.8324C5.73693 15.5392 10.1255 15.5392 12.8324 12.8324C15.5392 10.1256 15.5392 5.73693 12.8324 3.03011ZM2.32301 2.32301C5.42035 -0.774336 10.4421 -0.774336 13.5395 2.32301C16.6101 5.39361 16.6366 10.3556 13.619 13.4588L18.2473 18.0871C18.4426 18.2824 18.4426 18.599 18.2473 18.7943C18.0521 18.9895 17.7355 18.9895 17.5402 18.7943L12.8778 14.1318C9.76383 16.6223 5.20839 16.4249 2.32301 13.5395C-0.774335 10.4421 -0.774335 5.42035 2.32301 2.32301Z"
+                          fill="currentColor" />
+                      </svg>
+                    </span>
+                    <div class="product__media media media--transparent">
+
+                      <img src="{{PRODUCT_IMAGE_4}}" alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}"
+                        srcset="{{PRODUCT_IMAGE_4}} 246w, {{PRODUCT_IMAGE_4}} 493w, {{PRODUCT_IMAGE_4}} 600w, {{PRODUCT_IMAGE_4}} 713w, {{PRODUCT_IMAGE_4}} 823w, {{PRODUCT_IMAGE_4}} 990w, {{PRODUCT_IMAGE_4}} 1100w, {{PRODUCT_IMAGE_4}} 1206w, {{PRODUCT_IMAGE_4}} 1346w, {{PRODUCT_IMAGE_4}} 1426w, {{PRODUCT_IMAGE_4}} 1646w, {{PRODUCT_IMAGE_4}} 1946w"
+                        width="1946" height="1946" loading="lazy" class="image-magnify-none"
+                        sizes="(min-width: 1400px) 715px, (min-width: 990px) calc(55.0vw - 10rem), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw / 1 - 4rem)">
+
+                    </div>
+                    <button class="product__media-toggle quick-add-hidden product__media-zoom-none" type="button"
+                      aria-haspopup="dialog" data-media-id="25634420818019">
+                      <span class="visually-hidden">
+                        Open media 4 in modal
+                      </span>
+                    </button>
+                  </modal-opener>
+                </div>
+
+              </li>
+              <li id="Slide-template--17453745111139__main-25634596028515"
+                class="product__media-item grid__item slider__slide"
+                data-media-id="template--17453745111139__main-25634596028515"
+                data-alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}">
+
+
+                <div
+                  class="product-media-container media-type-image media-fit-contain global-media-settings gradient constrain-height"
+                  style="--ratio: 1.0; --preview-ratio: 1.0;">
+
+                  <noscript>
+                    <div class="product__media media">
+                      <img src="{{PRODUCT_IMAGE_5}}" alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}"
+                        srcset="{{PRODUCT_IMAGE_5}} 246w, {{PRODUCT_IMAGE_5}} 493w, {{PRODUCT_IMAGE_5}} 600w, {{PRODUCT_IMAGE_5}} 713w, {{PRODUCT_IMAGE_5}} 823w, {{PRODUCT_IMAGE_5}} 990w, {{PRODUCT_IMAGE_5}} 1100w, {{PRODUCT_IMAGE_5}} 1206w, {{PRODUCT_IMAGE_5}} 1346w, {{PRODUCT_IMAGE_5}} 1426w, {{PRODUCT_IMAGE_5}} 1646w, {{PRODUCT_IMAGE_5}} 1946w"
+                        width="1946" height="1946" loading="lazy"
+                        sizes="(min-width: 1400px) 715px, (min-width: 990px) calc(55.0vw - 10rem), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw / 1 - 4rem)">
+                    </div>
+                  </noscript>
+
+                  <modal-opener class="product__modal-opener product__modal-opener--image no-js-hidden"
+                    data-modal="#ProductModal-template--17453745111139__main">
+                    <span class="product__media-icon motion-reduce quick-add-hidden product__media-icon--none"
+                      aria-hidden="true"><svg aria-hidden="true" focusable="false" class="icon icon-plus" width="19"
+                        height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M4.66724 7.93978C4.66655 7.66364 4.88984 7.43922 5.16598 7.43853L10.6996 7.42464C10.9758 7.42395 11.2002 7.64724 11.2009 7.92339C11.2016 8.19953 10.9783 8.42395 10.7021 8.42464L5.16849 8.43852C4.89235 8.43922 4.66793 8.21592 4.66724 7.93978Z"
+                          fill="currentColor" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M7.92576 4.66463C8.2019 4.66394 8.42632 4.88723 8.42702 5.16337L8.4409 10.697C8.44159 10.9732 8.2183 11.1976 7.94215 11.1983C7.66601 11.199 7.44159 10.9757 7.4409 10.6995L7.42702 5.16588C7.42633 4.88974 7.64962 4.66532 7.92576 4.66463Z"
+                          fill="currentColor" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M12.8324 3.03011C10.1255 0.323296 5.73693 0.323296 3.03011 3.03011C0.323296 5.73693 0.323296 10.1256 3.03011 12.8324C5.73693 15.5392 10.1255 15.5392 12.8324 12.8324C15.5392 10.1256 15.5392 5.73693 12.8324 3.03011ZM2.32301 2.32301C5.42035 -0.774336 10.4421 -0.774336 13.5395 2.32301C16.6101 5.39361 16.6366 10.3556 13.619 13.4588L18.2473 18.0871C18.4426 18.2824 18.4426 18.599 18.2473 18.7943C18.0521 18.9895 17.7355 18.9895 17.5402 18.7943L12.8778 14.1318C9.76383 16.6223 5.20839 16.4249 2.32301 13.5395C-0.774335 10.4421 -0.774335 5.42035 2.32301 2.32301Z"
+                          fill="currentColor" />
+                      </svg>
+                    </span>
+                    <div class="product__media media media--transparent">
+
+                      <img src="{{PRODUCT_IMAGE_5}}" alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}"
+                        srcset="{{PRODUCT_IMAGE_5}} 246w, {{PRODUCT_IMAGE_5}} 493w, {{PRODUCT_IMAGE_5}} 600w, {{PRODUCT_IMAGE_5}} 713w, {{PRODUCT_IMAGE_5}} 823w, {{PRODUCT_IMAGE_5}} 990w, {{PRODUCT_IMAGE_5}} 1100w, {{PRODUCT_IMAGE_5}} 1206w, {{PRODUCT_IMAGE_5}} 1346w, {{PRODUCT_IMAGE_5}} 1426w, {{PRODUCT_IMAGE_5}} 1646w, {{PRODUCT_IMAGE_5}} 1946w"
+                        width="1946" height="1946" loading="lazy" class="image-magnify-none"
+                        sizes="(min-width: 1400px) 715px, (min-width: 990px) calc(55.0vw - 10rem), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw / 1 - 4rem)">
+
+                    </div>
+                    <button class="product__media-toggle quick-add-hidden product__media-zoom-none" type="button"
+                      aria-haspopup="dialog" data-media-id="25634596028515">
+                      <span class="visually-hidden">
+                        Open media 5 in modal
+                      </span>
+                    </button>
+                  </modal-opener>
+                </div>
+
+              </li>
+              <li id="Slide-template--17453745111139__main-25634596028516"
+                class="product__media-item grid__item slider__slide"
+                data-media-id="template--17453745111139__main-25634596028516"
+                data-alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}">
+
+                <div
+                  class="product-media-container media-type-image media-fit-contain global-media-settings gradient constrain-height"
+                  style="--ratio: 1.0; --preview-ratio: 1.0;">
+
+                  <noscript>
+                    <div class="product__media media">
+                      <img src="{{PRODUCT_IMAGE_6}}" alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}"
+                        srcset="{{PRODUCT_IMAGE_6}} 246w, {{PRODUCT_IMAGE_6}} 493w, {{PRODUCT_IMAGE_6}} 600w, {{PRODUCT_IMAGE_6}} 713w, {{PRODUCT_IMAGE_6}} 823w, {{PRODUCT_IMAGE_6}} 990w, {{PRODUCT_IMAGE_6}} 1100w, {{PRODUCT_IMAGE_6}} 1206w, {{PRODUCT_IMAGE_6}} 1346w, {{PRODUCT_IMAGE_6}} 1426w, {{PRODUCT_IMAGE_6}} 1646w, {{PRODUCT_IMAGE_6}} 1946w"
+                        width="1946" height="1946" loading="lazy"
+                        sizes="(min-width: 1400px) 715px, (min-width: 990px) calc(55.0vw - 10rem), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw / 1 - 4rem)">
+                    </div>
+                  </noscript>
+
+                  <modal-opener class="product__modal-opener product__modal-opener--image no-js-hidden"
+                    data-modal="#ProductModal-template--17453745111139__main">
+                    <span class="product__media-icon motion-reduce quick-add-hidden product__media-icon--none"
+                      aria-hidden="true"><svg aria-hidden="true" focusable="false" class="icon icon-plus" width="19"
+                        height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M4.66724 7.93978C4.66655 7.66364 4.88984 7.43922 5.16598 7.43853L10.6996 7.42464C10.9758 7.42395 11.2002 7.64724 11.2009 7.92339C11.2016 8.19953 10.9783 8.42395 10.7021 8.42464L5.16849 8.43852C4.89235 8.43922 4.66793 8.21592 4.66724 7.93978Z"
+                          fill="currentColor" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M7.92576 4.66463C8.2019 4.66394 8.42632 4.88723 8.42702 5.16337L8.4409 10.697C8.44159 10.9732 8.2183 11.1976 7.94215 11.1983C7.66601 11.199 7.44159 10.9757 7.4409 10.6995L7.42702 5.16588C7.42633 4.88974 7.64962 4.66532 7.92576 4.66463Z"
+                          fill="currentColor" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M12.8324 3.03011C10.1255 0.323296 5.73693 0.323296 3.03011 3.03011C0.323296 5.73693 0.323296 10.1256 3.03011 12.8324C5.73693 15.5392 10.1255 15.5392 12.8324 12.8324C15.5392 10.1256 15.5392 5.73693 12.8324 3.03011ZM2.32301 2.32301C5.42035 -0.774336 10.4421 -0.774336 13.5395 2.32301C16.6101 5.39361 16.6366 10.3556 13.619 13.4588L18.2473 18.0871C18.4426 18.2824 18.4426 18.599 18.2473 18.7943C18.0521 18.9895 17.7355 18.9895 17.5402 18.7943L12.8778 14.1318C9.76383 16.6223 5.20839 16.4249 2.32301 13.5395C-0.774335 10.4421 -0.774335 5.42035 2.32301 2.32301Z"
+                          fill="currentColor" />
+                      </svg>
+                    </span>
+                    <div class="product__media media media--transparent">
+
+                      <img src="{{PRODUCT_IMAGE_6}}" alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}"
+                        srcset="{{PRODUCT_IMAGE_6}} 246w, {{PRODUCT_IMAGE_6}} 493w, {{PRODUCT_IMAGE_6}} 600w, {{PRODUCT_IMAGE_6}} 713w, {{PRODUCT_IMAGE_6}} 823w, {{PRODUCT_IMAGE_6}} 990w, {{PRODUCT_IMAGE_6}} 1100w, {{PRODUCT_IMAGE_6}} 1206w, {{PRODUCT_IMAGE_6}} 1346w, {{PRODUCT_IMAGE_6}} 1426w, {{PRODUCT_IMAGE_6}} 1646w, {{PRODUCT_IMAGE_6}} 1946w"
+                        width="1946" height="1946" loading="lazy" class="image-magnify-none"
+                        sizes="(min-width: 1400px) 715px, (min-width: 990px) calc(55.0vw - 10rem), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw / 1 - 4rem)">
+
+                    </div>
+                    <button class="product__media-toggle quick-add-hidden product__media-zoom-none" type="button"
+                      aria-haspopup="dialog" data-media-id="25634596028516">
+                      <span class="visually-hidden">
+                        Open media 6 in modal
+                      </span>
+                    </button>
+                  </modal-opener>
+                </div>
+
+              </li>
+            </ul>
+            <div
+              class="slider-buttons slider-mobile-buttons-overlay-container slider-buttons--dots slider--mobile-arrows-sides splide--transparent-arrows no-js-hidden quick-add-hidden">
+              <button type="button" class="slider-button--prev splide__arrow splide__arrow--prev color-inverse"
+                name="previous" aria-label="Slide left">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false">
+                  <path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z">
+                  </path>
+                </svg>
+              </button>
+
+              <div class='slider__dots flex-center desktop-hidden slider-mobile-buttons-overlay'>
+
+                <button class="slider-counter__link slider-counter__link--dots link" aria-label="Load slide 1 of 6"
+                  aria-controls="Slider-template--17453745111139__main">
+                  <span class="dot color-inverse"></span>
+                </button>
+
+                <button class="slider-counter__link slider-counter__link--dots link" aria-label="Load slide 2 of 6"
+                  aria-controls="Slider-template--17453745111139__main">
+                  <span class="dot color-inverse"></span>
+                </button>
+
+                <button class="slider-counter__link slider-counter__link--dots link" aria-label="Load slide 3 of 6"
+                  aria-controls="Slider-template--17453745111139__main">
+                  <span class="dot color-inverse"></span>
+                </button>
+
+                <button class="slider-counter__link slider-counter__link--dots link" aria-label="Load slide 4 of 6"
+                  aria-controls="Slider-template--17453745111139__main">
+                  <span class="dot color-inverse"></span>
+                </button>
+
+                <button class="slider-counter__link slider-counter__link--dots link" aria-label="Load slide 5 of 6"
+                  aria-controls="Slider-template--17453745111139__main">
+                  <span class="dot color-inverse"></span>
+                </button>
+
+                <button class="slider-counter__link slider-counter__link--dots link" aria-label="Load slide 6 of 6"
+                  aria-controls="Slider-template--17453745111139__main">
+                  <span class="dot color-inverse"></span>
+                </button>
+
+              </div>
+
+              <button type="button" class="slider-button--next splide__arrow splide__arrow--next color-inverse"
+                name="next" aria-label="Slide right">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false">
+                  <path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z">
+                  </path>
+                </svg>
+              </button>
+            </div>
+          </slider-component>
+
+          <!-- WaistMafia-Style Product Overlay Bar - EXACT 2-LINE LAYOUT -->
+          <div class="product-overlay-bar" style="
+            background: #000;
+            color: #fff;
+            padding: 10px 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            width: calc(100% + 3rem);
+            margin-left: -1.5rem;
+            margin-right: -1.5rem;
+            box-sizing: border-box;
+          ">
+            <!-- LINE 1: Stars + Rating -->
+            <div style="display: flex; align-items: center; gap: 6px; font-size: 13px;">
+              <span style="color: #ffd700;">★★★★<span style="background: linear-gradient(90deg, #ffd700 80%, #888 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">★</span></span>
+              <span><strong>4.8/5</strong> Rated by <strong>792</strong> {{AUDIENCE}}</span>
+            </div>
+
+            <!-- LINE 2: Promo text + Logo (on SAME line) -->
+            <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+              <div style="font-weight: 700; text-transform: uppercase; font-size: 14px; letter-spacing: 0.3px;">
+                <span style="color: #fff;">BUY ONE, GET ONE</span> <span style="color: #e5ff00;">FREE GIFT</span>
+              </div>
+              <div
+                style="font-family: 'Poppins', sans-serif; font-size: 20px; letter-spacing: 1px; white-space: nowrap;">
+                <span style="font-weight: 300;">AURA</span><span style="font-weight: 700;">LO</span><sup
+                  style="font-size: 9px; font-weight: 400;">®</sup>
+              </div>
+            </div>
+          </div>
+
+          <slider-component id="GalleryThumbnails-template--17453745111139__main"
+            class="thumbnail-slider slider-mobile-gutter quick-add-hidden">
+            <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="Slide left"
+              aria-controls="GalleryThumbnails-template--17453745111139__main" data-step="3">
+              <svg aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z"
+                  fill="currentColor">
+              </svg>
+
+            </button>
+            <ul id="Slider-Thumbnails-template--17453745111139__main"
+              class="thumbnail-list list-unstyled slider slider--mobile slider--tablet-up">
+              <li id="Slide-Thumbnails-template--17453745111139__main-1" class="thumbnail-list__item slider__slide"
+                data-target="template--17453745111139__main-25929888825443" data-media-position="1"
+                data-alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}">
+                <button class="thumbnail global-media-settings global-media-settings--no-shadow"
+                  aria-label="Load image 1 in gallery view" aria-current="true"
+                  aria-controls="GalleryViewer-template--17453745111139__main" aria-describedby="Thumbnail-template--17453745111139__main-1
+">
+                  <img src="{{PRODUCT_IMAGE_1}}" alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}"
+                    srcset="{{PRODUCT_IMAGE_1}} 54w, {{PRODUCT_IMAGE_1}} 74w, {{PRODUCT_IMAGE_1}} 104w, {{PRODUCT_IMAGE_1}} 162w, {{PRODUCT_IMAGE_1}} 208w, {{PRODUCT_IMAGE_1}} 324w, {{PRODUCT_IMAGE_1}} 416w"
+                    width="416" height="520" loading="lazy" sizes="(min-width: 1400px) calc((715 - 4rem) / 4),
+          (min-width: 990px) calc((55.0vw - 4rem) / 4),
+          (min-width: 750px) calc((100vw - 15rem) / 8),
+          calc((100vw - 8rem) / 3)" id="Thumbnail-template--17453745111139__main-1
+">
+                </button>
+              </li>
+              <li id="Slide-Thumbnails-template--17453745111139__main-2" class="thumbnail-list__item slider__slide"
+                data-target="template--17453745111139__main-25929888792675" data-media-position="2"
+                data-alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}">
+                <button class="thumbnail global-media-settings global-media-settings--no-shadow"
+                  aria-label="Load image 2 in gallery view" aria-controls="GalleryViewer-template--17453745111139__main"
+                  aria-describedby="Thumbnail-template--17453745111139__main-2
+">
+                  <img src="{{PRODUCT_IMAGE_2}}" alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}"
+                    srcset="{{PRODUCT_IMAGE_2}} 54w, {{PRODUCT_IMAGE_2}} 74w, {{PRODUCT_IMAGE_2}} 104w, {{PRODUCT_IMAGE_2}} 162w, {{PRODUCT_IMAGE_2}} 208w, {{PRODUCT_IMAGE_2}} 324w, {{PRODUCT_IMAGE_2}} 416w"
+                    width="416" height="520" loading="lazy" sizes="(min-width: 1400px) calc((715 - 4rem) / 4),
+          (min-width: 990px) calc((55.0vw - 4rem) / 4),
+          (min-width: 750px) calc((100vw - 15rem) / 8),
+          calc((100vw - 8rem) / 3)" id="Thumbnail-template--17453745111139__main-2
+">
+                </button>
+              </li>
+              <li id="Slide-Thumbnails-template--17453745111139__main-3" class="thumbnail-list__item slider__slide"
+                data-target="template--17453745111139__main-25929888858211" data-media-position="3"
+                data-alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}">
+                <button class="thumbnail global-media-settings global-media-settings--no-shadow"
+                  aria-label="Load image 3 in gallery view" aria-controls="GalleryViewer-template--17453745111139__main"
+                  aria-describedby="Thumbnail-template--17453745111139__main-3
+">
+                  <img src="{{PRODUCT_IMAGE_3}}" alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}"
+                    srcset="{{PRODUCT_IMAGE_3}} 54w, {{PRODUCT_IMAGE_3}} 74w, {{PRODUCT_IMAGE_3}} 104w, {{PRODUCT_IMAGE_3}} 162w, {{PRODUCT_IMAGE_3}} 208w, {{PRODUCT_IMAGE_3}} 324w, {{PRODUCT_IMAGE_3}} 416w"
+                    width="416" height="520" loading="lazy" sizes="(min-width: 1400px) calc((715 - 4rem) / 4),
+          (min-width: 990px) calc((55.0vw - 4rem) / 4),
+          (min-width: 750px) calc((100vw - 15rem) / 8),
+          calc((100vw - 8rem) / 3)" id="Thumbnail-template--17453745111139__main-3
+">
+                </button>
+              </li>
+              <li id="Slide-Thumbnails-template--17453745111139__main-4" class="thumbnail-list__item slider__slide"
+                data-target="template--17453745111139__main-25634420818019" data-media-position="4"
+                data-alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}">
+                <button class="thumbnail global-media-settings global-media-settings--no-shadow"
+                  aria-label="Load image 4 in gallery view" aria-controls="GalleryViewer-template--17453745111139__main"
+                  aria-describedby="Thumbnail-template--17453745111139__main-4
+">
+                  <img src="{{PRODUCT_IMAGE_4}}" alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}"
+                    srcset="{{PRODUCT_IMAGE_4}} 54w, {{PRODUCT_IMAGE_4}} 74w, {{PRODUCT_IMAGE_4}} 104w, {{PRODUCT_IMAGE_4}} 162w, {{PRODUCT_IMAGE_4}} 208w, {{PRODUCT_IMAGE_4}} 324w, {{PRODUCT_IMAGE_4}} 416w"
+                    width="416" height="416" loading="lazy" sizes="(min-width: 1400px) calc((715 - 4rem) / 4),
+          (min-width: 990px) calc((55.0vw - 4rem) / 4),
+          (min-width: 750px) calc((100vw - 15rem) / 8),
+          calc((100vw - 8rem) / 3)" id="Thumbnail-template--17453745111139__main-4
+">
+                </button>
+              </li>
+              <li id="Slide-Thumbnails-template--17453745111139__main-5" class="thumbnail-list__item slider__slide"
+                data-target="template--17453745111139__main-25634596028515" data-media-position="5"
+                data-alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}">
+                <button class="thumbnail global-media-settings global-media-settings--no-shadow"
+                  aria-label="Load image 5 in gallery view" aria-controls="GalleryViewer-template--17453745111139__main"
+                  aria-describedby="Thumbnail-template--17453745111139__main-5
+">
+                  <img src="{{PRODUCT_IMAGE_5}}" alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}"
+                    srcset="{{PRODUCT_IMAGE_5}} 54w, {{PRODUCT_IMAGE_5}} 74w, {{PRODUCT_IMAGE_5}} 104w, {{PRODUCT_IMAGE_5}} 162w, {{PRODUCT_IMAGE_5}} 208w, {{PRODUCT_IMAGE_5}} 324w, {{PRODUCT_IMAGE_5}} 416w"
+                    width="416" height="416" loading="lazy" sizes="(min-width: 1400px) calc((715 - 4rem) / 4),
+          (min-width: 990px) calc((55.0vw - 4rem) / 4),
+          (min-width: 750px) calc((100vw - 15rem) / 8),
+          calc((100vw - 8rem) / 3)" id="Thumbnail-template--17453745111139__main-5
+">
+                </button>
+              </li>
+            </ul>
+            <button type="button" class="slider-button slider-button--next" name="next" aria-label="Slide right"
+              aria-controls="GalleryThumbnails-template--17453745111139__main" data-step="3">
+              <svg aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z"
+                  fill="currentColor">
+              </svg>
+
+            </button>
+          </slider-component>
+        </media-gallery>
+
+      </div>
+      <div class="product__info-wrapper grid__item product__column-sticky product__info-wrapper--top-padding">
+        <product-info id="ProductInfo-template--17453745111139__main" data-section="template--17453745111139__main"
+          data-url="{{PRODUCT_URL}}" class="product__info-container main-product__info-container">
+          <!-- CHANGE #1: Curiosity Headline (Open Loop) -->
+          <div class="product__title" style="--margin-top: 0.0rem;--margin-bottom: 0.0rem;">
+            <p style="font-size: 14px; color: #666; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 1px;">
+              {{PRODUCT_NAME}}</p>
+            <h1 class="h1" style="font-size: 28px; line-height: 1.2; margin: 0; font-weight: 800; letter-spacing: -0.5px;">
+              {{HEADLINE_HOOK}}
+            </h1>
+          </div>
+
+          <!-- Star Rating: 4.8/5 with dynamic review count -->
+          <div class="rating-stars" style="display: flex; align-items: center; gap: 8px; margin-top: 0; margin-bottom: 0.9rem;">
+            <div style="display: flex; align-items: center; position: relative;">
+              <!-- Background stars (gray) -->
+              <div style="display: flex; gap: 2px; color: #ececec;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" width="18" height="18">
+                  <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" width="18" height="18">
+                  <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" width="18" height="18">
+                  <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" width="18" height="18">
+                  <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" width="18" height="18">
+                  <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/>
+                </svg>
+              </div>
+              <!-- Filled stars overlay (gold) - 4.8/5 = 96% width -->
+              <div style="display: flex; gap: 2px; color: #FFD700; position: absolute; top: 0; left: 0; overflow: hidden; width: 96%;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" width="18" height="18" style="flex-shrink: 0;">
+                  <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" width="18" height="18" style="flex-shrink: 0;">
+                  <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" width="18" height="18" style="flex-shrink: 0;">
+                  <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" width="18" height="18" style="flex-shrink: 0;">
+                  <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" width="18" height="18" style="flex-shrink: 0;">
+                  <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/>
+                </svg>
+              </div>
+            </div>
+            <span style="font-size: 14px; color: #666;">&nbsp;{{REVIEW_COUNT}} Reviews</span>
+          </div>
+
+          <!-- ENGAGE FRAMEWORK: Hero Body Copy (Narrate -> Embed) -->
+          <div class="product__text body" style="margin-top: 1.5rem; margin-bottom: 2rem;">
+            <p style="font-size: 16px; line-height: 1.6; color: #444;">
+              {{HEADLINE_OPENING_COPY}}
+            </p>
+          </div>
+
+          <div id="rotating-review" style="color:#0000000; font-size:14px; font-style:italic; margin:20px 0 10px 0;">
+            <span id="testimonial-text">{{ROTATING_TESTIMONIAL_1}}</span>
+          </div>
+
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const reviews = [
+                "{{ROTATING_TESTIMONIAL_1}}",
+                "{{ROTATING_TESTIMONIAL_2}}",
+                "{{ROTATING_TESTIMONIAL_3}}",
+                "{{ROTATING_TESTIMONIAL_4}}",
+                "{{ROTATING_TESTIMONIAL_5}}"
+              ];
+
+              const el = document.getElementById("testimonial-text");
+              let i = 0;
+
+              function rotateReview() {
+                i = (i + 1) % reviews.length;
+                el.textContent = reviews[i];
+              }
+
+              setInterval(rotateReview, 4000);
+            });
+          </script>
+
+          <!-- CHANGE #5: 120-Day Guarantee Badge (Risk Reversal) -->
+          <div
+            style="background: linear-gradient(135deg, #f0fff0 0%, #e8f5e8 100%); border: 2px solid #2d8f2d; border-radius: 12px; padding: 12px 16px; margin: 15px 0; display: flex; align-items: center; gap: 12px;">
+            <span style="font-size: 28px;">🛡️</span>
+            <div>
+              <strong style="font-size: 14px; color: #1a5f1a; display: block;">{{GUARANTEE_DAYS}}-Day
+                "{{GUARANTEE_NAME}}"
+                Guarantee</strong>
+              <span style="font-size: 12px; color: #2d8f2d;">{{GUARANTEE_CONDITION}}, full refund. No questions
+                asked.</span>
+            </div>
+          </div>
+
+          <div class="bundle-selector-container">
+            <style>
+              .bundle-selector {
+                margin: 20px 0;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+              }
+
+              .bundle-card {
+                border: 1px solid #ddd;
+                border-radius: 12px;
+                padding: 15px 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                position: relative;
+                background: #fff;
+              }
+
+              .bundle-card:hover {
+                border-color: #000;
+              }
+
+              .bundle-card.active {
+                border: 2px solid #000;
+                background: #fdfdfd;
+              }
+
+              .bundle-card.active::after {
+                content: "✓";
+                position: absolute;
+                top: -10px;
+                right: -10px;
+                background: #000;
+                color: #fff;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 14px;
+                font-weight: bold;
+                z-index: 10;
+              }
+
+              .bundle-badge {
+                position: absolute;
+                top: -10px;
+                left: 15px;
+                background: #f0f0f0;
+                padding: 3px 10px;
+                font-size: 10px;
+                font-weight: 800;
+                border-radius: 4px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+              }
+
+              .bundle-badge.best-value {
+                background: #000;
+                color: #fff;
+              }
+
+              .bundle-info {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                flex: 1;
+              }
+
+              .bundle-img {
+                width: 45px;
+                height: 45px;
+                border-radius: 6px;
+                object-fit: cover;
+                background: #f7f7f7;
+              }
+
+              .bundle-text h3 {
+                margin: 0;
+                font-size: 16px;
+                font-weight: 700;
+                color: #000;
+              }
+
+              .bundle-text p {
+                margin: 2px 0 0;
+                font-size: 13px;
+                color: #666;
+              }
+
+              .bundle-price {
+                text-align: right;
+                margin-left: 10px;
+              }
+
+              .bundle-price .price {
+                display: block;
+                font-size: 18px;
+                font-weight: 800;
+                color: #000;
+              }
+
+              .bundle-price .old-price {
+                font-size: 13px;
+                text-decoration: line-through;
+                color: #999;
+              }
+
+              /* Order Bump Modal Styles */
+              .ob-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.6);
+                z-index: 9999;
+                display: none;
+                align-items: center;
+                justify-content: center;
+              }
+
+              .ob-modal {
+                background: #fff;
+                width: 90%;
+                max-width: 400px;
+                border-radius: 20px;
+                padding: 25px;
+                text-align: center;
+                animation: slideUp 0.3s ease;
+              }
+
+              @keyframes slideUp {
+                from {
+                  transform: translateY(50px);
+                  opacity: 0;
+                }
+
+                to {
+                  transform: translateY(0);
+                  opacity: 1;
+                }
+              }
+
+              .ob-modal img {
+                width: 120px;
+                height: 120px;
+                object-fit: contain;
+                margin-bottom: 15px;
+                border-radius: 12px;
+                background: #f7f7f7;
+              }
+
+              .ob-modal h2 {
+                margin: 0 0 10px;
+                font-size: 20px;
+                color: #000;
+              }
+
+              .ob-modal p {
+                color: #444;
+                margin-bottom: 20px;
+                font-size: 14px;
+              }
+
+              .ob-add-btn {
+                background: #000;
+                color: #fff;
+                border: none;
+                width: 100%;
+                padding: 15px;
+                border-radius: 10px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                cursor: pointer;
+              }
+
+              .ob-skip-btn {
+                background: none;
+                border: none;
+                color: #666;
+                font-size: 13px;
+                text-decoration: underline;
+                cursor: pointer;
+              }
+            </style>
+
+            <div class="bundle-selector" id="bundle-selector-anchor">
+              <!-- SIZE CHART LINK -->
+              <div style="text-align: right; margin-bottom: 5px;">
+                <a href="#" id="size-chart-trigger" style="font-size: 12px; text-decoration: underline; color: #666;">📏
+                  Size Chart</a>
+              </div>
+              <!-- CHANGE #2: Best Value Bundle FIRST with visual emphasis -->
+              <div class="bundle-card bundle-featured" data-offer="bundle2"
+                style="border: 2px solid #000; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transform: scale(1.02);">
+                <div class="bundle-badge best-value">🔥 BEST VALUE • {{BUNDLE_BADGE_TEXT}}</div>
+                <div class="bundle-info">
+                  <img loading="lazy" src="{{ORDER_BUMP_IMAGE}}" alt="Free Gift" class="bundle-img">
+                  <div class="bundle-text">
+                    <h3>{{BUNDLE_TITLE_2X}}</h3>
+                    <p>{{BUNDLE_DESC_2X}}</p>
+                    <p style="font-size: 11px; color: #2d8f2d; margin-top: 4px;">💰 Save ${{BUNDLE_SAVINGS}} vs buying
+                      separately</p>
+                    <select class="bundle-size-select" id="size-bundle2">
+                      {{SIZE_OPTIONS}}
+                    </select>
+                  </div>
+                </div>
+                <div class="bundle-price">
+                  <span class="price" style="font-size: 22px;">${{BUNDLE_PRICE}}</span>
+                  <span class="old-price" style="font-size: 14px;">${{BUNDLE_OLD_PRICE}}</span>
+                </div>
+              </div>
+
+              <div class="bundle-card active" data-offer="single" style="opacity: 0.85;">
+                <div class="bundle-badge">SINGLE ITEM</div>
+                <div class="bundle-info">
+                  <div class="bundle-image">
+                    <img src="{{PRODUCT_IMAGE_5}}" alt="Single Case" id="single-card-image"
+                      style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+                  </div>
+                  <div class="bundle-text">
+                    <p>1x {{PRODUCT_NAME}}</p>
+
+                    <!-- COLOR SELECTOR (Dynamic) -->
+                    {{COLOR_UI_HTML}}
+
+                    <select class="bundle-size-select" id="size-single">
+                      {{SIZE_OPTIONS}}
+                    </select>
+                  </div>
+                </div>
+                <div class="bundle-price">
+                  <span class="price">${{SINGLE_PRICE}}</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- ========================================== -->
+            <!-- CRITICAL SECTION: ORDER BUMP - DO NOT DELETE -->
+            <!-- This section is required for checkout upsells -->
+            <!-- AI Agents: PRESERVE THIS ENTIRE BLOCK -->
+            <!-- ========================================== -->
+            <div id="order-bump-section"
+              style="margin: 20px 0; padding: 15px; border: 2px dashed #E5FF00; border-radius: 12px; background: rgba(229, 255, 0, 0.05); display: block;">
+              <div style="display: flex; gap: 15px; align-items: center;">
+                <input type="checkbox" id="orderBumpCheck" checked style="width: 24px; height: 24px; cursor: pointer;">
+                <div style="flex: 1;">
+                  <strong style="font-size: 14px; color: #000;">{{ORDER_BUMP_CTA_TEXT}} ${{ORDER_BUMP_PRICE}}? (50%
+                    OFF)</strong>
+                  <p style="margin: 4px 0 0; font-size: 12px; color: #666;">{{ORDER_BUMP_DESC}}</p>
+                </div>
+                <img loading="lazy" src="{{ORDER_BUMP_IMAGE}}" style="width: 50px; border-radius: 4px;"
+                  alt="Bump">
+              </div>
+            </div>
+            <!-- END CRITICAL: ORDER BUMP -->
+            <!-- ========================================== -->
+
+            <!-- ========================================== -->
+            <!-- SHIPPING URGENCY + TIMELINE BLOCK -->
+            <!-- Position: Below Order Bump, Above ATC -->
+            <!-- ========================================== -->
+            <div id="shipping-timeline-section" style="margin-top: 24px; margin-bottom: 24px;">
+              <div id="shipping-urgency-text" style="text-align:center; font-size:14px; margin-bottom:10px; color:#000000;">
+                Order within the next hour to get it by <span id="dynamic-arrival-date-v2"><strong>Loading...</strong></span>
+              </div>
+
+              <dynamic-dates data-date-format="mm_dd" data-day-labels="Mon, Tue, Wed, Thu, Fri, Sat, Sun"
+                data-month-labels="Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
+                style="--margin-top: 1.2rem;--margin-bottom: 1.2rem;--item-count: 3;" class='shipping-checkpoints'>
+                <div class='shipping-checkpoints__bar color-inverse' style="--item-count-sub: 2;">
+                  &nbsp
+                </div>
+
+                <div class='shipping-checkpoint'>
+                  <div class='shipping-checkpoint__icon flex-center color-inverse'>
+                    <span class="material-icon material-symbols-outlined">
+                      add_shopping_cart
+                    </span>
+                  </div>
+                  <p class='shipping-checkpoint__top' data-dynamic-date='true' data-text="<strong>DAY 1</strong>"
+                    data-min-days="1" data-max-days="1">
+                    <strong>DAY 1</strong>
+                  </p>
+                  <p class='shipping-checkpoint__bottom' data-dynamic-date='true' data-text="Ordered" data-min-days="1"
+                    data-max-days="1">
+                    Ordered
+                  </p>
+                </div>
+
+                <div class='shipping-checkpoint'>
+                  <div class='shipping-checkpoint__icon flex-center color-inverse'>
+                    <span class="material-icon material-symbols-outlined">local_shipping</span>
+                  </div>
+                  <p class='shipping-checkpoint__top' data-dynamic-date='true' data-text="<strong>DAY 2</strong>"
+                    data-min-days="2" data-max-days="2">
+                    <strong>DAY 2</strong>
+                  </p>
+                  <p class='shipping-checkpoint__bottom' data-dynamic-date='true' data-text="Shipped" data-min-days="2"
+                    data-max-days="2">
+                    Shipped
+                  </p>
+                </div>
+
+                <div class='shipping-checkpoint'>
+                  <div class='shipping-checkpoint__icon flex-center color-inverse'>
+                    <span class="material-icon material-symbols-outlined">home</span>
+                  </div>
+                  <p class='shipping-checkpoint__top' data-dynamic-date='true' data-text="<strong>DAY 4</strong>"
+                    data-min-days="4" data-max-days="5">
+                    <strong>DAY 4</strong>
+                  </p>
+                  <p class='shipping-checkpoint__bottom' data-dynamic-date='true' data-text="Delivered" data-min-days="4"
+                    data-max-days="5">
+                    Delivered
+                  </p>
+                </div>
+              </dynamic-dates>
+            </div>
+            <!-- END: SHIPPING TIMELINE BLOCK -->
+            <!-- ========================================== -->
+
+            <!-- Mobile ATC Removed -->
+            <style>
+              .bundle-size-select {
+                margin-top: 8px;
+                padding: 8px 12px;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                font-size: 13px;
+                background: #fff;
+                width: 100%;
+                max-width: 180px;
+                cursor: pointer;
+              }
+
+              .bundle-size-select:focus {
+                outline: none;
+                border-color: #000;
+              }
+
+              .mobile-atc-container {
+                display: block;
+                margin: 20px 0;
+              }
+
+              .mobile-atc-btn {
+                width: 100%;
+                padding: 18px;
+                background: #000;
+                color: #fff;
+                border: none;
+                border-radius: 12px;
+                font-size: 18px;
+                font-weight: 700;
+                cursor: pointer;
+              }
+
+              @media (min-width: 768px) {
+                .mobile-atc-container {
+                  display: none;
+                }
+              }
+            </style>
+
+
+            <!-- Checkout Transition Overlay -->
+            <div id="checkoutTransition"
+              style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(17, 17, 17, 0.95); z-index: 99999; align-items: center; justify-content: center; flex-direction: column; gap: 24px;">
+              <div
+                style="width: 60px; height: 60px; border: 4px solid rgba(229, 255, 0, 0.3); border-top-color: #E5FF00; border-radius: 50%; animation: ob-spin 1s linear infinite;">
+              </div>
+              <div style="color: #fff; font-size: 24px; font-weight: 700;">Creating your order...</div>
+              <div style="color: rgba(255,255,255,0.7); font-size: 14px;">Please wait while we prepare your secure
+                checkout</div>
+            </div>
+            <style>
+              @keyframes ob-spin {
+                to {
+                  transform: rotate(360deg);
+                }
+              }
+            </style>
+
+            <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                const bundleCards = document.querySelectorAll('.bundle-card');
+                const orderBumpCheck = document.getElementById('orderBumpCheck');
+                const mobileAtcBtn = document.getElementById('mobile-atc-trigger');
+                const desktopAtcBtn = document.querySelector('.main-product-atc');
+
+                const BUNDLE_PRICES = {
+                  single: 19,
+                  bundle2: 59
+                };
+                const ORDER_BUMP_PRICE = 10;
+
+                let selectedBundle = 'single';
+                const checkoutCache = {};
+
+                // 1. Preload Function (Optimistic UI)
+                async function preloadCheckout(amount) {
+                  if (checkoutCache[amount]) return;
+                  try {
+                    // CORRECT PATH & KEY
+                    const response = await fetch("/.netlify/functions/buy-now", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({ amountUSD: amount }),
+                    });
+                    const data = await response.json();
+                    if (data.exchangeUrl) checkoutCache[amount] = data.exchangeUrl;
+                  } catch (e) {
+                    console.warn("Preload failed", e);
+                  }
+                }
+
+                function updatePrice() {
+                  let total = BUNDLE_PRICES[selectedBundle];
+
+                  // Order bump logic: Pool 2 ($29) for single, Pool 3 ($59) for bundle
+                  if (orderBumpCheck.checked && selectedBundle === 'single') {
+                    total += ORDER_BUMP_PRICE;
+                  }
+
+                  const priceDisplay = document.getElementById('offer-total-price');
+                  if (priceDisplay) priceDisplay.textContent = `$${total.toFixed(2)}`;
+
+                  const mobilePrice = document.getElementById('mobile-price');
+                  if (mobilePrice) mobilePrice.textContent = `$${total.toFixed(2)}`;
+
+                  // Hide/show bump on bundle2 if needed, but per instructions it's FREE there
+                  const bumpSection = document.getElementById('order-bump-section');
+                  if (selectedBundle === 'bundle2') {
+                    bumpSection.style.opacity = '0.5';
+                    bumpSection.style.pointerEvents = 'none';
+                    orderBumpCheck.checked = true; // For bundle2 it's always included
+                  } else {
+                    bumpSection.style.opacity = '1';
+                    bumpSection.style.pointerEvents = 'auto';
+                  }
+
+                  // Trigger Optimistic Preload
+                  preloadCheckout(total);
+                }
+
+                bundleCards.forEach(card => {
+                  card.addEventListener('click', function () {
+                    bundleCards.forEach(c => c.classList.remove('active'));
+                    this.classList.add('active');
+                    selectedBundle = this.dataset.offer;
+                    updatePrice();
+                  });
+                });
+
+                orderBumpCheck.addEventListener('change', updatePrice);
+
+                async function handleCheckout(e) {
+                  if (e) e.preventDefault();
+                  const total = BUNDLE_PRICES[selectedBundle] + (orderBumpCheck.checked && selectedBundle === 'single' ? ORDER_BUMP_PRICE : 0);
+
+                  // Instant Redirect if Cached
+                  if (checkoutCache[total]) {
+                    window.location.href = checkoutCache[total];
+                    return;
+                  }
+
+                  // Fallback Fetch
+                  const overlay = document.getElementById("checkoutTransition");
+                  if (overlay) overlay.style.display = "flex";
+
+                  try {
+                    const response = await fetch("/.netlify/functions/buy-now", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({ amountUSD: total }),
+                    });
+                    const data = await response.json();
+                    if (data.exchangeUrl) {
+                      window.location.href = data.exchangeUrl;
+                    } else {
+                      throw new Error("No exchange URL returned");
+                    }
+                  } catch (e) {
+                    if (overlay) overlay.style.display = "none";
+                    console.error("Checkout failed", e);
+                    alert("Checkout failed. Please try again.");
+                  }
+                }
+
+                if (mobileAtcBtn) mobileAtcBtn.addEventListener('click', handleCheckout);
+                if (desktopAtcBtn) desktopAtcBtn.addEventListener('click', handleCheckout);
+
+                // Trigger initial price update
+                updatePrice();
+              });
+            </script>
+          </div>
+
+          <!-- Feature Cards moved to after ATC (see #feature-cards-section) -->
+
+          <style>
+            #offer-checkout-btn,
+            #SectionAtcBtn-template--17453745111139__main {
+              --icon-scale: 1.2em;
+              --icon-spacing: 10px;
+            }
+
+            #offer-checkout-btn {
+              --color-button: 0, 0, 0;
+            }
+          </style>
+          <!-- ========================================== -->
+          <!-- ADD TO CART CONTAINER -->
+          <!-- Position: Below Shipping Timeline, Above Feature Icons -->
+          <!-- Spacing: 35px top/bottom as per UI requirements -->
+          <!-- ========================================== -->
+          <div id="atc-container" style="margin-top: 35px; margin-bottom: 35px;"><product-form
+              id="ProductForm-template--17453745111139__main" class="product-form main-product-form"
+              data-section="template--17453745111139__main" data-options="Size,Color" data-main="true">
+              <div class="product-form__error-message-wrapper" role="alert" hidden>
+                <svg aria-hidden="true" focusable="false" class="icon icon-error" viewBox="0 0 13 13">
+                  <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2" />
+                  <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7" />
+                  <path
+                    d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z"
+                    fill="white" />
+                  <path
+                    d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z"
+                    fill="white" stroke="#EB001B" stroke-width="0.7">
+                </svg>
+                <span class="product-form__error-message"></span>
+              </div>
+              <form method="post" action="/cart/add" id="product-form-template--17453745111139__main"
+                accept-charset="UTF-8" class="form" enctype="multipart/form-data" novalidate="novalidate"
+                data-type="add-to-cart-form"><input type="hidden" name="form_type" value="product" /><input
+                  type="hidden" name="utf8" value="✓" />
+                <!-- 
+        ENGAGE FRAMEWORK INSTRUCTION (HERO HOOK):
+        This section must follow the strict ENGAGE sequence:
+        1. EXPLOIT (Headline): Call out the enemy / Violate expectations.
+        2. NARRATE (Subhead): Open a story loop / High stakes context.
+        3. GIVE (Body): Reveal the "Unique Mechanism" immediately.
+        4. ATTACH (Body): Connect mechanism to Identity Shift.
+        
+        VISUAL SEED: Must use `{{PRODUCT_IMAGE_1}}` as the Style Anchor.
+      -->
+                <div class="product__info-container product__info-container--sticky"
+                  id="ProductInfo-template--17453745111139__main">
+                  <div class="hidden product-form__variants" id="product-form-template--17453745111139__main__variants"
+                    data-values=""></div>
+                  <input type="hidden" name="id" value="{{VARIANT_ID}}" class="product-variant-id"
+                    data-skip-cart="true">
+                  <div class="product-form__buttons product-form__buttons--uppercase">
+                    <div
+                      class='product-form__quantity-and-btn product-form__quantity-and-btn--none product-form__quantity-and-btn--stretch-quantity'>
+
+                      <button id="offer-checkout-btn" type="submit" name="add"
+                        class="atc-button product-form__submit button button--full-width button--margin-x main-product-atc"
+                        data-required-fields="0" data-valid-fields="0">
+                        <span class="main-atc__error" style="display:none;"></span>
+                        <span class="main-atc__label button__label">
+
+                          <span id="offer-total-price" class='main-atc-price'>
+                            ${{SINGLE_PRICE}}
+                          </span>
+                          <span> • </span>
+
+                          <span class="main-atc__label__text">Add to cart
+                          </span>
+                        </span>
+                        <div class="loading-overlay__spinner hidden">
+                          <svg aria-hidden="true" focusable="false" class="spinner" viewBox="0 0 66 66"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                          </svg>
+                        </div>
+                      </button>
+                    </div>
+                  </div><input type="hidden" name="product-id" value="{{PRODUCT_ID}}" /><input type="hidden"
+                    name="section-id" value="template--17453745111139__main" />
+              </form>
+            </product-form>
+          </div>
+          <!-- END: ADD TO CART CONTAINER -->
+          <!-- ========================================== -->
+
+          <!-- ========================================== -->
+          <!-- FEATURE ICONS SECTION -->
+          <!-- Position: Below ATC, for social proof -->
+          <!-- ========================================== -->
+          <div class="feature-cards" style="margin-top: 24px;">
+            <div class="feature-card">
+              <span class="icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.75" />
+                  <path d="M7 12.5l3 3 7-8" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span class="text">{{HERO_FEATURE_1}}</span>
+            </div>
+
+            <div class="feature-card">
+              <span class="icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.75" />
+                  <path d="M7 12.5l3 3 7-8" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span class="text">{{HERO_FEATURE_4}}</span>
+            </div>
+
+            <div class="feature-card">
+              <span class="icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.75" />
+                  <path d="M7 12.5l3 3 7-8" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span class="text">{{HERO_FEATURE_3}}</span>
+            </div>
+
+            <div class="feature-card">
+              <span class="icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.75" />
+                  <path d="M7 12.5l3 3 7-8" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span class="text">{{HERO_FEATURE_2}}</span>
+            </div>
+          </div>
+
+          <style>
+            /* FEATURE CARDS - MOBILE-FIRST */
+            .feature-cards {
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 12px;
+            }
+
+            .feature-card {
+              display: flex;
+              align-items: center;
+              gap: 12px;
+              background: #f8f8f8;
+              border: 1px solid #eee;
+              border-radius: 14px;
+              padding: 22px 16px;
+            }
+
+            .feature-card .icon {
+              display: inline-flex;
+              flex-shrink: 0;
+              color: #111;
+            }
+
+            .feature-card .text {
+              font-size: 17px;
+              color: #111;
+              line-height: 1.4;
+            }
+
+            /* DESKTOP ENHANCEMENTS */
+            @media (min-width: 768px) {
+              .feature-cards {
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+              }
+
+              .feature-card {
+                padding: 26px 20px;
+              }
+
+              .feature-card .text {
+                font-size: 16px;
+              }
+            }
+          </style>
+          <!-- END: FEATURE ICONS SECTION -->
+          <!-- ========================================== -->
+
+          <!-- Shipping Timeline moved to after Order Bump (see #shipping-timeline-section) -->
+            <link href="stylesheets/component-pickup-availability.css" rel="stylesheet" type="text/css" media="all" />
+            <pickup-availability class="product__pickup-availabilities no-js-hidden quick-add-hidden" data-root-url="/"
+              data-variant-id="{{VARIANT_ID}}" data-has-only-default-variant="false">
+              <template>
+                <pickup-availability-preview class="pickup-availability-preview">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" focusable="false"
+                    class="icon icon-unavailable" fill="none" viewBox="0 0 20 20">
+                    <path fill="#DE3618" stroke="#fff"
+                      d="M13.94 3.94L10 7.878l-3.94-3.94A1.499 1.499 0 103.94 6.06L7.88 10l-3.94 3.94a1.499 1.499 0 102.12 2.12L10 12.12l3.94 3.94a1.497 1.497 0 002.12 0 1.499 1.499 0 000-2.12L12.122 10l3.94-3.94a1.499 1.499 0 10-2.121-2.12z" />
+                  </svg>
+
+                  <div class="pickup-availability-info">
+                    <p class="caption-large">Couldn&#39;t load pickup availability</p>
+                    <button class="pickup-availability-button link link--text underlined-link">
+                      Refresh
+                    </button>
+                  </div>
+                </pickup-availability-preview>
+              </template>
+            </pickup-availability>
+
+            <script src="scripts/pickup-availability.js" defer="defer"></script>
+          </div>
+
+
+
+
+
+
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              // Dynamic Arrival Date Calculator
+              // Updates the #dynamic-arrival-date-v2 span with calculated delivery date
+              const arrivalDateSpan = document.getElementById('dynamic-arrival-date-v2');
+
+              if (arrivalDateSpan) {
+                const today = new Date();
+                const deliveryDate = new Date(today);
+                deliveryDate.setDate(today.getDate() + 4); // 4 days from now
+
+                const options = { weekday: 'long', month: 'long', day: 'numeric' };
+                const dateString = deliveryDate.toLocaleDateString('en-US', options);
+
+                arrivalDateSpan.innerHTML = `<strong>${dateString}</strong>`;
+              }
+            });
+          </script>
+
+
+          <product-info>
+      </div>
+    </div>
+
+
+
+    <product-modal id="ProductModal-template--17453745111139__main" class="product-media-modal media-modal">
+      <div class="product-media-modal__dialog" role="dialog" aria-label="Media gallery" aria-modal="true" tabindex="-1">
+        <button id="ModalClose-template--17453745111139__main" type="button" class="product-media-modal__toggle"
+          aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-close"
+            fill="none" viewBox="0 0 18 17">
+            <path
+              d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z"
+              fill="currentColor">
+          </svg>
+
+        </button>
+
+        <div class="product-media-modal__content color-background-1 gradient" role="document" aria-label="Media gallery"
+          tabindex="0">
+          <img class="global-media-settings global-media-settings--no-shadow"
+            srcset="{{PRODUCT_IMAGE_1}} 550w,{{PRODUCT_IMAGE_1}} 960w"
+            sizes="(min-width: 750px) calc(100vw - 22rem), 1100px" src="{{PRODUCT_IMAGE_1}}"
+            alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}" loading="lazy" width="1100" height="1375"
+            data-media-id="25929888825443">
+          <img class="global-media-settings global-media-settings--no-shadow"
+            srcset="{{PRODUCT_IMAGE_2}} 550w,{{PRODUCT_IMAGE_2}} 960w"
+            sizes="(min-width: 750px) calc(100vw - 22rem), 1100px" src="{{PRODUCT_IMAGE_2}}"
+            alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}" loading="lazy" width="1100" height="1375"
+            data-media-id="25929888792675">
+          <img class="global-media-settings global-media-settings--no-shadow"
+            srcset="{{PRODUCT_IMAGE_3}} 550w,{{PRODUCT_IMAGE_3}} 960w"
+            sizes="(min-width: 750px) calc(100vw - 22rem), 1100px" src="{{PRODUCT_IMAGE_3}}"
+            alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}" loading="lazy" width="1100" height="1375"
+            data-media-id="25929888858211">
+          <img class="global-media-settings global-media-settings--no-shadow"
+            srcset="{{PRODUCT_IMAGE_4}} 550w,{{PRODUCT_IMAGE_4}} 1024w"
+            sizes="(min-width: 750px) calc(100vw - 22rem), 1100px" src="{{PRODUCT_IMAGE_4}}"
+            alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}" loading="lazy" width="1100" height="1100"
+            data-media-id="25634420818019">
+          <img class="global-media-settings global-media-settings--no-shadow"
+            srcset="{{PRODUCT_IMAGE_5}} 550w,{{PRODUCT_IMAGE_5}} 1024w"
+            sizes="(min-width: 750px) calc(100vw - 22rem), 1100px" src="{{PRODUCT_IMAGE_5}}"
+            alt="{{PRODUCT_NAME}} - {{BRAND_NAME}}" loading="lazy" width="1100" height="1100"
+            data-media-id="25634596028515">
+        </div>
+      </div>
+    </product-modal>
+
+
+
+
+    <script src="scripts/product-modal.js" defer="defer"></script>
+    <script src="scripts/media-gallery.js" defer="defer"></script>
+    <script src="scripts/component-slider.js" defer="defer"></script>
+
+    <!-- COLOR_IMAGE_MAP Data Container (DO NOT MOVE INTO JAVASCRIPT) -->
+    <!-- AI Agents: To change color mappings, edit the data-map attribute below -->
+    <!-- The JSON must be valid: {"Color Name": "path/to/image.webp"} -->
+    <div id="color-image-data" data-map='{{COLOR_IMAGE_MAP}}' style="display:none;"></div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        function isIE() {
+          const ua = window.navigator.userAgent;
+          const msie = ua.indexOf('MSIE ');
+          const trident = ua.indexOf('Trident/');
+
+          return msie > 0 || trident > 0;
+        }
+
+        if (!isIE()) return;
+        const hiddenInput = document.querySelector('#product-form-template--17453745111139__main input[name="id"]');
+        const noScriptInputWrapper = document.createElement('div');
+        const variantSwitcher =
+          document.querySelector('variant-radios[data-section="template--17453745111139__main"]') ||
+          document.querySelector('variant-selects[data-section="template--17453745111139__main"]');
+        noScriptInputWrapper.innerHTML = document.querySelector(
+          '.product-form__noscript-wrapper-template--17453745111139__main'
+        ).textContent;
+        variantSwitcher.outerHTML = noScriptInputWrapper.outerHTML;
+
+        document.querySelector('#Variants-template--17453745111139__main').addEventListener('change', function (event) {
+          hiddenInput.value = event.currentTarget.value;
+        });
+      });
+
+      // ==========================================
+      // CRITICAL: COLOR SWATCH LOGIC - HANDLE WITH CARE
+      // The COLOR_IMAGE_MAP is stored in a data attribute to prevent
+      // corruption from AI find/replace operations on inline JavaScript.
+      // DO NOT move the map back into the script block.
+      // ==========================================
+
+      // COLOR IMAGE MAP DATA (stored as data attribute for robustness)
+      // AI Agents: Edit the data-map value, not the JavaScript
+      document.addEventListener('DOMContentLoaded', function () {
+        const swatches = document.querySelectorAll('.swatch');
+        const colorLabel = document.getElementById('color-label-single');
+
+        // Parse color map from data attribute (safer than inline JSON)
+        const colorDataEl = document.getElementById('color-image-data');
+        let imageMap = {};
+        try {
+          imageMap = colorDataEl ? JSON.parse(colorDataEl.dataset.map || '{}') : {};
+        } catch(e) {
+          console.warn('COLOR_IMAGE_MAP parse error:', e);
+          imageMap = {};
+        }
+
+      function updateMainImage(src) {
+        // Find the first slide image and update it
+        // This is a rough hack for the carousel, targeting the first visible one might be enough
+        // But ideally we trigger the slider. For now, let's just update the visible image src if possible
+        // checking standard selector from template
+        const mainImgs = document.querySelectorAll('.product__media img');
+        if (mainImgs.length > 0) {
+          mainImgs[0].src = src;
+          mainImgs[0].srcset = src; // Clear srcset to prevent revert
+        }
+      }
+
+      swatches.forEach(swatch => {
+        swatch.addEventListener('click', function (e) {
+          e.stopPropagation(); // prevent triggering bundle card click if possible
+
+          // Remove active class from siblings
+          swatches.forEach(s => {
+            s.classList.remove('active');
+            s.style.border = '1px solid #ddd';
+          });
+
+          // Add active to clicked
+          this.classList.add('active');
+          this.style.border = '2px solid #000';
+
+          // Update Label
+          const color = this.dataset.color;
+          if (colorLabel) colorLabel.textContent = color;
+
+          // Update Image
+          if (imageMap[color]) {
+            updateMainImage(imageMap[color]);
+
+            // Also update the image inside the card
+            const cardImg = document.getElementById('single-card-image');
+            if (cardImg) cardImg.src = imageMap[color];
+          }
+        });
+      });
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org/",
+      "@type": "Product",
+      "name": "{{PRODUCT_NAME}}",
+      "url": "{{PRODUCT_FULL_URL}}",
+      "image": [
+          "{{OG_IMAGE_URL}}"
+        ],
+      "description": "{{META_DESCRIPTION}}",
+      
+      "brand": {
+        "@type": "Brand",
+        "name": "{{BRAND_NAME}}"
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": "http://schema.org/InStock",
+        "price": "{{SINGLE_PRICE}}",
+        "priceCurrency": "USD",
+        "url": "{{PRODUCT_FULL_URL}}"
+      }
+    }
+  </script>
+  </section>
+
+
+</section>
+
+<!-- Size Chart Modal -->
+<div id="size-chart-modal" class="ob-overlay">
+  <div class="ob-modal" style="max-width: 600px; position: relative;">
+    <button id="size-chart-close"
+      style="position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 24px; cursor: pointer; color: #333;">&times;</button>
+    <h2 style="margin-bottom: 15px;">Size Guide</h2>
+    <img src="{{SIZE_CHART_IMAGE}}" style="width: 100%; height: auto; border-radius: 0;" alt="Size Chart">
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const trigger = document.getElementById('size-chart-trigger');
+    const modal = document.getElementById('size-chart-modal');
+    const closeBtn = document.getElementById('size-chart-close');
+
+    if (trigger && modal && closeBtn) {
+      trigger.addEventListener('click', function (e) {
+        e.preventDefault();
+        modal.style.display = 'flex';
+      });
+
+      closeBtn.addEventListener('click', function () {
+        modal.style.display = 'none';
+      });
+
+      modal.addEventListener('click', function (e) {
+        if (e.target === this) {
+          modal.style.display = 'none';
+        }
+      });
+    }
+  });
+</script>

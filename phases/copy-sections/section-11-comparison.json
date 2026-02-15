@@ -1,0 +1,86 @@
+{
+  "section": "06-comparison",
+  "file": "sections/06-comparison.html",
+
+  "MANDATORY_READS": [
+    "context/COPY-REQUIREMENTS.md",
+    "context/research-summary.md - READ PAIN STACK"
+  ],
+
+  "CRITICAL_NOTE": {
+    "DO_NOT_USE": "Single combined comparison image (comparison-new.webp)",
+    "USE_INSTEAD": "Interactive slider with TWO separate images",
+    "reason": "Slider is more engaging and works better on mobile"
+  },
+
+  "requirements": {
+    "pain_points": ["Pain 1", "Pain 4"],
+    "pattern_interrupts_min": 2
+  },
+
+  "images": {
+    "before": "{{COMPARISON_IMAGE_BEFORE}}",
+    "after": "{{COMPARISON_IMAGE_AFTER}}",
+    "source": "images/comparison/",
+    "files_needed": [
+      "comparison-before.webp - The disappointing 'old way' image",
+      "comparison-after.webp - Your product looking amazing"
+    ],
+    "NOT_NEEDED": "comparison-new.webp (single combined image - REMOVED)"
+  },
+
+  "slider_labels": {
+    "before_label": "THE OLD",
+    "after_label": "THE NEW"
+  },
+
+  "structure": {
+    "HOOK": "See why this feels different",
+    "BEFORE": "How other pieces made her feel (the disappointment)",
+    "AFTER": "How THIS piece makes her feel (the confidence)"
+  },
+
+  "comparison_framing": {
+    "WRONG": "Feature A vs Feature B (tech specs)",
+    "RIGHT": "How you felt BEFORE vs How you'll feel NOW"
+  },
+
+  "before_column": {
+    "headline": "What you're used to",
+    "items": [
+      "Looked good online, disappointing in person",
+      "Never quite fit right",
+      "Constant adjusting and pulling",
+      "Wore it once, never again"
+    ]
+  },
+
+  "after_column": {
+    "headline": "What you deserve",
+    "items": [
+      "Looks even better than the photos",
+      "Flattering from every angle",
+      "Comfortable all day, no adjusting",
+      "Your new go-to piece"
+    ]
+  },
+
+  "placement": {
+    "position": "Early (40% scroll)",
+    "reason": "Show the transformation EARLY - she needs to see what's possible"
+  },
+
+  "tone_guidance": {
+    "write_like": "Showing her the difference between settling and finding the one",
+    "avoid": ["tech specs", "feature comparisons", "aggressive claims"],
+    "use": ["how it feels", "what she deserves", "the difference"]
+  },
+
+  "anti_laziness_check": [
+    "Does BEFORE describe feelings, not features?",
+    "Does AFTER describe transformation, not specs?",
+    "Would she see herself in the BEFORE column?",
+    "Would she WANT to be in the AFTER column?",
+    "Am I using TWO separate images (not a single combined one)?"
+  ]
+}

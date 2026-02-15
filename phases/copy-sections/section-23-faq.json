@@ -1,0 +1,59 @@
+{
+  "section": "23-faq",
+  "file": "sections/23-faq.html",
+
+  "MANDATORY_READS": [
+    "context/COPY-REQUIREMENTS.md",
+    "context/research-summary.md - READ OBJECTIONS SECTION"
+  ],
+
+  "requirements": {
+    "objections": "Use Objections 1-6 from research",
+    "faq_count": 6,
+    "pattern_interrupts_min": 6,
+    "note": "Each answer MUST start with validation, then reassurance"
+  },
+
+  "structure": {
+    "each_faq": {
+      "QUESTION": "Her real worry, phrased as she'd think it",
+      "ANSWER_HOOK": "Validation first - we get it",
+      "ANSWER_BODY": "Gentle reassurance and solution"
+    }
+  },
+
+  "common_women_fashion_objections": [
+    "What if it doesn't look like the photos?",
+    "Will it actually fit my body type?",
+    "What if I need to return it?",
+    "Is it worth the price?",
+    "How long will it last?",
+    "What if it doesn't work with my wardrobe?"
+  ],
+
+  "answer_patterns": {
+    "Validation": "We totally understand this worry...",
+    "Reassurance": "That's exactly why we...",
+    "Permission": "It's okay to be skeptical. Most of our customers felt the same before..."
+  },
+
+  "tone_guidance": {
+    "write_like": "A patient friend addressing her concerns with warmth",
+    "avoid": ["defensive tone", "corporate speak", "dismissing concerns"],
+    "use": [
+      "we get it",
+      "that's why",
+      "you're right to ask",
+      "here's how we handle that"
+    ]
+  },
+
+  "html_structure": "Accordion with expand/collapse",
+
+  "anti_laziness_check": [
+    "Does EACH FAQ address a REAL concern from research?",
+    "Does EACH answer start with VALIDATION?",
+    "Does the tone feel supportive, not defensive?",
+    "Would she feel HEARD reading these answers?"
+  ]
+}

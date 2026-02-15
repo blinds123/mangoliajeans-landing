@@ -1,0 +1,171 @@
+{
+  "phase": "4-build-deploy",
+  "title": "Build & Deploy",
+  "description": "Optimize images, assemble HTML, deploy to GitHub and Netlify. SAFELY handles existing repos/sites.",
+
+  "CRITICAL_RULES": [
+    "NEVER overwrite existing repos without user confirmation",
+    "NEVER delete existing Netlify sites",
+    "Always check if repo/site exists BEFORE creating"
+  ],
+
+  "tasks": [
+    {
+      "id": "4.1",
+      "title": "Optimize images to WebP",
+      "bullets": [
+        "Run: python3 optimize_images.py",
+        "Convert all .jpg/.png to .webp",
+        "Resize to max 1200x1600",
+        "Quality 85 for balance",
+        "Verify all images < 100KB"
+      ],
+      "command": "python3 optimize_images.py",
+      "tests": ["bash tests/validate-images.sh"]
+    },
+    {
+      "id": "4.2",
+      "title": "Assemble sections into index.html",
+      "bullets": [
+        "Run: ./build.sh",
+        "Concatenate sections 01-25 in order",
+        "Include base.html template wrapper",
+        "Link styles/main.css",
+        "Link scripts/main.js and checkout.js"
+      ],
+      "command": "./build.sh",
+      "tests": ["bash tests/validate-build.sh"]
+    },
+    {
+      "id": "4.3",
+      "title": "Replace all variables",
+      "bullets": [
+        "Substitute {{VARIABLES}} from product.config",
+        "Zero placeholders remaining",
+        "Validate all image paths exist"
+      ],
+      "tests": ["bash tests/validate-no-placeholders.sh"],
+      "critical": true
+    },
+    {
+      "id": "4.4",
+      "title": "CHECK if GitHub repo exists (BEFORE creating)",
+      "bullets": [
+        "Run: gh repo view {{PRODUCT_HANDLE}}-landing 2>/dev/null",
+        "IF EXISTS: Ask user - overwrite or use different name?",
+        "IF NOT EXISTS: Proceed to create"
+      ],
+      "check_command": "gh repo view {{PRODUCT_HANDLE}}-landing --json name 2>/dev/null && echo 'EXISTS' || echo 'NOT_EXISTS'",
+      "on_exists": {
+        "action": "ASK_USER",
+        "prompt": "GitHub repo '{{PRODUCT_HANDLE}}-landing' already exists. Options:\n1. Use existing repo (will add files to it)\n2. Create new repo with suffix (e.g., {{PRODUCT_HANDLE}}-landing-v2)\n3. Abort",
+        "options": ["use_existing", "create_new_name", "abort"]
+      }
+    },
+    {
+      "id": "4.5",
+      "title": "Create/Update GitHub repository",
+      "depends_on": "4.4",
+      "bullets": [
+        "IF new: gh repo create {{PRODUCT_HANDLE}}-landing --public",
+        "Initialize git if needed: git init",
+        "Add all files: git add .",
+        "Commit: git commit -m 'Initial landing page deployment'",
+        "Set remote: git remote add origin <repo_url>",
+        "Push: git push -u origin main"
+      ],
+      "commands": {
+        "new_repo": [
+          "git init 2>/dev/null || true",
+          "gh repo create {{PRODUCT_HANDLE}}-landing --public --source=. --remote=origin --push"
+        ],
+        "existing_repo": [
+          "git add .",
+          "git commit -m 'Update landing page'",
+          "git push origin main"
+        ]
+      },
+      "tests": ["bash tests/validate-github.sh"]
+    },
+    {
+      "id": "4.6",
+      "title": "CHECK if Netlify site exists (BEFORE creating)",
+      "bullets": [
+        "Run: netlify sites:list --json | grep {{PRODUCT_HANDLE}}",
+        "IF EXISTS: Ask user - update existing or create new?",
+        "IF NOT EXISTS: Proceed to create"
+      ],
+      "check_command": "netlify sites:list --json 2>/dev/null | grep -q '\"name\":.*{{PRODUCT_HANDLE}}' && echo 'EXISTS' || echo 'NOT_EXISTS'",
+      "on_exists": {
+        "action": "ASK_USER",
+        "prompt": "Netlify site with name containing '{{PRODUCT_HANDLE}}' already exists. Options:\n1. Deploy to existing site\n2. Create new site with suffix (e.g., {{PRODUCT_HANDLE}}-v2)\n3. Abort",
+        "options": ["use_existing", "create_new_name", "abort"]
+      }
+    },
+    {
+      "id": "4.7",
+      "title": "Create/Update Netlify site",
+      "depends_on": "4.6",
+      "bullets": [
+        "IF new: netlify sites:create --name {{PRODUCT_HANDLE}}",
+        "Link site: netlify link (if using existing)",
+        "Set env: netlify env:set POOL_URL {{POOL_SERVER_URL}}",
+        "Deploy: netlify deploy --prod --dir=.",
+        "Verify site returns 200"
+      ],
+      "commands": {
+        "new_site": [
+          "netlify sites:create --name {{PRODUCT_HANDLE}}",
+          "netlify env:set POOL_URL {{POOL_SERVER_URL}}",
+          "netlify deploy --prod --dir=."
+        ],
+        "existing_site": [
+          "netlify link --name {{PRODUCT_HANDLE}}",
+          "netlify env:set POOL_URL {{POOL_SERVER_URL}}",
+          "netlify deploy --prod --dir=."
+        ]
+      },
+      "tests": ["bash tests/validate-netlify-deploy.sh"],
+      "output": "Live URL for testing"
+    },
+    {
+      "id": "4.8",
+      "title": "Capture deployment URLs",
+      "bullets": [
+        "Store GITHUB_URL = https://github.com/{{GITHUB_USERNAME}}/{{PRODUCT_HANDLE}}-landing",
+        "Store LIVE_URL = https://{{PRODUCT_HANDLE}}.netlify.app",
+        "Output both URLs for user reference"
+      ],
+      "output_variables": ["GITHUB_URL", "LIVE_URL"]
+    }
+  ],
+
+  "error_handling": {
+    "github_auth_failed": {
+      "message": "GitHub CLI not authenticated. Run: gh auth login",
+      "action": "halt_and_instruct"
+    },
+    "netlify_auth_failed": {
+      "message": "Netlify CLI not authenticated. Run: netlify login",
+      "action": "halt_and_instruct"
+    },
+    "repo_name_taken": {
+      "message": "Repository name already exists",
+      "action": "ask_user_for_alternative"
+    },
+    "site_name_taken": {
+      "message": "Netlify site name already exists",
+      "action": "ask_user_for_alternative"
+    }
+  },
+
+  "checkpoint": {
+    "type": "automatic",
+    "pass_condition": "Site deployed and returns 200",
+    "fail_action": "Check deployment logs",
+    "outputs": {
+      "GITHUB_URL": "Captured from gh repo view",
+      "LIVE_URL": "Captured from netlify deploy output"
+    }
+  }
+}

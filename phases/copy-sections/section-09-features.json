@@ -1,0 +1,205 @@
+{
+  "section": "09-features",
+  "file": "sections/08-multirow.html",
+  "aka": "The Insider Feature Grid",
+
+  "MANDATORY_READS": [
+    "context/COPY-REQUIREMENTS.md",
+    "context/research-summary.md - USE EXACT LANGUAGE FROM VOICE & TONE",
+    "resources/ATOMIC-ENGAGE-PROMPT.md - COMPLETE EXECUTION PROTOCOL FOR FEATURE CARDS"
+  ],
+
+  "STRATEGY": {
+    "level": "MICRO",
+    "purpose": "Handle objections LOGISTICALLY (the 'what')",
+    "tone": "Fashion Insider - Cognitive Disruption, NOT tech specs",
+    "contrast": "Macro Secrets handle objections PHILOSOPHICALLY (the 'why')"
+  },
+
+  "requirements": {
+    "feature_count": 4,
+    "words_per_card": "200+ characters minimum (~40-60 words, 5-6 sentences)",
+    "images": "TESTIMONIAL images only (social proof) - NOT product shots"
+  },
+
+  "OBJECTION_MAPPING": {
+    "CRITICAL": "Each Micro Feature SUBTLY addresses an objection type",
+    "feature_1": {
+      "spec": "Quality/Construction (e.g., Zipper, Stitching, Hardware)",
+      "objection": "VEHICLE - Why other products' mechanisms fail",
+      "example_headline": "THE CHEAP ZIPPER",
+      "example_truth": "That $50 jacket? Its zipper will catch and stick within a month.",
+      "example_benefit": "Ours uses YKK hardware that glides for years."
+    },
+    "feature_2": {
+      "spec": "Cut/Structure (e.g., Rise, Silhouette, Shape)",
+      "objection": "INTERNAL - Why it'll work for HER body",
+      "example_headline": "THE 'DIAPER EFFECT'",
+      "example_truth": "Length isn't modesty; cut is modesty.",
+      "example_benefit": "Our curved rise covers you without looking boxy."
+    },
+    "feature_3": {
+      "spec": "Practicality (e.g., Pockets, Closures, Movement)",
+      "objection": "EXTERNAL - Practical concern removed",
+      "example_headline": "THE FAKE POCKET LIE",
+      "example_truth": "Decorative pockets are fashion's laziest trick.",
+      "example_benefit": "Real pockets that actually fit your phone."
+    },
+    "feature_4": {
+      "spec": "Details (e.g., Sleeves, Collar, Hem)",
+      "objection": "VEHICLE - Another mechanism that usually fails",
+      "example_headline": "THE ARM SQUEEZE",
+      "example_truth": "Tight sleeves aren't 'fitted' - they're poorly drafted.",
+      "example_benefit": "Our sleeve allows full movement without bulk."
+    }
+  },
+
+  "JSON_THINKING_REQUIREMENT": {
+    "CRITICAL": "Draft each card in JSON FIRST to ensure all 5 elements exist",
+    "internal_structure": {
+      "headline": "THE [COGNITIVE DISRUPTION]",
+      "exploit": "[Challenge belief - 1 sentence]",
+      "narrate": "[Touch on struggle - 1 sentence]",
+      "give": "[Controversial truth - 1 sentence]",
+      "attach": "[Emotional cost - 1 sentence]",
+      "guarantee": "[Effortless payoff - 1 sentence]"
+    },
+    "output_format": "Combine JSON into natural flowing paragraph as MULTIROW_PARAGRAPH_X",
+    "minimum_length": "200 characters to force narrative depth"
+  },
+
+  "ENGAGE_5_ELEMENT_FORMULA": {
+    "CRITICAL": "ALL 4 feature cards MUST use the first 5 elements of ENGAGE",
+    "total_words": "~40 words per card (bold headline + 3-5 sentence paragraph)",
+    "MANDATORY_ELEMENTS": {
+      "1_EXPLOIT_COGNITIVE_DISRUPTION": {
+        "format": "Bold headline that challenges a common belief",
+        "examples": [
+          "THE CHEAP ZIPPER",
+          "THE 'DIAPER EFFECT'",
+          "THE FAKE POCKET LIE"
+        ],
+        "rule": "Challenge what they think they know about this feature"
+      },
+      "2_NARRATE_UNFINISHED_STORY": {
+        "format": "Introduce a relatable realization or moment of discovery",
+        "examples": [
+          "You bought that $60 jacket thinking it was quality.",
+          "You've felt it - that awkward moment when you sit and the rise gaps.",
+          "You reach for your phone and realize: decorative pockets again."
+        ],
+        "rule": "Create a 'you've been here' moment that's unresolved"
+      },
+      "3_GIVE_CONTROVERSIAL_TRUTH": {
+        "format": "State an uncomfortable truth about typical clothing",
+        "examples": [
+          "Hardware quality is where fast fashion cuts corners first.",
+          "Length isn't modesty; cut is modesty.",
+          "Fake pockets are fashion's laziest trick."
+        ],
+        "rule": "Say the quiet part out loud - the industry secret"
+      },
+      "4_ATTACH_HIGH_STAKES_CONFLICT": {
+        "format": "Highlight the emotional/identity frustration",
+        "examples": [
+          "You don't want to look cheap - but cheap zippers give you away.",
+          "You want coverage without looking frumpy.",
+          "Carrying a bag for your phone defeats the point of a pocket."
+        ],
+        "rule": "Connect to identity, confidence, or self-image stakes"
+      },
+      "5_GUARANTEE_UNCONVENTIONAL_PAYOFF": {
+        "format": "Explain how this feature solves it in a surprising, low-effort way",
+        "examples": [
+          "Our YKK hardware glides for years - no catches, no cheap feel.",
+          "Our curved rise covers you without adding bulk.",
+          "Real pockets that fit your phone and keys - finally."
+        ],
+        "rule": "The solution should feel effortless/obvious once revealed"
+      }
+    },
+    "BANNED_LANGUAGE": [
+      "urgency/scarcity (no time pressure)",
+      "hype/buzzwords",
+      "tech specs without emotion",
+      "generic marketing speak"
+    ],
+    "REQUIRED_TONE": "Confident, empathetic, precise. Gen Z women. Fashion insider."
+  },
+
+  "images": {
+    "CRITICAL": "MUST be testimonial/social proof images - NOT product shots",
+    "feature_1_image": "{{TESTIMONIAL_IMAGE_6}}",
+    "feature_2_image": "{{TESTIMONIAL_IMAGE_7}}",
+    "feature_3_image": "{{TESTIMONIAL_IMAGE_8}}",
+    "feature_4_image": "{{TESTIMONIAL_IMAGE_9}}",
+    "source": "images/testimonials/",
+    "WHY": "Social proof images show REAL women wearing it, building trust while explaining specs"
+  },
+
+  "variables_output": {
+    "MULTIROW_HEADLINE_1": "[Disruptive Headline for Feature 1]",
+    "MULTIROW_PARAGRAPH_1": "[ENGAGE 5-element copy: Cognitive Disruption + Unfinished Story + Controversial Truth + High-Stakes Conflict + Unconventional Payoff]",
+    "MULTIROW_IMAGE_1": "images/testimonials/testimonial-XX.webp",
+    "MULTIROW_HEADLINE_2": "[Disruptive Headline for Feature 2]",
+    "MULTIROW_PARAGRAPH_2": "[ENGAGE 5-element copy: Cognitive Disruption + Unfinished Story + Controversial Truth + High-Stakes Conflict + Unconventional Payoff]",
+    "MULTIROW_IMAGE_2": "images/testimonials/testimonial-XX.webp",
+    "MULTIROW_HEADLINE_3": "[Disruptive Headline for Feature 3]",
+    "MULTIROW_PARAGRAPH_3": "[ENGAGE 5-element copy: Cognitive Disruption + Unfinished Story + Controversial Truth + High-Stakes Conflict + Unconventional Payoff]",
+    "MULTIROW_IMAGE_3": "images/testimonials/testimonial-XX.webp",
+    "MULTIROW_HEADLINE_4": "[Disruptive Headline for Feature 4]",
+    "MULTIROW_PARAGRAPH_4": "[ENGAGE 5-element copy: Cognitive Disruption + Unfinished Story + Controversial Truth + High-Stakes Conflict + Unconventional Payoff]",
+    "MULTIROW_IMAGE_4": "images/testimonials/testimonial-XX.webp"
+  },
+
+  "tone_guidance": {
+    "write_like": "A fashion insider revealing industry secrets",
+    "voice": "Knowing, slightly provocative, confident",
+    "MUST_USE": "Exact language patterns from research-summary.md Voice & Tone",
+    "avoid": [
+      "tech specs language",
+      "feature/benefit lists",
+      "generic marketing speak",
+      "product shots in this section"
+    ],
+    "use": [
+      "insider terminology",
+      "problem naming (THE [X] EFFECT)",
+      "counter-intuitive truths",
+      "cognitive disruption"
+    ]
+  },
+
+  "anti_laziness_check": [
+    "FEATURE CARD 1: Does it have ALL 5 ENGAGE elements? (Cognitive Disruption, Unfinished Story, Controversial Truth, High-Stakes Conflict, Unconventional Payoff)",
+    "FEATURE CARD 2: Does it have ALL 5 ENGAGE elements?",
+    "FEATURE CARD 3: Does it have ALL 5 ENGAGE elements?",
+    "FEATURE CARD 4: Does it have ALL 5 ENGAGE elements?",
+    "Did I draft each card in JSON format first to verify all 5 elements?",
+    "Does each headline have MORE than 3 words?",
+    "Does each headline contain THE, ISN'T, AREN'T, LIE, MYTH, TRUTH, or SECRET?",
+    "Is each paragraph at least 200 characters (not just 40 words)?",
+    "Does each headline CHALLENGE a common belief (not just describe)?",
+    "Does each paragraph include a 'you've been here' moment?",
+    "Does each paragraph reveal an uncomfortable industry truth?",
+    "Does each paragraph connect to identity/confidence stakes?",
+    "Does each paragraph offer an effortless solution?",
+    "Did I map each feature to its objection type (Vehicle/Internal/External)?",
+    "Am I using TESTIMONIAL images, not product shots?",
+    "Is the copy ~40 words per card (not too long)?",
+    "Did I use language from the research Voice & Tone section?",
+    "Did I avoid urgency/scarcity/time-pressure language?",
+    "Would a fashion-savvy Gen Z woman read this and think 'finally, someone who gets it'?"
+  ],
+
+  "VALIDATION_ENFORCEMENT": {
+    "script": "tests/validate-features.sh",
+    "checks": [
+      "All 4 feature cards present in product.config",
+      "Each card has both headline + paragraph",
+      "Research context referenced (pain points used)",
+      "All 5 ENGAGE elements detectable in each card"
+    ],
+    "failure_action": "Regenerate features section until validation passes"
+  }
+}

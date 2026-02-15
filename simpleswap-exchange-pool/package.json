@@ -1,0 +1,30 @@
+{
+  "name": "simpleswap-exchange-pool",
+  "version": "4.0.0",
+  "description": "Pre-creates SimpleSwap cryptocurrency exchanges and serves them instantly via a pool server",
+  "main": "pool-server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node pool-server.js",
+    "dev": "node --watch pool-server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "playwright": "^1.40.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "simpleswap",
+    "cryptocurrency",
+    "exchange",
+    "pool",
+    "brightdata"
+  ],
+  "author": "",
+  "license": "MIT"
+}

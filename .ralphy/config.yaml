@@ -1,0 +1,50 @@
+# Ralphy Configuration for Brunson-Antigravity Workflow
+# Universal rules that apply to ALL tasks
+
+project:
+  name: "brunson-landing"
+  language: "html"
+  framework: "brunson-protocol"
+
+engine: claude-code
+retries: 3
+branch_per_task: false
+auto_commit: true
+
+# Test command runs after each task
+test_commands:
+  - "bash tests/validate-current.sh"
+
+# Universal Antigravity Principles (apply to every task)
+ai_rules:
+  # ZERO SKIMMING
+  - "Never skim files. For files >500 lines, read in 200-line chunks and summarize each before proceeding."
+
+  # ZERO HALLUCINATION
+  - "Every claim in copy MUST trace to a research file. If you cannot cite avatar_profile.json, strategy_brief.json, or another research source, do not write the claim."
+
+  # FRAMEWORK ENFORCEMENT
+  - "Headlines MUST use pattern interrupts: 'Why...', 'What if...', 'Stop...', 'The X Lie', 'The X Myth', contradictions, or questions."
+  - "Features MUST follow FIBS: Fear (frustration) -> Intrigue (mechanism) -> Believability (proof) -> Stakes (transformation)."
+  - "Secrets MUST address: 1-Vehicle (product doubt), 2-Internal (self doubt), 3-External (world doubt)."
+
+  # IMAGE RULES
+  - "Product images (product-01 to 05) go to hero/gallery sections ONLY."
+  - "Testimonial images go to features, secrets, testimonials, reviews ONLY."
+  - "NEVER map testimonial images to slideshow sections."
+  - "Order bump image ONLY in order bump section."
+  - "Founder image ONLY in founder story section."
+
+  # TRACEABILITY
+  - "After writing copy, create copy_provenance_report.md linking each copy element to its research source."
+  - "Include HALLUCINATION_CHECK: PASSED only if all claims are verified."
+
+  # OUTPUT QUALITY
+  - "No placeholder text allowed: {{VAR}}, $00, XX%, [amount], etc."
+  - "No framework labels in copy: never write 'The Backstory:', 'THE EPIPHANY:', 'Secret 1:', etc."
+
+# Files that should never be modified
+protected_files:
+  - "build.sh"
+  - "stylesheets/*"
+  - "netlify.toml"

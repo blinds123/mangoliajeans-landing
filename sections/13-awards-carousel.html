@@ -1,0 +1,339 @@
+<!-- ============================================
+     SECTION: AWARDS CAROUSEL
+     VARIABLES: {{AWARD_IMAGE_1}}, {{AWARD_IMAGE_2}}, {{AWARD_IMAGE_3}}, {{AWARD_IMAGE_4}}, {{AWARD_IMAGE_5}}
+     IMAGES: NONE
+     FRAMEWORK: AUTHORITY
+     ============================================ -->
+<!-- FINAL PRODUCTION STRUCTURE: Manual Awards Carousel (Seamless Integration) -->
+<div id="awards-section-final" class="shopify-section">
+  <link rel="stylesheet" href="stylesheets/component-slider.css" />
+  <style>
+    .awards-section-container {
+      /* Drastically reduced padding for "integrated" feel */
+      padding: 10px 0 20px 0;
+      background: #ffffff;
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+      margin-top: 0;
+      /* Ensure no external gap */
+    }
+
+    /* Typography: Tighten title for compactness */
+    .awards-title {
+      text-align: center;
+      margin-bottom: 12px;
+      margin-top: 0;
+      /* Inherits global H2 styles: font-family, weight, etc. */
+    }
+
+    .awards-slider-wrapper {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 0;
+    }
+
+    .awards-list {
+      display: flex;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding-bottom: 10px;
+      /* Minimal bounce scroll space */
+    }
+
+    .awards-list::-webkit-scrollbar {
+      display: none;
+    }
+
+    .awards-item {
+      flex: 0 0 85%;
+      /* Mobile: 85% width */
+      width: 85%;
+      scroll-snap-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
+      padding: 0 4px;
+      /* Very tight horizontal gap */
+      box-sizing: border-box;
+    }
+
+    .awards-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      /* Image sits very close to text */
+      margin-top: 8px;
+    }
+
+    .awards-item-caption {
+      text-align: center;
+      /* Typography refinement for "integrated" look */
+      font-size: 13px;
+      color: #121212;
+      /* Darker black for integration with standard text */
+      line-height: 1.4;
+      max-width: 96%;
+      margin-bottom: 0;
+      /* Remove bottom margin so image pulls up */
+    }
+
+    .awards-item-caption strong {
+      font-weight: 700;
+      display: block;
+      margin-bottom: 2px;
+      /* Tight gap between headline and body */
+      text-transform: none;
+      /* Keep provided casing for award titles */
+      font-size: 14px;
+      /* Slightly larger header */
+    }
+
+    /* Desktop: 3 items per view */
+    @media screen and (min-width: 750px) {
+      .awards-item {
+        flex: 0 0 33.333%;
+        padding: 0 15px;
+      }
+
+      .awards-section-container {
+        padding: 20px 0;
+        /* Still tight on desktop */
+      }
+
+      .awards-item-caption {
+        font-size: 14px;
+      }
+
+      .awards-item-caption strong {
+        font-size: 15px;
+      }
+    }
+
+    /* Controls - OVERLAY STYLE */
+    .slider-buttons {
+      position: absolute;
+      /* Vertically centered on the visual center of the whole card (text + image) ~ 55% down? */
+      top: 55%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none;
+      z-index: 2;
+      padding: 0 5px;
+      /* Very close to edge */
+    }
+
+    .slider-button {
+      pointer-events: auto;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      /* Slightly more visible border */
+      border-radius: 50%;
+      width: 36px;
+      /* Smaller, more discreet button */
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      color: #000;
+      backdrop-filter: blur(2px);
+    }
+
+    .slider-button:hover {
+      background: #fff;
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      border-color: #000;
+    }
+
+    .slider-button .icon {
+      width: 10px;
+      /* Smaller icon */
+    }
+
+    .slider-button[disabled] {
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
+
+  <div class="awards-section-container">
+    <div class="page-width">
+      <h2 class="h2 awards-title">{{AWARDS_SECTION_TITLE}}</h2>
+
+      <slider-component class="awards-slider-wrapper">
+        <ul
+          class="awards-list slider slider--tablet"
+          id="Awards-Slider"
+          role="list"
+        >
+          <!-- Award 1 -->
+          <li class="awards-item slider__slide">
+            <div class="awards-item-caption">
+              <strong>{{AWARD_1_TITLE}}</strong>
+              {{AWARD_1_BODY}}
+            </div>
+            <img
+              src="{{AWARD_IMAGE_1}}"
+              alt="{{AWARD_1_TITLE}}"
+              loading="lazy"
+            />
+          </li>
+          <!-- Award 2 -->
+          <li class="awards-item slider__slide">
+            <div class="awards-item-caption">
+              <strong>{{AWARD_2_TITLE}}</strong>
+              {{AWARD_2_BODY}}
+            </div>
+            <img
+              src="{{AWARD_IMAGE_2}}"
+              alt="{{AWARD_2_TITLE}}"
+              loading="lazy"
+            />
+          </li>
+          <!-- Award 3 -->
+          <li class="awards-item slider__slide">
+            <div class="awards-item-caption">
+              <strong>{{AWARD_3_TITLE}}</strong>
+              {{AWARD_3_BODY}}
+            </div>
+            <img
+              src="{{AWARD_IMAGE_3}}"
+              alt="{{AWARD_3_TITLE}}"
+              loading="lazy"
+            />
+          </li>
+          <!-- Award 4 -->
+          <li class="awards-item slider__slide">
+            <div class="awards-item-caption">
+              <strong>{{AWARD_4_TITLE}}</strong>
+              {{AWARD_4_BODY}}
+            </div>
+            <img
+              src="{{AWARD_IMAGE_4}}"
+              alt="{{AWARD_4_TITLE}}"
+              loading="lazy"
+            />
+          </li>
+          <!-- Award 5 -->
+          <li class="awards-item slider__slide">
+            <div class="awards-item-caption">
+              <strong>{{AWARD_5_TITLE}}</strong>
+              {{AWARD_5_BODY}}
+            </div>
+            <img src="{{AWARD_IMAGE_5}}" alt="{{AWARD_5_TITLE}}" loading="lazy" />
+          </li>
+        </ul>
+
+        <div class="slider-buttons no-js-hidden">
+          <button
+            type="button"
+            class="slider-button slider-button--prev"
+            name="previous"
+            aria-label="Slide left"
+          >
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              class="icon icon-caret"
+              viewBox="0 0 10 6"
+              style="width: 10px; transform: rotate(90deg)"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="slider-button slider-button--next"
+            name="next"
+            aria-label="Slide right"
+          >
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              class="icon icon-caret"
+              viewBox="0 0 10 6"
+              style="width: 10px; transform: rotate(-90deg)"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </slider-component>
+    </div>
+  </div>
+
+  <script>
+    class SliderComponent extends HTMLElement {
+      constructor() {
+        super();
+        this.slider = this.querySelector(".slider");
+        this.sliderItems = this.querySelectorAll(".slider__slide");
+        this.prevBtn = this.querySelector('button[name="previous"]');
+        this.nextBtn = this.querySelector('button[name="next"]');
+
+        if (!this.slider || !this.prevBtn || !this.nextBtn) return;
+
+        this.init();
+      }
+
+      init() {
+        this.prevBtn.addEventListener("click", this.onButtonClick.bind(this));
+        this.nextBtn.addEventListener("click", this.onButtonClick.bind(this));
+        this.slider.addEventListener("scroll", this.updateButtons.bind(this));
+        this.slider.addEventListener("resize", this.updateButtons.bind(this));
+        requestAnimationFrame(this.updateButtons.bind(this));
+      }
+
+      onButtonClick(event) {
+        event.preventDefault();
+        const slideWidth = this.sliderItems[0].clientWidth;
+        const currentScroll = this.slider.scrollLeft;
+        const direction = event.currentTarget.name === "next" ? 1 : -1;
+        const targetScroll = currentScroll + direction * slideWidth;
+        this.slider.scrollTo({ left: targetScroll, behavior: "smooth" });
+      }
+
+      updateButtons() {
+        if (!this.slider) return;
+        const scrollLeft = Math.ceil(this.slider.scrollLeft);
+        const scrollWidth = this.slider.scrollWidth;
+        const clientWidth = this.slider.clientWidth;
+        const isStart = scrollLeft <= 5;
+        const isEnd = scrollLeft >= scrollWidth - clientWidth - 5;
+        this.prevBtn.disabled = isStart;
+        this.nextBtn.disabled = isEnd;
+      }
+    }
+    if (!customElements.get("slider-component")) {
+      customElements.define("slider-component", SliderComponent);
+    }
+  </script>
+</div>
