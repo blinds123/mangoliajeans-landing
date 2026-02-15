@@ -1,0 +1,197 @@
+{
+  "url": "file:///Users/nelsonchan/Downloads/YES-Clean-Team-Template-mangoliajeans/index.html",
+  "mode": "pre-deploy",
+  "timestamp": "2026-02-15T00:38:55.237Z",
+  "summary": {
+    "total": 28,
+    "passes": 15,
+    "fails": 5,
+    "warns": 8
+  },
+  "passed": false,
+  "results": [
+    {
+      "name": "page-load",
+      "status": "PASS",
+      "detail": "Page loaded successfully",
+      "viewport": "desktop"
+    },
+    {
+      "name": "no-placeholders",
+      "status": "PASS",
+      "detail": "Zero raw placeholders",
+      "viewport": "desktop"
+    },
+    {
+      "name": "no-console-errors",
+      "status": "FAIL",
+      "detail": "8 JS errors: Failed to load resource: net::ERR_FILE_NOT_FOUND | Failed to load resource: net::ERR_FILE_NOT_FOUND | Failed to load resource: net::ERR_FILE_NOT_FOUND",
+      "fix": "Fix JavaScript errors in sections/23-scripts.html",
+      "viewport": "desktop"
+    },
+    {
+      "name": "no-image-404s",
+      "status": "PASS",
+      "detail": "All image requests succeeded",
+      "viewport": "desktop"
+    },
+    {
+      "name": "no-other-404s",
+      "status": "WARN",
+      "detail": "6 non-image 404s: file:///Users/nelsonchan/Downloads/YES-Clean-Team-Template-mangoliajeans/stylesheets/component-pickup-availability.css, file:///Users/nelsonchan/Downloads/YES-Clean-Team-Template-mangoliajeans/stylesheets/component-slider.css, file:///Users/nelsonchan/Downloads/YES-Clean-Team-Template-mangoliajeans/scripts/scripts.js",
+      "viewport": "desktop"
+    },
+    {
+      "name": "images-not-broken",
+      "status": "FAIL",
+      "detail": "55 broken image(s): images/product/product-06.webp, images/testimonials/testimonial-07.webp, images/testimonials/testimonial-08.webp, images/testimonials/testimonial-09.webp, images/testimonials/testimonial-10.webp",
+      "fix": "Replace missing images or check file paths in sections/*.html",
+      "viewport": "desktop"
+    },
+    {
+      "name": "header-visible",
+      "status": "PASS",
+      "detail": "Header height: 84px",
+      "viewport": "desktop"
+    },
+    {
+      "name": "product-section",
+      "status": "PASS",
+      "detail": "Product section height: 1444px",
+      "viewport": "desktop"
+    },
+    {
+      "name": "cta-buttons",
+      "status": "PASS",
+      "detail": "1 CTA button(s) visible and clickable",
+      "viewport": "desktop"
+    },
+    {
+      "name": "faq-accordion",
+      "status": "WARN",
+      "detail": "FAQ items exist but click failed: elementHandle.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    49 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n",
+      "viewport": "desktop"
+    },
+    {
+      "name": "bundle-selector",
+      "status": "PASS",
+      "detail": "2 bundle options found, clickable",
+      "viewport": "desktop"
+    },
+    {
+      "name": "no-overflow",
+      "status": "PASS",
+      "detail": "No horizontal overflow (body: 1440px, viewport: 1440px)",
+      "viewport": "desktop"
+    },
+    {
+      "name": "footer-present",
+      "status": "WARN",
+      "detail": "No footer element found",
+      "viewport": "desktop"
+    },
+    {
+      "name": "cart-drawer",
+      "status": "WARN",
+      "detail": "Cart trigger clicked but no drawer element found",
+      "viewport": "desktop"
+    },
+    {
+      "name": "page-load",
+      "status": "PASS",
+      "detail": "Page loaded successfully",
+      "viewport": "mobile"
+    },
+    {
+      "name": "no-placeholders",
+      "status": "PASS",
+      "detail": "Zero raw placeholders",
+      "viewport": "mobile"
+    },
+    {
+      "name": "no-console-errors",
+      "status": "FAIL",
+      "detail": "8 JS errors: Failed to load resource: net::ERR_FILE_NOT_FOUND | Failed to load resource: net::ERR_FILE_NOT_FOUND | Failed to load resource: net::ERR_FILE_NOT_FOUND",
+      "fix": "Fix JavaScript errors in sections/23-scripts.html",
+      "viewport": "mobile"
+    },
+    {
+      "name": "no-image-404s",
+      "status": "PASS",
+      "detail": "All image requests succeeded",
+      "viewport": "mobile"
+    },
+    {
+      "name": "no-other-404s",
+      "status": "WARN",
+      "detail": "6 non-image 404s: file:///Users/nelsonchan/Downloads/YES-Clean-Team-Template-mangoliajeans/stylesheets/component-pickup-availability.css, file:///Users/nelsonchan/Downloads/YES-Clean-Team-Template-mangoliajeans/stylesheets/component-slider.css, file:///Users/nelsonchan/Downloads/YES-Clean-Team-Template-mangoliajeans/scripts/scripts.js",
+      "viewport": "mobile"
+    },
+    {
+      "name": "images-not-broken",
+      "status": "FAIL",
+      "detail": "57 broken image(s): images/product/product-06.webp, images/testimonials/testimonial-03.webp, images/testimonials/testimonial-07.webp, images/testimonials/testimonial-08.webp, images/testimonials/testimonial-09.webp",
+      "fix": "Replace missing images or check file paths in sections/*.html",
+      "viewport": "mobile"
+    },
+    {
+      "name": "header-visible",
+      "status": "FAIL",
+      "detail": "Header has zero height",
+      "fix": "Check sections/03-header.html CSS",
+      "viewport": "mobile"
+    },
+    {
+      "name": "product-section",
+      "status": "PASS",
+      "detail": "Product section height: 2354px",
+      "viewport": "mobile"
+    },
+    {
+      "name": "cta-buttons",
+      "status": "PASS",
+      "detail": "1 CTA button(s) visible and clickable",
+      "viewport": "mobile"
+    },
+    {
+      "name": "faq-accordion",
+      "status": "WARN",
+      "detail": "FAQ items exist but click failed: elementHandle.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    50 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+      "viewport": "mobile"
+    },
+    {
+      "name": "bundle-selector",
+      "status": "PASS",
+      "detail": "2 bundle options found, clickable",
+      "viewport": "mobile"
+    },
+    {
+      "name": "no-overflow",
+      "status": "PASS",
+      "detail": "No horizontal overflow (body: 375px, viewport: 375px)",
+      "viewport": "mobile"
+    },
+    {
+      "name": "footer-present",
+      "status": "WARN",
+      "detail": "No footer element found",
+      "viewport": "mobile"
+    },
+    {
+      "name": "cart-drawer",
+      "status": "WARN",
+      "detail": "Cart trigger click failed: elementHandle.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    51 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+      "viewport": "mobile"
+    }
+  ],
+  "screenshots": [
+    "desktop-1440x900-full.png",
+    "desktop-1440x900-header.png",
+    "desktop-1440x900-product.png",
+    "mobile-375x812-awards.png",
+    "mobile-375x812-comparison.png",
+    "mobile-375x812-full.png",
+    "mobile-375x812-product.png",
+    "mobile-375x812-testimonials.png"
+  ]
+}
